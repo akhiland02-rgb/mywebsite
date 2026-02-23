@@ -1,0 +1,1114 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Enteecom | #1 Shopify Agency Kerala</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+            --electric-mint: #14FF82;
+            --dark-accent: #050d0b;
+            --card-bg: #1A1A1A;
+            --terminal-black: #000000;
+            --grid-color: rgba(20, 255, 130, 0.03);
+            --white-heading: #FFFFFF;
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: var(--terminal-black);
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--electric-mint);
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(
+                600px circle at var(--mouse-x) var(--mouse-y),
+                rgba(20, 255, 130, 0.12),
+                transparent 80%
+            );
+        }
+        .text-mint { color: var(--electric-mint); }
+        .text-heading { color: var(--white-heading); }
+        .border-mint { border-color: var(--electric-mint); }
+        .bg-terminal { background-color: var(--terminal-black); }
+        .bg-card { background-color: var(--card-bg); }
+        .cursor-blink {
+            display: inline-block;
+            width: 8px;
+            height: 1.2em;
+            background-color: var(--electric-mint);
+            margin-left: 4px;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .terminal-window {
+            border: 1px solid var(--electric-mint);
+            background: var(--card-bg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 5;
+        }
+        .terminal-header {
+            background: var(--dark-accent);
+            color: var(--electric-mint);
+            padding: 4px 12px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--electric-mint);
+        }
+        .code-card {
+            border: 1px solid rgba(20, 255, 130, 0.2);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+            position: relative;
+            z-index: 5;
+        }
+        .code-card:hover {
+            border-color: var(--electric-mint);
+            box-shadow: 0 0 20px rgba(20, 255, 130, 0.1);
+            transform: translateY(-2px);
+        }
+        .btn-terminal {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--electric-mint);
+            color: var(--electric-mint);
+            transition: all 0.2s;
+            position: relative;
+            background: transparent;
+            z-index: 10;
+        }
+        .btn-terminal:hover {
+            background: var(--electric-mint);
+            color: var(--terminal-black);
+        }
+        .pseudo-code {
+            position: fixed;
+            font-size: 10px;
+            opacity: 0.15;
+            pointer-events: none;
+            white-space: pre;
+            z-index: 0;
+        }
+        ::selection {
+            background: var(--electric-mint);
+            color: var(--terminal-black);
+        }
+        header, main {
+            position: relative;
+            z-index: 5;
+        }
+        #mobile-menu-overlay {
+            display: none;
+        }
+        #mobile-menu-overlay.active {
+            display: flex;
+        }
+        .hamburger-line {
+            height: 2px;
+            width: 24px;
+            background-color: var(--electric-mint);
+            box-shadow: 0 0 8px var(--electric-mint);
+            margin: 4px 0;
+        }
+        footer {
+            background-color: #000000 !important;
+            background-image: none !important;
+            position: relative;
+            z-index: 50;
+        }
+        .recommended-glow {
+            box-shadow: 0 0 30px rgba(20, 255, 130, 0.2);
+            border: 2px solid var(--electric-mint) !important;
+        }
+        .badge-glow {
+            box-shadow: 0 0 15px var(--electric-mint);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .carousel-container {
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden"
+    onmousemove="document.documentElement.style.setProperty('--mouse-x', event.clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', event.clientY + 'px')"
+    ontouchmove="document.documentElement.style.setProperty('--mouse-x', event.touches[0].clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', event.touches[0].clientY + 'px')"
+    ontouchstart="document.documentElement.style.setProperty('--mouse-x', event.touches[0].clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', event.touches[0].clientY + 'px')">
+    <div class="pseudo-code top-20 left-10 text-mint">function initializeStore() {<br /> shopify.auth();<br />
+        theme.push();<br />}</div>
+    <div class="pseudo-code bottom-40 right-10 text-mint">while(active) {<br /> optimize(conversion);<br />
+        scale(growth);<br />}</div>
+    <header class="border-b border-mint/20 py-4 px-6 sticky top-0 bg-black/95 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a class="text-xl font-extrabold font-mono tracking-tighter" href="#hero">
+                    <span class="text-white">ente_</span><span class="text-mint">ecom</span>
+                </a>
+                <span class="cursor-blink"></span>
+            </div>
+            <nav class="hidden lg:flex gap-6 text-xs uppercase font-bold">
+                <a class="hover:text-white transition-colors text-mint" href="#about">&lt;About /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#services">&lt;Services /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#why-choose-us">&lt;Why /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#portfolio">&lt;Portfolio /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#pricing">&lt;Pricing /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#faq">&lt;FAQ /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#contact">&lt;Contact /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#academy"><span
+                        class="text-mint">&lt;</span><span class="text-white">ACADEMY</span> <span
+                        class="text-mint">/&gt;</span></a>
+            </nav>
+            <button class="lg:hidden flex flex-col justify-center items-end"
+                onclick="document.getElementById('mobile-menu-overlay').classList.add('active')">
+                <div class="hamburger-line w-8"></div>
+                <div class="hamburger-line w-6"></div>
+                <div class="hamburger-line w-8"></div>
+            </button>
+            <div class="hidden xl:block text-[10px] text-mint opacity-60 uppercase font-bold">System: v3.0.1_KERALA_NODE
+            </div>
+        </div>
+    </header>
+    <div class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[100] flex-col items-center justify-center p-6 text-center space-y-8"
+        id="mobile-menu-overlay">
+        <button class="absolute top-6 right-6 text-mint"
+            onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div class="text-xs text-mint mb-8 font-mono opacity-50 tracking-widest">// root@ente_ecom:~$ navigate --select
+        </div>
+        <nav class="flex flex-col gap-6 text-xl uppercase font-extrabold tracking-tighter">
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#about"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;About /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#services"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Services
+                /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#why-choose-us"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Why Choose Us
+                /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#portfolio"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Portfolio
+                /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#pricing"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Pricing
+                /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#faq"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;FAQ /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#contact"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Contact
+                /&gt;</a>
+            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#academy"
+                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;ACADEMY
+                /&gt;</a>
+        </nav>
+    </div>
+    <main>
+        <section class="min-h-screen flex flex-col justify-center px-6 relative" id="hero">
+            <div class="max-w-4xl mx-auto w-full space-y-10">
+                <div class="space-y-6">
+                    <div class="text-mint text-sm font-bold tracking-wider">$ status: Official Shopify Partner</div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-heading">
+                        We Build <span
+                            class="text-mint underline decoration-2 underline-offset-8">High-Converting</span> Shopify
+                        Stores.
+                    </h1>
+                    <div class="space-y-2">
+                        <p class="text-lg md:text-xl text-slate-400 font-mono">// Custom Store Setup, Theme
+                            Customization &amp; Ecommerce Growth</p>
+                        <p class="text-sm md:text-base text-mint/80 font-mono">// 20+ Stores Launched | ₹2Cr+ Revenue
+                            Generated</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-6">
+                    <a class="btn-terminal text-lg font-bold" href="#contact">[ Get a Quote ]</a>
+                    <a class="btn-terminal text-lg font-bold" href="tel:+917892393901">[ Call Now ]</a>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="about">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <h2 class="text-5xl font-bold text-heading text-center lg:text-left">About<span
+                            class="text-mint">()</span></h2>
+                    <div class="text-slate-400 leading-relaxed text-lg">
+                        <p class="mb-6 text-mint opacity-80 font-bold text-xl">// We are the technical backbone for
+                            elite ecommerce brands.</p>
+                        <p class="mb-6">Based in Kerala, we specialize in high-stakes Shopify development. We don't just
+                            "install themes"—we architect conversion machines that handle millions in revenue with
+                            precision engineering and localized expertise.</p>
+                    </div>
+                    <div class="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-8 border border-mint/20 bg-card">
+                            <div class="text-mint font-bold mb-2 text-4xl">20+</div>
+                            <div class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Elite Stores
+                                Deployed</div>
+                        </div>
+                        <div class="p-8 border border-mint/20 bg-card">
+                            <div class="text-mint font-bold mb-2 text-4xl">₹2Cr+</div>
+                            <div class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Revenue Powered
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="services">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 text-center">
+                    <h2 class="text-5xl font-extrabold mb-4 text-heading">Services<span class="text-mint">()</span></h2>
+                    <h3 class="text-xl text-mint mb-4 uppercase tracking-tighter font-bold">Solutions for Scale</h3>
+                    <div class="text-mint opacity-60 font-bold tracking-widest uppercase text-xs">// Pricing.matrix_v2
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">01_setup</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Shopify Store Setup
+                            </h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹6,999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 5–7 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">02_custom</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Custom Theme Dev</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹18,999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 10–20 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">03_redesign</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Store Redesign</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹12,999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 7–14 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">04_debug</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Bug Fixing</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 1–2 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">05_api</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">App Integration</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹1,499</span>
+                                <span class="text-[11px] text-white/70">Timeline: 1–3 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">06_perf</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Speed Optimization</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹3,999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 2–4 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">07_migration</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Migration to Shopify
+                            </h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹14,999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 7–15 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
+                        <div>
+                            <div class="text-xs text-mint/50 font-mono mb-2">08_dropship</div>
+                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Dropshipping Setup</h4>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-[11px] text-mint">Starting: ₹9,999</span>
+                                <span class="text-[11px] text-white/70">Timeline: 5–10 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="why-choose-us">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-4xl font-bold text-heading">WhyChooseUs<span class="text-mint">()</span></h2>
+                    <p class="text-xs text-mint mt-2 opacity-60 uppercase font-bold tracking-widest">// Evaluation.logic
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="space-y-4">
+                        <div class="text-mint font-bold text-lg">// Performance Driven</div>
+                        <div class="p-6 border-l-2 border-mint bg-card/40 hover:bg-card transition-colors">
+                            <p class="text-slate-400 text-sm leading-relaxed">Optimizing for Core Web Vitals to ensure
+                                sub-second load times and maximum SEO juice.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-mint font-bold text-lg">// Shopify Native</div>
+                        <div class="p-6 border-l-2 border-mint bg-card/40 hover:bg-card transition-colors">
+                            <p class="text-slate-400 text-sm leading-relaxed">Mastering Liquid and Hydrogen. We don't
+                                use bloated page builders; we code directly on Shopify.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="text-mint font-bold text-lg">// Clean Code</div>
+                        <div class="p-6 border-l-2 border-mint bg-card/40 hover:bg-card transition-colors">
+                            <p class="text-slate-400 text-sm leading-relaxed">Maintainable, scalable, and documented
+                                code architecture that grows with your business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="portfolio">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-end mb-16">
+                    <h2 class="text-4xl font-bold text-heading">Portfolio<span class="text-mint">[]</span></h2>
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="text-mint border border-mint/30 p-2 hover:bg-mint hover:text-black transition-all"
+                            onclick="document.getElementById('portfolio-carousel').scrollBy({left: -400, behavior: 'smooth'})">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                        </button>
+                        <button
+                            class="text-mint border border-mint/30 p-2 hover:bg-mint hover:text-black transition-all"
+                            onclick="document.getElementById('portfolio-carousel').scrollBy({left: 400, behavior: 'smooth'})">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-8 overflow-x-auto no-scrollbar carousel-container pb-8" id="portfolio-carousel">
+                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
+                        <div
+                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
+                            <div class="terminal-header">Project.v1</div>
+                            <a href="https://nayura.in/" target="_blank">
+                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
+                                    <img alt="Nayura Wellness Ayurveda Store"
+                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                                        src="https://i.ibb.co/1fYW5gFx/nayura-landing.png" />
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
+                                        <div
+                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
+                                            Nayura Wellness
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-white font-mono text-sm">Ayurveda E-com</span>
+                                    <span
+                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// Natural healing products
+                                    &amp; wellness interface.</p>
+                                <div
+                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
+                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
+                                    <span class="text-white font-bold">Timeline: 14 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
+                        <div
+                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
+                            <div class="terminal-header">Project.v2</div>
+                            <a href="https://www.thankamsherbal.com/" target="_blank">
+                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
+                                    <img alt="Nayura Wellness Ayurveda Store"
+                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                                        src="https://i.ibb.co/Txxgcbzp/Screenshot-2026-02-23-183609.png" />
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
+                                        <div
+                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
+                                            Thankamsherbal
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-white font-mono text-sm">Thankamsherbal</span>
+                                    <span
+                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// Natural healing products
+                                    &amp; wellness interface.</p>
+                                <div
+                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
+                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
+                                    <span class="text-white font-bold">Timeline: 14 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
+                        <div
+                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
+                            <div class="terminal-header">Project.v3</div>
+                            <a href="https://kapdaclub.com/" target="_blank">
+                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
+                                    <img alt="Nayura Wellness Ayurveda Store"
+                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                                        src="https://i.ibb.co/Tq7GjyW2/Screenshot-2026-02-23-185133.png" />
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
+                                        <div
+                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
+                                            Kapdaclub.com
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-white font-mono text-sm">mens fashion</span>
+                                    <span
+                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// Clothing brand
+                                    &amp; fashion interface.</p>
+                                <div
+                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
+                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
+                                    <span class="text-white font-bold">Timeline: 20 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
+                        <div
+                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
+                            <div class="terminal-header">Project.v4</div>
+                            <a href="https://devamanthra.com/" target="_blank">
+                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
+                                    <img alt="Deva Manthra"
+                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                                        src="https://i.ibb.co/XnDt12R/Screenshot-2026-02-23-190040.png" />
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
+                                        <div
+                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
+                                            Deva Manthra
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-white font-mono text-sm">E-commerce</span>
+                                    <span
+                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// E-commerce website
+                                    &amp; devotional interface.</p>
+                                <div
+                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
+                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
+                                    <span class="text-white font-bold">Timeline: 14 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
+                        <div
+                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
+                            <div class="terminal-header">Project.v5</div>
+                            <a href="https://slimytea.com/" target="_blank">
+                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
+                                    <img alt="Deva Manthra"
+                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                                        src="https://i.ibb.co/MyCSNVch/Screenshot-2026-02-23-190418.png" />
+                                    <div
+                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
+                                        <div
+                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
+                                            slimytea
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-white font-mono text-sm">E-commerce</span>
+                                    <span
+                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
+                                </div>
+                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// E-commerce website
+                                    &amp; health interface.</p>
+                                <div
+                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
+                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
+                                    <span class="text-white font-bold">Timeline: 14 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 h-1 w-full bg-mint/10 relative">
+                    <div class="absolute top-0 left-0 h-full bg-mint w-1/4 animate-pulse"></div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="pricing">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 text-center">
+                    <h2 class="text-5xl font-extrabold mb-4 text-heading">Choose Your Growth Plan</h2>
+                    <div class="text-mint opacity-60 font-bold tracking-widest uppercase text-xs">//
+                        select.pricing_tier(level)</div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="terminal-window flex flex-col h-full rounded overflow-hidden">
+                        <div class="terminal-header">Starter.exe</div>
+                        <div class="p-8 bg-card flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-heading mb-2">Starter</h3>
+                            <div class="text-3xl font-bold text-mint mb-8">₹25,000</div>
+                            <div class="space-y-4 text-xs flex-grow mb-8 font-mono">
+                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Full Store
+                                        Setup</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Payment
+                                        Gateway</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Essential
+                                        Apps</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Mobile
+                                        Optimized</span></div>
+                            </div>
+                            <button class="btn-terminal text-center text-xs font-bold uppercase tracking-widest py-4">[
+                                Select ]</button>
+                        </div>
+                    </div>
+                    <div class="terminal-window recommended-glow flex flex-col h-full rounded overflow-hidden relative">
+                        <div
+                            class="absolute top-0 right-0 bg-[#14FF82] text-white text-[10px] font-bold px-4 py-1.5 uppercase z-10 badge-glow">
+                            RECOMMENDED</div>
+                        <div class="terminal-header !bg-[#14FF82] !text-white">Pro_Growth.exe</div>
+                        <div class="p-8 bg-card flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-heading mb-2">Professional</h3>
+                            <div class="text-3xl font-bold text-mint mb-8">₹35,000</div>
+                            <div class="space-y-4 text-xs flex-grow mb-8 font-mono">
+                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span>
+                                    <span>Everything in Starter</span>
+                                </div>
+                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span> <span>Advanced
+                                        CRO Suite</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span> <span>Deep
+                                        Analytics Dev</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span> <span>Marketing
+                                        Automations</span></div>
+                            </div>
+                            <button
+                                class="btn-terminal bg-[#14FF82] text-black text-center text-xs font-bold uppercase tracking-widest py-4 hover:opacity-90">[
+                                Select ]</button>
+                        </div>
+                    </div>
+                    <div class="terminal-window flex flex-col h-full rounded overflow-hidden">
+                        <div class="terminal-header">Enterprise.exe</div>
+                        <div class="p-8 bg-card flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-heading mb-2">Enterprise</h3>
+                            <div class="text-3xl font-bold text-mint mb-8">₹55,000</div>
+                            <div class="space-y-4 text-xs flex-grow mb-8 font-mono">
+                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>Headless
+                                        Commerce</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>PWA
+                                        Implementation</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>24/7 VIP
+                                        Maintenance</span></div>
+                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>Unlimited
+                                        Support</span></div>
+                            </div>
+                            <button class="btn-terminal text-center text-xs font-bold uppercase tracking-widest py-4">[
+                                Select ]</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="deliverables">
+            <div class="max-w-7xl mx-auto">
+                <div class="terminal-window border border-mint overflow-hidden">
+                    <div class="terminal-header">Deliverables_Manifest.txt</div>
+                    <div class="p-10 bg-[#1A1A1A]">
+                        <div class="mb-12">
+                            <h2 class="text-3xl font-bold text-heading font-mono mb-2">Scope of Work &amp; Deliverables
+                            </h2>
+                            <p class="text-mint text-sm font-mono opacity-80">// Transparent, structured deliverables
+                                for every build.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                            <div class="space-y-4">
+                                <h4
+                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
+                                    01. Design &amp; Core</h4>
+                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                                    <li class="flex gap-2"><span>[+]</span> <span>Theme installation &amp;
+                                            optimization</span></li>
+                                    <li class="flex gap-2"><span>[+]</span> <span>Mobile-responsive UI/UX
+                                            implementation</span></li>
+                                    <li class="flex gap-2"><span>[+]</span> <span>Multi-level Navigation &amp; Mega
+                                            Menus</span></li>
+                                    <li class="flex gap-2"><span>[+]</span> <span>Product catalog entry (Up to 30
+                                            products)</span></li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4
+                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
+                                    02. Payment &amp; Tech</h4>
+                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>Razorpay/Preferred Gateway
+                                            integration</span></li>
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>COD setup with OTP
+                                            verification</span></li>
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>SSL certificate activation</span>
+                                    </li>
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>Domain mapping &amp; DNS
+                                            configuration</span></li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4
+                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
+                                    03. Apps &amp; Automation</h4>
+                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                                    <li class="flex gap-2"><span>[+]</span> <span>Photo Reviews &amp; Social Proof
+                                            widgets</span></li>
+                                    <li class="flex gap-2"><span>[+]</span> <span>Abandoned cart recovery
+                                            automation</span></li>
+                                    <li class="flex gap-2"><span>[+]</span> <span>WhatsApp Chat &amp; Instagram Feed
+                                            integration</span></li>
+                                </ul>
+                            </div>
+                            <div class="space-y-4">
+                                <h4
+                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
+                                    04. Marketing &amp; SEO</h4>
+                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>GA4, GTM &amp; Search Console
+                                            setup</span></li>
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>Meta Pixel &amp; Conversions API
+                                            (CAPI)</span></li>
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>Google Merchant Center feed
+                                            linking</span></li>
+                                    <li class="flex gap-2"><span>-&gt;</span> <span>Basic On-page SEO &amp; Meta
+                                            tagging</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="built-for-growth">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-extrabold text-heading uppercase tracking-tighter">Built For Growth</h2>
+                    <p class="text-[10px] text-mint mt-2 font-bold tracking-[0.2em] opacity-60">//
+                        Scale.Ready_Deployment</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
+                        <div
+                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">verified</span>
+                        </div>
+                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">15-20 Days</div>
+                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Fast Turnaround</div>
+                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
+                    </div>
+                    <div
+                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
+                        <div
+                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">verified</span>
+                        </div>
+                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">Fixed ₹25k</div>
+                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Transparent Pricing</div>
+                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
+                    </div>
+                    <div
+                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
+                        <div
+                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">verified</span>
+                        </div>
+                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">1:1 Support</div>
+                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Expert Training</div>
+                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
+                    </div>
+                    <div
+                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
+                        <div
+                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
+                            <span class="material-symbols-outlined text-sm">verified</span>
+                        </div>
+                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">5 Revisions</div>
+                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Proven Quality</div>
+                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="faq">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-4xl font-bold text-heading font-mono uppercase tracking-tighter">FAQ<span
+                            class="text-mint">()</span></h2>
+                    <p class="text-[10px] text-mint mt-2 font-bold tracking-[0.2em] opacity-60">// Knowledge_Base.read()
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="terminal-window bg-card overflow-hidden">
+                        <details class="group">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
+                                <span class="text-white font-bold text-sm md:text-base pr-4">How long does a Shopify
+                                    store take to build?</span>
+                                <span
+                                    class="material-symbols-outlined text-mint toggle-icon transition-transform duration-300">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 pt-0 border-t border-mint/10">
+                                <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                                    A standard Shopify store takes <span class="text-mint">5–12 days</span>, depending
+                                    on the design and features required. For custom or advanced stores, it can take
+                                    <span class="text-mint">2–4 weeks</span>. We provide a clear timeline before
+                                    starting the project so you always know what to expect.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="terminal-window bg-card overflow-hidden">
+                        <details class="group">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
+                                <span class="text-white font-bold text-sm md:text-base pr-4">Do you offer
+                                    revisions?</span>
+                                <span
+                                    class="material-symbols-outlined text-mint toggle-icon transition-transform duration-300">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 pt-0 border-t border-mint/10">
+                                <p class="text-slate-400 text-sm leading-relaxed mt-4">
+                                    Yes! We offer <span class="text-mint">unlimited revisions</span> during the design
+                                    phase to ensure your store matches your vision. Development revisions are also
+                                    included for adjustments and fine-tuning until you’re fully satisfied.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="terminal-window bg-card overflow-hidden">
+                        <details class="group">
+                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
+                                <span class="text-white font-bold text-sm md:text-base pr-4">What support do you
+                                    provide?</span>
+                                <span
+                                    class="material-symbols-outlined text-mint toggle-icon transition-transform duration-300">expand_more</span>
+                            </summary>
+                            <div class="px-6 pb-6 pt-0 border-t border-mint/10">
+                                <div class="text-slate-400 text-sm leading-relaxed mt-4">
+                                    <p class="mb-2">We provide:</p>
+                                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-xs">
+                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span> 30
+                                            days free post-launch support</li>
+                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span>
+                                            Store maintenance</li>
+                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span> Bug
+                                            fixes</li>
+                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span> App
+                                            support</li>
+                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span>
+                                            Theme adjustments</li>
+                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span>
+                                            Performance tuning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="contact">
+            <div class="max-w-4xl mx-auto">
+                <div class="terminal-window rounded overflow-hidden">
+                    <div class="terminal-header">Comm_Link.exe</div>
+                    <div class="p-8 bg-card">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-6 text-heading">Contact<span
+                                        class="text-mint">()</span></h3>
+                                <p class="text-xs text-slate-400 leading-relaxed mb-8 italic">
+                                    // Send your project specs. Our engineers respond within 4 hours.
+                                </p>
+                                <div class="space-y-4 text-xs">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-mint text-sm">alternate_email</span>
+                                        <span class="text-slate-300">shopify@enteecom.in</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-mint text-sm">terminal</span>
+                                        <span class="text-slate-300">+91 7892393901 Akhil Anand</span>
+                                    </div>
+                                    <div class="pt-6">
+                                        <button
+                                            class="btn-terminal flex items-center gap-3 bg-[#25D366] text-black px-6 py-3 font-bold text-xs border-none hover:shadow-lg hover:brightness-110 transition-all">
+                                            <span class="material-symbols-outlined">chat</span>
+                                            OPEN_WHATSAPP_COMMS
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="space-y-4" onsubmit="return false">
+                                <div>
+                                    <label
+                                        class="block text-[10px] uppercase font-bold text-mint mb-1">brand_identity</label>
+                                    <input
+                                        class="w-full bg-black border border-mint/30 p-3 text-xs focus:border-mint focus:ring-0 outline-none text-mint transition-colors placeholder:text-slate-600"
+                                        placeholder="NAME" type="text" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-[10px] uppercase font-bold text-mint mb-1">contact_node</label>
+                                    <input
+                                        class="w-full bg-black border border-mint/30 p-3 text-xs focus:border-mint focus:ring-0 outline-none text-mint transition-colors placeholder:text-slate-600"
+                                        placeholder="EMAIL" type="email" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-[10px] uppercase font-bold text-mint mb-1">mission_params</label>
+                                    <textarea
+                                        class="w-full bg-black border border-mint/30 p-3 text-xs focus:border-mint focus:ring-0 outline-none text-mint transition-colors placeholder:text-slate-600"
+                                        placeholder="DESCRIBE YOUR PROJECT" rows="4"></textarea>
+                                </div>
+                                <button
+                                    class="w-full btn-terminal text-xs font-bold py-4 hover:bg-mint hover:text-black transition-all"
+                                    type="submit">[ SUBMIT_CONTACT ]</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 px-6" id="academy">
+            <div class="max-w-7xl mx-auto">
+                <div class="terminal-window border border-mint bg-card overflow-hidden">
+                    <div class="terminal-header">Academy_Enrollment_Portal.sh</div>
+                    <div class="p-10 md:p-16 flex flex-col md:flex-row gap-12 items-center">
+                        <div class="flex-1 space-y-8">
+                            <div class="space-y-4">
+                                <div class="text-mint font-bold text-sm tracking-[0.2em] uppercase">//
+                                    Incoming_Connection: Education_Stream</div>
+                                <h2 class="text-4xl md:text-5xl font-black text-heading leading-tight">Master Shopify
+                                    <br /><span class="text-mint">Development.</span>
+                                </h2>
+                                <p class="text-slate-400 font-mono leading-relaxed">
+                                    Join the elite circle of developers in Kerala. Learn the architecture behind
+                                    high-performance e-commerce engines directly from the ente_ecom engineering team.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+                                <div class="flex items-center gap-3 text-white/80">
+                                    <span class="material-symbols-outlined text-mint text-lg">code</span>
+                                    <span>Liquid Architecture</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/80">
+                                    <span class="material-symbols-outlined text-mint text-lg">conversion_path</span>
+                                    <span>CRO Frameworks</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/80">
+                                    <span class="material-symbols-outlined text-mint text-lg">hub</span>
+                                    <span>App Ecosystem</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-white/80">
+                                    <span class="material-symbols-outlined text-mint text-lg">rocket_launch</span>
+                                    <span>Scaling 101</span>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <a class="btn-terminal font-bold px-8 py-4" href="#contact">[
+                                    INITIALIZE_LEARNING_PROTOCOL ]</a>
+                            </div>
+                        </div>
+                        <div class="flex-1 w-full max-w-md">
+                            <div class="border border-mint/20 p-6 bg-black/40 relative">
+                                <div
+                                    class="absolute -top-3 -left-3 bg-mint text-black text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">
+                                    NEXT_BATCH: LIVE</div>
+                                <div class="space-y-6">
+                                    <div class="flex justify-between items-center border-b border-mint/10 pb-4">
+                                        <span
+                                            class="text-xs text-slate-500 uppercase font-bold tracking-widest">Enrollment
+                                            Status:</span>
+                                        <span
+                                            class="text-mint font-bold animate-pulse text-xs tracking-widest">ACTIVE</span>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="text-white text-sm font-mono flex justify-between">
+                                            <span>Duration:</span>
+                                            <span class="text-mint">6 Weeks</span>
+                                        </div>
+                                        <div class="text-white text-sm font-mono flex justify-between">
+                                            <span>Format:</span>
+                                            <span class="text-mint">Live Coding</span>
+                                        </div>
+                                        <div class="text-white text-sm font-mono flex justify-between">
+                                            <span>Capacity:</span>
+                                            <span class="text-mint">15 Slots Only</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="bg-mint/5 p-4 border border-mint/10 text-[11px] text-mint italic font-mono">
+                                        // 100% Placement assistance for top performers at ente_ecom or partner
+                                        agencies.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full px-6 py-20 border-t border-mint/10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="material-symbols-outlined text-mint">terminal</span>
+                    <span class="font-extrabold font-mono tracking-tighter">
+                        <span class="text-white">ente_</span><span class="text-mint">ecom</span>
+                    </span>
+                </div>
+                <div class="text-[10px] text-slate-600 font-mono tracking-widest uppercase">
+                    © 2026 ente_ecom kerala. status: scaling_active.
+                </div>
+            </div>
+            <div class="flex gap-12 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                <div class="flex flex-col gap-2">
+                    <span class="text-mint mb-1">// follow</span>
+                    <a class="hover:text-white transition-colors" href="#">Instagram</a>
+                    <a class="hover:text-white transition-colors" href="#">Facebook</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-mint mb-1">// contact</span>
+                    <a class="hover:text-white transition-colors" href="tel:+917892393901">call</a>
+                    <a class="hover:text-white transition-colors" href="https://wa.me/917892393901">whatsapp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
