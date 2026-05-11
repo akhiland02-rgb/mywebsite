@@ -1,901 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopify Course | Enteecom</title>
-  
-  <!-- Tailwind CSS via CDN -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enteecom Shopify Course</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Modern Font (Inter) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    body{
+      font-family:'Inter',sans-serif;
+      background:black;
+      overflow-x:hidden;
     }
   </style>
 </head>
-<body class="bg-black text-white overflow-x-hidden relative">
 
-  <!-- Animated Background -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-    <div class="absolute inset-0 opacity-[0.05] bg-zinc-900/20"></div>
+<body class="text-white">
 
-    <!-- Mouse Moving Fog Style Effects -->
-    <div class="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-lime-400/10 rounded-full blur-[120px] animate-pulse"></div>
-    <div class="absolute bottom-[15%] right-[10%] w-[350px] h-[350px] bg-green-400/10 rounded-full blur-[120px] animate-pulse"></div>
-    <div class="absolute top-[45%] left-[40%] w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] animate-pulse"></div>
+<!-- Background -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none">
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-3xl animate-pulse"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
+</div>
 
-    <div class="absolute inset-0 bg-gradient-to-br from-lime-500/5 to-green-500/5"></div>
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <div class="flex items-center gap-3">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg"
+        class="w-12 h-12 object-contain"
+      />
+
+      <div>
+        <h2 class="text-2xl font-black">
+          Entee<span class="text-lime-400">com</span>
+        </h2>
+
+        <p class="text-xs uppercase tracking-[3px] text-zinc-400">
+          Shopify Expert
+        </p>
+      </div>
+    </div>
+
+    <button class="bg-lime-400 hover:bg-lime-300 text-black font-black px-6 py-3 rounded-xl transition-all duration-300">
+      ENROLL NOW
+    </button>
+
   </div>
+</nav>
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center pt-32 pb-20 px-6">
 
-  <div class="relative z-10">
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-lime-400 to-green-500 flex items-center justify-center shadow-lg">
-            <span class="text-black text-2xl">🛍️</span>
-          </div>
-          <div>
-            <h2 class="text-2xl font-black tracking-tight">Entee<span class="text-lime-400">com</span></h2>
-            <p class="text-xs text-zinc-400 uppercase tracking-[3px]">Shopify Expert</p>
-          </div>
-        </div>
-        <button class="bg-lime-400 hover:bg-lime-300 text-black font-black px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 hidden sm:block">
-          ENROLL NOW
-        </button>
-        <button class="bg-lime-400 hover:bg-lime-300 text-black font-black px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105 sm:hidden text-sm">
-          ENROLL
-        </button>
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center w-full">
+
+    <!-- LEFT -->
+    <div>
+
+      <div class="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/20 text-lime-400 px-4 py-2 rounded-full text-xs font-black uppercase tracking-[2px] mb-6">
+        Shopify Expert Training
       </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 pt-24 pb-16">
-      <div class="absolute inset-0 bg-gradient-to-br from-lime-500/10 via-transparent to-green-500/10"></div>
-      
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10 w-full">
-        <!-- Video First on Mobile (Hidden on Desktop) -->
-        <div class="lg:hidden order-1 mt-8 w-full">
-          <div class="relative overflow-hidden rounded-[24px] border border-lime-400/20 bg-black/70 backdrop-blur-xl shadow-2xl">
-            <div class="aspect-video bg-zinc-900">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shopify Course Video Mobile" allowfullscreen></iframe>
-            </div>
-            <div class="p-5 border-t border-white/10 bg-black/80">
-              <div class="flex items-center justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-black uppercase">Shopify Masterclass</h3>
-                  <p class="mt-1 text-zinc-400 text-sm">30 Days Live Class</p>
-                </div>
-                <div class="bg-lime-400 text-black px-4 py-2 rounded-xl font-black text-lg">₹2999</div>
-              </div>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-[10px] font-semibold uppercase">Lifetime Support</div>
-                <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-[10px] font-semibold uppercase">Live Classes</div>
-                <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-[10px] font-semibold uppercase">Free Access to Shopify Community</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="flex items-center gap-4 mb-6">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg"
+          class="w-16 h-16 object-contain"
+        />
 
-        <!-- Left Content -->
-        <div class="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/20 text-lime-400 px-4 py-2 rounded-full text-xs font-black uppercase tracking-[2px] mb-6">
-            <span class="text-lg">🛍️</span> Shopify Expert Training
-          </div>
-
-          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" alt="Shopify Logo" class="w-full h-full object-contain drop-shadow-2xl">
-            </div>
-            <div class="text-left">
-              <div class="text-zinc-400 uppercase tracking-[4px] text-xs sm:text-sm font-bold">Powered By Shopify</div>
-              <div class="text-2xl sm:text-4xl font-black uppercase">Shopify Experts</div>
-            </div>
-          </div>
-
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black uppercase leading-[0.9] tracking-tight max-w-3xl">
-            Become A
-            <span class="block text-lime-400 mt-2">Shopify Expert</span>
-          </h1>
-
-          <div class="mt-6 space-y-3 text-base sm:text-xl lg:text-2xl font-bold uppercase text-zinc-300">
-            <div>Shopify Store Development</div>
-            <div class="text-lime-400">Custom Theme Development</div>
-            <div>Dropshipping • Meta Ads • Freelancing</div>
-          </div>
-
-          <p class="mt-6 text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl">
-            Learn Shopify development from beginner to advanced level with practical projects, custom themes, dropshipping systems, Meta ads, and freelancing guidance.
-          </p>
-
-          <div class="hidden lg:flex mt-7 flex-wrap gap-3">
-            <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold uppercase">Lifetime Support</div>
-            <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold uppercase">Live Classes</div>
-            <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold uppercase">Shopify Community</div>
-          </div>
-        </div>
-
-        <!-- Video (Desktop Version) -->
-        <div class="hidden lg:block order-2 relative mt-8 lg:mt-0">
-          <div class="absolute -inset-3 bg-lime-400/10 blur-3xl rounded-[35px]"></div>
-          <div class="relative overflow-hidden rounded-[30px] border border-lime-400/20 bg-black/70 backdrop-blur-xl shadow-2xl">
-            <div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-lime-400 text-black px-4 py-2 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider">
-              <span class="text-base">🛍️</span> Shopify Course Preview
-            </div>
-            <div class="aspect-video bg-zinc-900">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shopify Course Video" allowfullscreen></iframe>
-            </div>
-            <div class="p-5 sm:p-7 bg-black/80 border-t border-white/10">
-              <div class="flex items-center justify-between gap-4">
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-black uppercase">Shopify Masterclass</h3>
-                  <p class="mt-2 text-zinc-400 text-sm sm:text-base">30 Days Live Practical Training</p>
-                </div>
-                <div class="bg-lime-400 text-black px-5 py-3 rounded-2xl font-black text-lg sm:text-2xl">₹2999</div>
-              </div>
-              <button class="mt-6 w-full bg-lime-400 hover:bg-lime-300 text-black py-4 rounded-2xl text-base sm:text-lg font-black uppercase transition-all duration-300 hover:scale-[1.01]">
-                Start Learning Today
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Scroll Animation Section / What You Will Learn -->
-    <section class="py-24 px-6 bg-zinc-950">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-6xl font-black uppercase">What You Will <span class="text-lime-400">Learn</span></h2>
-          <p class="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg">
-            Practical training designed for beginners and freelancers who want to build real Shopify stores and start earning online.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🛒</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Shopify Store Setup</h3>
-            <p class="text-zinc-400 leading-relaxed">Complete store creation from scratch with premium looking design.</p>
-          </div>
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📦</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Dropshipping Mastery</h3>
-            <p class="text-zinc-400 leading-relaxed">Find winning products, suppliers, and automate your business.</p>
-          </div>
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">💻</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Custom Theme Development</h3>
-            <p class="text-zinc-400 leading-relaxed">Learn Liquid coding, custom sections, snippets, and performance optimization.</p>
-          </div>
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📢</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Meta Ads Training</h3>
-            <p class="text-zinc-400 leading-relaxed">Run profitable Facebook & Instagram ads for Shopify stores.</p>
-          </div>
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📈</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Conversion Optimization</h3>
-            <p class="text-zinc-400 leading-relaxed">Increase sales with high-converting product pages and UX.</p>
-          </div>
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🔥</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Freelancing Guidance</h3>
-            <p class="text-zinc-400 leading-relaxed">Get clients and build your Shopify development career.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Shopify Notes Section -->
-    <section class="py-24 px-6 bg-black relative overflow-hidden border-t border-white/5">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-            Shopify Ecosystem
-          </div>
-          <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">Why <span class="text-lime-400">Shopify?</span></h2>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-6">
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">What Is Shopify?</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Shopify is one of the most popular eCommerce platforms in the world used by millions of businesses and brands to create online stores with secure hosting and powerful tools.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">Shopify Theme Development</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Learn Shopify Liquid coding, custom sections, premium storefront design, animations, responsive layouts, and complete custom theme development workflows.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">Career & Earnings</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Shopify developers and freelancers are highly in demand globally. You can work with international clients, agencies, startups, and brands while building a strong freelancing career.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">Hosting & Store Management</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Shopify provides fast hosting, payment integrations, inventory management, analytics, shipping systems, and enterprise-grade infrastructure for online businesses.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Shopify Journey Section -->
-    <section class="py-20 px-4 sm:px-6 bg-zinc-950 relative overflow-hidden border-t border-white/5">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-14">
-          <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-4 py-2 rounded-full text-lime-400 text-xs font-bold uppercase tracking-wider mb-5">
-            Shopify Success Roadmap
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-black uppercase leading-tight max-w-4xl mx-auto">
-            Your Journey <span class="text-lime-400">From Beginner To Pro</span>
-          </h2>
-        </div>
-
-        <div class="relative">
-          <!-- Mobile + Desktop Connected Line -->
-          <div class="absolute left-[16px] sm:left-[16px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-lime-400/10 via-lime-400/60 to-lime-400/10"></div>
-
-          <div class="space-y-8 sm:space-y-10">
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 1</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Understanding Shopify</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Learn Shopify dashboard, products, collections, apps, and store setup.</p>
-              </div>
-            </div>
-
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 2</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Store Design & UI</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Create premium Shopify storefronts with responsive layouts.</p>
-              </div>
-            </div>
-
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 3</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Custom Theme Development</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Master Shopify Liquid coding, sections, snippets, and advanced customization.</p>
-              </div>
-            </div>
-
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 4</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Dropshipping Workflow</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Learn supplier systems, product research, and automation workflows.</p>
-              </div>
-            </div>
-
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 5</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Meta Ads & Scaling</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Run Facebook & Instagram ads and scale Shopify stores professionally.</p>
-              </div>
-            </div>
-
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 6</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Freelancing & Clients</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Get Shopify clients, build your portfolio, and grow your career.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Real Projects Section -->
-    <section class="py-24 px-6 bg-black border-t border-white/5 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-            Real Shopify Projects
-          </div>
-          <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">
-            Projects You <span class="text-lime-400">Will Build</span>
-          </h2>
-          <p class="mt-6 text-zinc-400 max-w-3xl mx-auto text-lg leading-relaxed">
-            Build real-world Shopify projects during the course and gain practical experience in store development and custom themes.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Fashion Brand Store</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Create a premium clothing brand Shopify store with modern UI and mobile optimization.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Custom Product Page</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Build high-converting product pages with custom layouts, sections, and animations.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Dropshipping Store</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Launch a complete dropshipping store with winning product workflows and supplier systems.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Animated Landing Pages</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Create premium Shopify landing pages with smooth scroll effects and conversion-focused design.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Custom Theme Sections</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Develop reusable Shopify Liquid sections, snippets, sliders, and advanced storefront features.</p>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Freelance Client Projects</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Learn how to structure and deliver Shopify projects professionally for real clients.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="py-24 px-6 bg-zinc-950 relative overflow-hidden border-t border-white/5">
-      <div class="max-w-5xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-          Course Pricing
-        </div>
-        <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">
-          Start Your <span class="text-lime-400">Shopify Career</span>
-        </h2>
-        <p class="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">
-          Join live practical training designed for beginners, freelancers, and future Shopify developers.
-        </p>
-
-        <div class="mt-14 bg-white/5 border border-white/10 rounded-[40px] p-8 sm:p-12 backdrop-blur-xl">
-          <div class="text-6xl sm:text-8xl font-black text-lime-400">₹2999</div>
-
-          <div class="mt-8 grid sm:grid-cols-2 gap-5 text-left">
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">30 Days Live Classes</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Lifetime Recording Access</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Custom Theme Development</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Real Shopify Projects</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Meta Ads Training</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Private Shopify Community</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Freelancing Guidance</span>
-            </div>
-            <div class="flex items
-
-[ignoring loop detection]
-
-Here is the complete, converted HTML code. I've replaced all React-specific syntax (`className`, JSX map functions, JSX comments) with standard HTML structures, added the Tailwind CSS CDN for styling, and ensured it remains fully mobile-responsive using Tailwind's `sm:`, `md:`, and `lg:` utility classes.
-
-You can save this as an `index.html` file and open it directly in your browser.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopify Course | Enteecom</title>
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Modern Font (Inter) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
-</head>
-<body class="bg-black text-white overflow-x-hidden relative min-h-screen">
-
-  <!-- Animated Background -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-    <div class="absolute inset-0 opacity-[0.05] bg-zinc-900/20"></div>
-
-    <!-- Mouse Moving Fog Style Effects -->
-    <div class="absolute top-[10%] left-[5%] w-[400px] h-[400px] bg-lime-400/10 rounded-full blur-[120px] animate-pulse"></div>
-    <div class="absolute bottom-[15%] right-[10%] w-[350px] h-[350px] bg-green-400/10 rounded-full blur-[120px] animate-pulse"></div>
-    <div class="absolute top-[45%] left-[40%] w-[300px] h-[300px] bg-white/5 rounded-full blur-[100px] animate-pulse"></div>
-
-    <div class="absolute inset-0 bg-gradient-to-br from-lime-500/5 to-green-500/5"></div>
-  </div>
-
-  <div class="relative z-10">
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-lime-400 to-green-500 flex items-center justify-center shadow-lg">
-            <span class="text-black text-2xl">🛍️</span>
-          </div>
-          <div>
-            <h2 class="text-2xl font-black tracking-tight">Entee<span class="text-lime-400">com</span></h2>
-            <p class="text-xs text-zinc-400 uppercase tracking-[3px]">Shopify Expert</p>
-          </div>
-        </div>
-        <!-- Desktop Enroll -->
-        <button class="bg-lime-400 hover:bg-lime-300 text-black font-black px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 hidden sm:block">
-          ENROLL NOW
-        </button>
-        <!-- Mobile Enroll -->
-        <button class="bg-lime-400 hover:bg-lime-300 text-black font-black px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105 sm:hidden text-sm">
-          ENROLL
-        </button>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 pt-24 pb-16">
-      <div class="absolute inset-0 bg-gradient-to-br from-lime-500/10 via-transparent to-green-500/10"></div>
-      
-      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10 w-full">
-        <!-- Video First on Mobile (Hidden on Desktop) -->
-        <div class="lg:hidden order-1 mt-8 w-full">
-          <div class="relative overflow-hidden rounded-[24px] border border-lime-400/20 bg-black/70 backdrop-blur-xl shadow-2xl">
-            <div class="aspect-video bg-zinc-900">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shopify Course Video Mobile" allowfullscreen></iframe>
-            </div>
-            <div class="p-5 border-t border-white/10 bg-black/80">
-              <div class="flex items-center justify-between gap-3">
-                <div>
-                  <h3 class="text-xl font-black uppercase">Shopify Masterclass</h3>
-                  <p class="mt-1 text-zinc-400 text-sm">30 Days Live Class</p>
-                </div>
-                <div class="bg-lime-400 text-black px-4 py-2 rounded-xl font-black text-lg">₹2999</div>
-              </div>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-[10px] font-semibold uppercase">Lifetime Support</div>
-                <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-[10px] font-semibold uppercase">Live Classes</div>
-                <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-[10px] font-semibold uppercase">Free Access to Shopify Community</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Left Content -->
-        <div class="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/20 text-lime-400 px-4 py-2 rounded-full text-xs font-black uppercase tracking-[2px] mb-6">
-            <span class="text-lg">🛍️</span> Shopify Expert Training
-          </div>
-
-          <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
-            <div class="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg" alt="Shopify Logo" class="w-full h-full object-contain drop-shadow-2xl">
-            </div>
-            <div class="text-left">
-              <div class="text-zinc-400 uppercase tracking-[4px] text-xs sm:text-sm font-bold">Powered By Shopify</div>
-              <div class="text-2xl sm:text-4xl font-black uppercase">Shopify Experts</div>
-            </div>
-          </div>
-
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black uppercase leading-[0.9] tracking-tight max-w-3xl">
-            Become A
-            <span class="block text-lime-400 mt-2">Shopify Expert</span>
-          </h1>
-
-          <div class="mt-6 space-y-3 text-base sm:text-xl lg:text-2xl font-bold uppercase text-zinc-300">
-            <div>Shopify Store Development</div>
-            <div class="text-lime-400">Custom Theme Development</div>
-            <div>Dropshipping • Meta Ads • Freelancing</div>
-          </div>
-
-          <p class="mt-6 text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl">
-            Learn Shopify development from beginner to advanced level with practical projects, custom themes, dropshipping systems, Meta ads, and freelancing guidance.
-          </p>
-
-          <div class="hidden lg:flex mt-7 flex-wrap gap-3">
-            <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold uppercase">Lifetime Support</div>
-            <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold uppercase">Live Classes</div>
-            <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-xs sm:text-sm font-semibold uppercase">Shopify Community</div>
-          </div>
-        </div>
-
-        <!-- Video (Desktop Version) -->
-        <div class="hidden lg:block order-2 relative mt-8 lg:mt-0">
-          <div class="absolute -inset-3 bg-lime-400/10 blur-3xl rounded-[35px]"></div>
-          <div class="relative overflow-hidden rounded-[30px] border border-lime-400/20 bg-black/70 backdrop-blur-xl shadow-2xl">
-            <div class="absolute top-4 left-4 z-20 flex items-center gap-2 bg-lime-400 text-black px-4 py-2 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider">
-              <span class="text-base">🛍️</span> Shopify Course Preview
-            </div>
-            <div class="aspect-video bg-zinc-900">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Shopify Course Video" allowfullscreen></iframe>
-            </div>
-            <div class="p-5 sm:p-7 bg-black/80 border-t border-white/10">
-              <div class="flex items-center justify-between gap-4">
-                <div>
-                  <h3 class="text-2xl sm:text-3xl font-black uppercase">Shopify Masterclass</h3>
-                  <p class="mt-2 text-zinc-400 text-sm sm:text-base">30 Days Live Practical Training</p>
-                </div>
-                <div class="bg-lime-400 text-black px-5 py-3 rounded-2xl font-black text-lg sm:text-2xl">₹2999</div>
-              </div>
-              <button class="mt-6 w-full bg-lime-400 hover:bg-lime-300 text-black py-4 rounded-2xl text-base sm:text-lg font-black uppercase transition-all duration-300 hover:scale-[1.01]">
-                Start Learning Today
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Scroll Animation Section / What You Will Learn -->
-    <section class="py-24 px-6 bg-zinc-950">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-6xl font-black uppercase">What You Will <span class="text-lime-400">Learn</span></h2>
-          <p class="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg">
-            Practical training designed for beginners and freelancers who want to build real Shopify stores and start earning online.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <!-- Item 1 -->
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🛒</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Shopify Store Setup</h3>
-            <p class="text-zinc-400 leading-relaxed">Complete store creation from scratch with premium looking design.</p>
-          </div>
-          <!-- Item 2 -->
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📦</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Dropshipping Mastery</h3>
-            <p class="text-zinc-400 leading-relaxed">Find winning products, suppliers, and automate your business.</p>
-          </div>
-          <!-- Item 3 -->
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">💻</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Custom Theme Development</h3>
-            <p class="text-zinc-400 leading-relaxed">Learn Liquid coding, custom sections, snippets, and performance optimization.</p>
-          </div>
-          <!-- Item 4 -->
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📢</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Meta Ads Training</h3>
-            <p class="text-zinc-400 leading-relaxed">Run profitable Facebook & Instagram ads for Shopify stores.</p>
-          </div>
-          <!-- Item 5 -->
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">📈</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Conversion Optimization</h3>
-            <p class="text-zinc-400 leading-relaxed">Increase sales with high-converting product pages and UX.</p>
-          </div>
-          <!-- Item 6 -->
-          <div class="group bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/50 transition-all duration-500 hover:-translate-y-5 hover:bg-lime-400/5 hover:shadow-xl">
-            <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🔥</div>
-            <h3 class="text-2xl font-black uppercase mb-4">Freelancing Guidance</h3>
-            <p class="text-zinc-400 leading-relaxed">Get clients and build your Shopify development career.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Shopify Notes Section -->
-    <section class="py-24 px-6 bg-black relative overflow-hidden border-t border-white/5">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-            Shopify Ecosystem
-          </div>
-          <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">Why <span class="text-lime-400">Shopify?</span></h2>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-6">
-          <!-- Note 1 -->
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">What Is Shopify?</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Shopify is one of the most popular eCommerce platforms in the world used by millions of businesses and brands to create online stores with secure hosting and powerful tools.</p>
-          </div>
-          <!-- Note 2 -->
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">Shopify Theme Development</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Learn Shopify Liquid coding, custom sections, premium storefront design, animations, responsive layouts, and complete custom theme development workflows.</p>
-          </div>
-          <!-- Note 3 -->
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">Career & Earnings</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Shopify developers and freelancers are highly in demand globally. You can work with international clients, agencies, startups, and brands while building a strong freelancing career.</p>
-          </div>
-          <!-- Note 4 -->
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-2">
-            <h3 class="text-2xl font-black uppercase text-lime-400 mb-4">Hosting & Store Management</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Shopify provides fast hosting, payment integrations, inventory management, analytics, shipping systems, and enterprise-grade infrastructure for online businesses.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Shopify Journey Section -->
-    <section class="py-20 px-4 sm:px-6 bg-zinc-950 relative overflow-hidden border-t border-white/5">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-14">
-          <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-4 py-2 rounded-full text-lime-400 text-xs font-bold uppercase tracking-wider mb-5">
-            Shopify Success Roadmap
-          </div>
-          <h2 class="text-3xl sm:text-5xl font-black uppercase leading-tight max-w-4xl mx-auto">
-            Your Journey <span class="text-lime-400">From Beginner To Pro</span>
-          </h2>
-        </div>
-
-        <div class="relative">
-          <!-- Mobile + Desktop Connected Line -->
-          <div class="absolute left-[16px] sm:left-[16px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-lime-400/10 via-lime-400/60 to-lime-400/10"></div>
-
-          <div class="space-y-8 sm:space-y-10">
-            <!-- Journey Step 1 -->
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2" style="transition-delay: 0ms;">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 1</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Understanding Shopify</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Learn Shopify dashboard, products, collections, apps, and store setup.</p>
-              </div>
-            </div>
-
-            <!-- Journey Step 2 -->
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2" style="transition-delay: 120ms;">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 2</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Store Design & UI</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Create premium Shopify storefronts with responsive layouts.</p>
-              </div>
-            </div>
-
-            <!-- Journey Step 3 -->
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2" style="transition-delay: 240ms;">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 3</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Custom Theme Development</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Master Shopify Liquid coding, sections, snippets, and advanced customization.</p>
-              </div>
-            </div>
-
-            <!-- Journey Step 4 -->
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2" style="transition-delay: 360ms;">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 4</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Dropshipping Workflow</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Learn supplier systems, product research, and automation workflows.</p>
-              </div>
-            </div>
-
-            <!-- Journey Step 5 -->
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2" style="transition-delay: 480ms;">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 5</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Meta Ads & Scaling</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Run Facebook & Instagram ads and scale Shopify stores professionally.</p>
-              </div>
-            </div>
-
-            <!-- Journey Step 6 -->
-            <div class="relative flex items-start gap-4 sm:gap-5 group transition-all duration-500 hover:translate-x-2" style="transition-delay: 600ms;">
-              <div class="relative z-10 min-w-[34px] h-[34px] rounded-full bg-lime-400 shadow-lg flex items-center justify-center text-black font-black text-xs animate-pulse mt-3">➜</div>
-              <div class="flex-1 bg-white/5 border border-white/10 rounded-[24px] p-5 sm:p-6 backdrop-blur-xl hover:border-lime-400/30 transition-all duration-300 hover:-translate-y-1">
-                <div class="text-lime-400 text-xs font-black uppercase tracking-wider mb-2">Step 6</div>
-                <h3 class="text-lg sm:text-2xl font-black uppercase leading-tight">Freelancing & Clients</h3>
-                <p class="mt-3 text-zinc-400 leading-relaxed text-xs sm:text-sm max-w-2xl">Get Shopify clients, build your portfolio, and grow your career.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Real Projects Section -->
-    <section class="py-24 px-6 bg-black border-t border-white/5 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-            Real Shopify Projects
-          </div>
-          <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">
-            Projects You <span class="text-lime-400">Will Build</span>
-          </h2>
-          <p class="mt-6 text-zinc-400 max-w-3xl mx-auto text-lg leading-relaxed">
-            Build real-world Shopify projects during the course and gain practical experience in store development and custom themes.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Project 1 -->
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Fashion Brand Store</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Create a premium clothing brand Shopify store with modern UI and mobile optimization.</p>
-          </div>
-          <!-- Project 2 -->
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Custom Product Page</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Build high-converting product pages with custom layouts, sections, and animations.</p>
-          </div>
-          <!-- Project 3 -->
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Dropshipping Store</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Launch a complete dropshipping store with winning product workflows and supplier systems.</p>
-          </div>
-          <!-- Project 4 -->
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Animated Landing Pages</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Create premium Shopify landing pages with smooth scroll effects and conversion-focused design.</p>
-          </div>
-          <!-- Project 5 -->
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Custom Theme Sections</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Develop reusable Shopify Liquid sections, snippets, sliders, and advanced storefront features.</p>
-          </div>
-          <!-- Project 6 -->
-          <div class="bg-white/5 border border-white/10 rounded-[28px] p-7 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-2">
-            <div class="w-14 h-14 rounded-2xl bg-lime-400 text-black flex items-center justify-center text-2xl font-black mb-6">✦</div>
-            <h3 class="text-2xl font-black uppercase leading-tight mb-4">Freelance Client Projects</h3>
-            <p class="text-zinc-400 leading-relaxed text-sm sm:text-base">Learn how to structure and deliver Shopify projects professionally for real clients.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="py-24 px-6 bg-zinc-950 relative overflow-hidden border-t border-white/5">
-      <div class="max-w-5xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-          Course Pricing
-        </div>
-        <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">
-          Start Your <span class="text-lime-400">Shopify Career</span>
-        </h2>
-        <p class="mt-6 text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">
-          Join live practical training designed for beginners, freelancers, and future Shopify developers.
-        </p>
-
-        <div class="mt-14 bg-white/5 border border-white/10 rounded-[40px] p-8 sm:p-12 backdrop-blur-xl">
-          <div class="text-6xl sm:text-8xl font-black text-lime-400">₹2999</div>
-
-          <div class="mt-8 grid sm:grid-cols-2 gap-5 text-left">
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">30 Days Live Classes</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Lifetime Recording Access</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Custom Theme Development</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Real Shopify Projects</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Meta Ads Training</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Private Shopify Community</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Freelancing Guidance</span>
-            </div>
-            <div class="flex items-center gap-3 bg-black/40 border border-white/10 rounded-2xl p-4">
-              <div class="w-10 h-10 rounded-full bg-lime-400 text-black flex items-center justify-center font-black">✓</div>
-              <span class="font-semibold text-sm sm:text-base">Lifetime Support</span>
-            </div>
-          </div>
-
-          <button class="mt-10 bg-lime-400 hover:bg-lime-300 text-black px-10 py-5 rounded-2xl text-lg font-black uppercase transition-all duration-300 hover:scale-105 shadow-xl">
-            Enroll Now
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Community Section -->
-    <section class="py-24 px-6 bg-zinc-950 border-t border-white/10">
-      <div class="max-w-6xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/30 px-5 py-2 rounded-full text-lime-400 font-semibold uppercase tracking-wider mb-6">
-          Shopify Dev Community
-        </div>
-        <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight">
-          Join Our <span class="text-lime-400">Private Community</span>
-        </h2>
-        <p class="mt-6 text-zinc-400 text-lg max-w-3xl mx-auto leading-relaxed">
-          Connect with Shopify developers, freelancers, store owners, and dropshipping experts. Get lifetime support, project guidance, updates, networking opportunities, and real-world Shopify development discussions.
-        </p>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-3">
-            <div class="text-5xl mb-5">💬</div>
-            <h3 class="text-xl font-black uppercase">Lifetime Support</h3>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-3">
-            <div class="text-5xl mb-5">🚀</div>
-            <h3 class="text-xl font-black uppercase">Shopify Dev Network</h3>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-3">
-            <div class="text-5xl mb-5">💼</div>
-            <h3 class="text-xl font-black uppercase">Client Guidance</h3>
-          </div>
-          <div class="bg-white/5 border border-white/10 rounded-[30px] p-8 hover:border-lime-400/40 transition-all duration-300 hover:-translate-y-3">
-            <div class="text-5xl mb-5">🔥</div>
-            <h3 class="text-xl font-black uppercase">Freelancing Help</h3>
-          </div>
-        </div>
-
-        <div class="mt-14 flex flex-wrap justify-center gap-4">
-          <a href="#" class="bg-lime-400 text-black font-black px-8 py-4 rounded-2xl hover:scale-105 transition-all duration-300">
-            JOIN COMMUNITY
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-14 px-6 bg-black border-t border-white/10">
-      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
         <div>
-          <h2 class="text-3xl font-black">
-            Entee<span class="text-lime-400">com</span>
-          </h2>
-          <p class="text-zinc-500 mt-2">
-            Shopify Development • Dropshipping • Custom Theme Development
-          </p>
-        </div>
+          <div class="text-zinc-400 uppercase tracking-[4px] text-xs font-bold">
+            Powered By Shopify
+          </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold uppercase">
-          <a href="#" class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 transition-all duration-300">Instagram</a>
-          <a href="#" class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 transition-all duration-300">YouTube</a>
-          <a href="#" class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 transition-all duration-300">WhatsApp</a>
-          <a href="#" class="px-5 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-lime-400 transition-all duration-300">Facebook</a>
+          <div class="text-3xl font-black uppercase">
+            Shopify Experts
+          </div>
         </div>
       </div>
-    </footer>
+
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black uppercase leading-[0.9]">
+        Become A
+        <span class="block text-lime-400 mt-2">
+          Shopify Expert
+        </span>
+      </h1>
+
+      <div class="mt-6 space-y-3 text-lg sm:text-xl lg:text-2xl font-bold uppercase text-zinc-300">
+        <div>Shopify Store Development</div>
+        <div class="text-lime-400">Custom Theme Development</div>
+        <div>Dropshipping • Meta Ads • Freelancing</div>
+      </div>
+
+      <p class="mt-6 text-zinc-400 leading-relaxed max-w-2xl">
+        Learn Shopify development from beginner to advanced level with practical projects, custom themes, dropshipping systems, Meta ads, and freelancing guidance.
+      </p>
+
+      <div class="hidden lg:flex mt-8 flex-wrap gap-3">
+        <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-sm font-semibold uppercase">
+          Lifetime Support
+        </div>
+
+        <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-sm font-semibold uppercase">
+          Live Classes
+        </div>
+
+        <div class="bg-white/5 border border-white/10 px-4 py-3 rounded-xl text-sm font-semibold uppercase">
+          Shopify Community
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+
+      <div class="overflow-hidden rounded-[30px] border border-lime-400/20 bg-black/70 backdrop-blur-xl">
+
+        <div class="aspect-video">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="p-6 border-t border-white/10 bg-black/80">
+
+          <div class="flex items-center justify-between gap-4">
+
+            <div>
+              <h3 class="text-3xl font-black uppercase">
+                Shopify Masterclass
+              </h3>
+
+              <p class="text-zinc-400 mt-2">
+                30 Days Live Practical Training
+              </p>
+            </div>
+
+            <div class="bg-lime-400 text-black px-5 py-3 rounded-2xl text-2xl font-black">
+              ₹2999
+            </div>
+
+          </div>
+
+          <button class="mt-6 w-full bg-lime-400 hover:bg-lime-300 text-black py-4 rounded-2xl text-lg font-black uppercase transition-all duration-300">
+            Start Learning Today
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
+</section>
 </body>
 </html>
-```
