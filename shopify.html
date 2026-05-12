@@ -82,55 +82,76 @@
   <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center w-full">
 
     <!-- VIDEO -->
-    <div class="order-1 lg:order-2">
+<!-- VIDEO -->
+<div class="order-2 lg:order-2 mt-8 lg:mt-0">
 
-      <div class="w-full overflow-hidden rounded-[28px] border border-lime-400/20 bg-black/70 backdrop-blur-xl shadow-2xl">
+  <div class="w-full max-w-[520px] mx-auto overflow-hidden rounded-[24px] border border-lime-400/20 bg-black/70 backdrop-blur-xl shadow-2xl">
 
-        <div class="aspect-video w-full">
+    <!-- VIDEO PLACEHOLDER -->
+    <div class="aspect-video w-full bg-gradient-to-br from-zinc-900 to-black flex items-center justify-center relative overflow-hidden">
 
-          <iframe
-            class="w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Shopify Course"
-            allowfullscreen>
-          </iframe>
+      <!-- Glow -->
+      <div class="absolute inset-0 bg-lime-400/5"></div>
+
+      <!-- Play -->
+      <div class="relative z-10 w-20 h-20 rounded-full bg-lime-400 flex items-center justify-center text-black text-3xl shadow-2xl">
+        ▶
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="p-4 sm:p-5 border-t border-white/10 bg-black/80">
+
+      <div class="flex items-center justify-between gap-3">
+
+        <div>
+
+          <h3 class="text-xl sm:text-3xl font-black uppercase leading-none">
+            Shopify
+            <span class="block">
+              Masterclass
+            </span>
+          </h3>
+
+          <p class="text-zinc-400 mt-2 text-xs sm:text-sm">
+            30 Days Live Practical Training
+          </p>
 
         </div>
 
-        <div class="p-5 sm:p-6 border-t border-white/10 bg-black/80">
-
-          <div class="flex items-center justify-between gap-4">
-
-            <div>
-
-              <h3 class="text-3xl sm:text-4xl font-black uppercase leading-none">
-                Shopify
-                <span class="block">
-                  Masterclass
-                </span>
-              </h3>
-
-              <p class="text-zinc-400 mt-3 text-sm sm:text-base">
-                30 Days Live Practical Training
-              </p>
-
-            </div>
-
-            <div class="bg-lime-400 text-black px-4 py-3 rounded-2xl text-2xl sm:text-3xl font-black whitespace-nowrap">
-              ₹2999
-            </div>
-
-          </div>
-
-          <button class="mt-6 w-full bg-lime-400 hover:bg-lime-300 text-black py-4 rounded-2xl text-base sm:text-lg font-black uppercase transition-all duration-300">
-            Start Learning Today
-          </button>
-
+        <div class="bg-lime-400 text-black px-3 py-2 rounded-xl text-lg sm:text-2xl font-black whitespace-nowrap">
+          ₹2999
         </div>
 
       </div>
 
+      <!-- MOBILE FEATURES -->
+      <div class="flex flex-wrap gap-2 mt-4 lg:hidden">
+
+        <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-xl text-[10px] font-semibold uppercase">
+          Lifetime Support
+        </div>
+
+        <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-xl text-[10px] font-semibold uppercase">
+          Live Classes
+        </div>
+
+        <div class="bg-white/5 border border-white/10 px-3 py-2 rounded-xl text-[10px] font-semibold uppercase">
+          Shopify Community
+        </div>
+
+      </div>
+
+      <button class="mt-5 w-full bg-lime-400 hover:bg-lime-300 text-black py-3 rounded-xl text-sm sm:text-base font-black uppercase transition-all duration-300">
+        Start Learning Today
+      </button>
+
     </div>
+
+  </div>
+
+</div>
 
     <!-- CONTENT -->
     <div class="order-2 lg:order-1">
