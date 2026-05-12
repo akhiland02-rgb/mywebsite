@@ -9,16 +9,17 @@
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <style type="text/tailwindcss">
-        :root {
-            --electric-mint: #14FF82;
-            --dark-accent: #050d0b;
-            --card-bg: #1A1A1A;
-            --terminal-black: #000000;
-            --grid-color: rgba(20, 255, 130, 0.03);
-            --white-heading: #FFFFFF;
-            --mouse-x: 50%;
-            --mouse-y: 50%;
-        }
+:root {
+    --electric-mint: #5BE584;
+    --dark-accent: #0B0F0D;
+    --card-bg: #101312;
+    --terminal-black: #050505;
+    --grid-color: rgba(91, 229, 132, 0.02);
+    --white-heading: #F8FAFC;
+    --soft-text: #A1A1AA;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+}
         html {
             scroll-behavior: smooth;
         }
@@ -35,18 +36,6 @@
             margin: 0;
             overflow-x: hidden;
         }
-        body::after {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            z-index: 2;
-            background-size: 100% 2px, 3px 100%;
-            pointer-events: none;
         }
         body::before {
             content: '';
@@ -59,7 +48,7 @@
             z-index: 1;
             background: radial-gradient(
                 600px circle at var(--mouse-x) var(--mouse-y),
-                rgba(20, 255, 130, 0.12),
+                rgba(91, 229, 132, 0.06),
                 transparent 80%
             );
         }
@@ -98,19 +87,22 @@
             align-items: center;
             border-bottom: 1px solid var(--electric-mint);
         }
-        .code-card {
-            border: 1px solid rgba(20, 255, 130, 0.2);
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            background: var(--card-bg);
-            position: relative;
-            z-index: 5;
-        }
-        .code-card:hover {
-            border-color: var(--electric-mint);
-            box-shadow: 0 0 20px rgba(20, 255, 130, 0.1);
-            transform: translateY(-2px);
-        }
+.code-card {
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    background: rgba(16,19,18,0.7);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    position: relative;
+    z-index: 5;
+}
+
+.code-card:hover {
+    border-color: rgba(91,229,132,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
         .btn-terminal {
             display: inline-block;
             padding: 0.5rem 1.5rem;
@@ -209,7 +201,7 @@
                 <span class="cursor-blink"></span>
             </div>
             <nav class="hidden lg:flex gap-6 text-xs uppercase font-bold">
-                <a class="hover:text-white transition-colors text-mint" href="#about">&lt;About /&gt;</a>
+                <a class="hover:text-white transition-colors text-mint" href="#about">About</a>
                 <a class="hover:text-white transition-colors text-mint" href="#services">&lt;Services /&gt;</a>
                 <a class="hover:text-white transition-colors text-mint" href="#why-choose-us">&lt;Why /&gt;</a>
                 <a class="hover:text-white transition-colors text-mint" href="#portfolio">&lt;Portfolio /&gt;</a>
@@ -1096,12 +1088,12 @@
             </div>
             <div class="flex gap-12 text-[10px] font-bold uppercase tracking-widest text-slate-500">
                 <div class="flex flex-col gap-2">
-                    <span class="text-mint mb-1">// follow</span>
+                    <span class="text-mint mb-1">Social</span>
                     <a class="hover:text-white transition-colors" href="#">Instagram</a>
                     <a class="hover:text-white transition-colors" href="#">Facebook</a>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <span class="text-mint mb-1">// contact</span>
+                    <span class="text-mint mb-1">Contact</span>
                     <a class="hover:text-white transition-colors" href="tel:+917892393901">call</a>
                     <a class="hover:text-white transition-colors" href="https://wa.me/917892393901">whatsapp</a>
                 </div>
