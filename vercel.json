@@ -1,8 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/shopify",
-      "destination": "/shopify.html"
-    }
-  ]
+  "cleanUrls": true
 }
