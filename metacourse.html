@@ -417,65 +417,61 @@
     </div>
   </section>
 
-  <!-- Section Divider -->
-<section id="enroll" class="py-20 px-6 relative z-10 bg-brand-dark/30 max-w-[1600px] mx-auto">
+  <!-- Section Divider --><section id="enroll" class="py-20 px-6 relative z-10 bg-brand-dark/30 max-w-[1600px] mx-auto">
     <div class="max-w-3xl mx-auto text-center">
       
       <div class="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 text-brand-blue px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-[3px] mb-6">
         Secure Instant Access
       </div>
-      <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-12">One-Time <span class="text-brand-blue">Investment</span></h2>
+
+      <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-12">
+        One-Time <span class="text-brand-blue">Investment</span>
+      </h2>
 
       <div class="bg-black border border-zinc-800 rounded-[32px] p-6 sm:p-10 shadow-2xl relative overflow-hidden text-left">
+        
         <!-- Glow -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] h-[350px] bg-brand-blue/10 blur-[80px] rounded-full pointer-events-none"></div>
 
-        <div class="flex flex-col sm:flex-row gap-4 mb-8 relative z-10">
-          
-          <!-- Option 1: Digital -->
-          <label class="flex-1 cursor-pointer">
-            <input type="radio" name="pricing" id="pricing-digital" class="peer hidden" checked="" onchange="updateCheckout('digital')">
-            <div class="border border-zinc-800 bg-zinc-900/50 peer-checked:border-brand-blue peer-checked:bg-brand-blue/5 rounded-2xl p-6 transition-all">
-              <h4 class="text-zinc-400 font-bold text-sm mb-1">Digital E-Book</h4>
-              <div class="text-3xl font-black text-white mb-2 flex items-baseline gap-1">
-                <span>₹299</span>
-                <span class="text-xs text-zinc-500 line-through font-normal">₹999</span>
-              </div>
-              <p class="text-[10px] font-bold text-brand-blue uppercase tracking-wider"><i class="fa-solid fa-bolt"></i> Instant Download • Malayalam &amp; English</p>
-            </div>
-          </label>
+        <!-- Digital Ebook -->
+        <div class="relative z-10 mb-8">
+          <div class="border border-brand-blue bg-brand-blue/5 rounded-2xl p-6 transition-all">
+            
+            <h4 class="text-zinc-400 font-bold text-sm mb-1">
+              Digital E-Book
+            </h4>
 
-          <!-- Option 2: Printed -->
-          <label class="flex-1 cursor-pointer">
-            <input type="radio" name="pricing" id="pricing-printed" class="peer hidden" onchange="updateCheckout('printed')">
-            <div class="border border-zinc-800 bg-zinc-900/50 peer-checked:border-brand-blue peer-checked:bg-brand-blue/5 rounded-2xl p-6 transition-all">
-              <div class="flex justify-between items-start">
-                <h4 class="text-zinc-400 font-bold text-sm mb-1">Printed Edition</h4>
-                <span class="bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider">Hot</span>
-              </div>
-              <div class="text-3xl font-black text-white mb-2 flex items-baseline gap-1">
-                <span>₹399</span>
-                <span class="text-xs text-zinc-500 line-through font-normal">₹1,499</span>
-              </div>
-              <p class="text-[10px] font-bold text-brand-cyan uppercase tracking-wider"><i class="fa-solid fa-truck"></i> Free Delivery in India • Malayalam &amp; English</p>
+            <div class="text-3xl font-black text-white mb-2 flex items-baseline gap-1">
+              <span>₹299</span>
+              <span class="text-xs text-zinc-500 line-through font-normal">₹999</span>
             </div>
-          </label>
 
+            <p class="text-[10px] font-bold text-brand-blue uppercase tracking-wider">
+              <i class="fa-solid fa-bolt"></i>
+              Instant Download • Malayalam &amp; English
+            </p>
+
+          </div>
         </div>
 
-        <!-- Checkout Buttons -->
+        <!-- Checkout Button -->
         <div class="space-y-4 relative z-10">
-          <a id="main-checkout-btn" href="https://u.payu.in/PAYUMN/KIFb8MGWkqJ1" target="_blank" class="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-black py-4 rounded-xl text-lg uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,102,254,0.3)]">
-            <i class="fa-solid fa-lock text-sm"></i> Get Digital E-Book (₹299)
+
+          <a id="main-checkout-btn"
+             href="https://u.payu.in/PAYUMN/KIFb8MGWkqJ1"
+             target="_blank"
+             class="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-black py-4 rounded-xl text-lg uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,102,254,0.3)]">
+            
+            <i class="fa-solid fa-lock text-sm"></i>
+            Get Digital E-Book (₹299)
+
           </a>
-          
-          <a href="https://u.payu.in/PAYUMN/hryp2U15EfMV" target="_blank" class="w-full bg-[#25D366] hover:bg-[#1ebf59] text-white font-black py-4 rounded-xl text-lg uppercase tracking-wider transition-all flex items-center justify-center gap-2">
-            <i class="fa-brands fa-whatsapp text-2xl"></i> Buy via WhatsApp
-          </a>
+
         </div>
 
         <p class="mt-6 text-center text-xs text-zinc-500 font-semibold relative z-10 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-shield-halved text-brand-blue text-sm"></i> 100% Encrypted Checkout • Lifetime Updates Included
+          <i class="fa-solid fa-shield-halved text-brand-blue text-sm"></i>
+          100% Encrypted Checkout • Lifetime Updates Included
         </p>
 
       </div>
