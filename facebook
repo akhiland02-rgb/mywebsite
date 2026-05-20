@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meta Ads Ebook | Enteecom</title>
+  <title>Meta Marketing E-Book | Akhil Anand</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0066fe',
+              cyan: '#00f2fe',
+              dark: '#03000a',
+              darkgray: '#0b0c10',
+              accent: '#0052cc',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: black;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      background-color: #03000a;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 102, 254, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.05) 0%, transparent 45%);
+      background-attachment: fixed;
+    }
+    
+    .book-container {
+      perspective: 1000px;
+    }
+    .book-mockup {
+        width: 100%;
+        max-width: 320px;
+        aspect-ratio: 0.7;
+        background: linear-gradient(135deg, #050b14, #0a192f);
+        border-radius: 4px 16px 16px 4px;
+        box-shadow: inset 6px 0 15px rgba(0,0,0,0.9), 20px 30px 50px rgba(0,0,0,0.9);
+        border-left: 12px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border-right: 1px solid rgba(255,255,255,0.05);
+        border-top: 1px solid rgba(255,255,255,0.05);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        transform: perspective(1000px) rotateY(-15deg);
+        transition: transform 0.5s ease;
+      width: 100%;
+      max-width: 290px;
+      aspect-ratio: 0.8;
+      background: #010205;
+      border-radius: 4px 16px 16px 4px;
+      box-shadow: 
+        inset 6px 0 15px rgba(255, 255, 255, 0.05),
+        25px 30px 60px rgba(0,0,0,0.9),
+        0px 0px 40px rgba(0, 102, 254, 0.2);
+      border-left: 14px solid #010205;
+      transform: rotateY(-18deg) rotateX(5deg);
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
+      animation: float 5s ease-in-out infinite;
+      position: relative;
+    }
+    .book-mockup:hover {
+        transform: perspective(1000px) rotateY(-5deg);
+      transform: rotateY(-5deg) rotateX(2deg) scale(1.03);
+      box-shadow: 
+        inset 6px 0 15px rgba(255, 255, 255, 0.08),
+        30px 35px 70px rgba(0,0,0,0.95),
+        0px 0px 65px rgba(0, 242, 254, 0.35);
+    }
+    @keyframes float {
+      0%, 100% { transform: rotateY(-18deg) rotateX(5deg) translateY(0px); }
+      50% { transform: rotateY(-18deg) rotateX(5deg) translateY(-12px); }
+    }
+    .text-glow {
+      text-shadow: 0 0 30px rgba(0, 102, 254, 0.5);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+<body class="text-white font-sans antialiased selection:bg-brand-blue selection:text-white overflow-x-hidden">
+<!-- Background Glows -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+  <div class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <i class="fa-solid fa-infinity text-blue-500 text-3xl"></i>
+      <div>
+        <h2 class="text-2xl font-black tracking-tight">Entee<span class="text-blue-500">com</span></h2>
+        <p class="text-[10px] uppercase tracking-[3px] text-zinc-400 font-bold mt-[-2px]">Meta Expert</p>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/70 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-[1600px] mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="relative flex items-center justify-center w-9 h-9 bg-brand-blue rounded-lg shadow-[0_0_15px_rgba(0,102,254,0.5)]">
+          <i class="fa-solid fa-infinity text-white text-lg"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-black tracking-tight leading-none">Entee<span class="text-brand-blue">com</span></h2>
+          <p class="text-[9px] uppercase tracking-[3px] text-zinc-400 font-bold mt-0.5">Meta Marketing</p>
+        </div>
+      </a>
+      
+      <!-- Navigation Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-400">
+        <a href="#journey" class="hover:text-white transition-colors">Chapter Outline</a>
+        <a href="#why-ebook" class="hover:text-white transition-colors">Why E-Book</a>
+        <a href="#earnings" class="hover:text-white transition-colors">What You Will Learn</a>
+        <a href="#about-author" class="hover:text-white transition-colors">About Author</a>
+      </div>
+    </a>
+    <a href="#enroll" class="bg-blue-500 hover:bg-blue-400 text-white font-black px-6 py-3 rounded-xl text-sm transition-all shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+      Get E-Book
+    </a>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-32 pb-20 px-5 overflow-hidden z-10">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+    
+    <!-- LEFT CONTENT -->
+    <div class="order-2 lg:order-1 flex flex-col items-start text-left">
+      <!-- TAG -->    
+      <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-[3px] mb-8">
+        <i class="fa-solid fa-bolt"></i> Latest 2024 Edition
+      </div>
+      <a href="https://wa.me/917892393901?text=i%20want%20this%20ebook" target="_blank" class="bg-brand-blue hover:bg-brand-blue/80 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(0,102,254,0.4)]">
+        Get E-Book
+      </a>
+    </div>
+  </nav>
+      <!-- MAIN HEADING -->
+      <h1 class="text-5xl sm:text-7xl lg:text-[85px] font-black uppercase leading-[0.9] tracking-[-3px]">
+        Master The
+        <span class="block text-blue-500 mt-2">Meta Algorithm</span>
+      </h1>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-28 pb-16 px-6 overflow-hidden z-10 max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+      
+      <!-- LEFT CONTENT (7 cols) -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left order-2 lg:order-1">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 text-brand-blue px-4 py-2 rounded-full text-xs font-black uppercase tracking-[3px] mb-6">
+          <i class="fa-solid fa-star text-[10px] animate-pulse"></i> 2026 Edition (Malayalam & English)
+        </div>
+      <!-- SUB -->
+      <p class="mt-8 text-lg sm:text-xl text-zinc-400 max-w-xl font-medium leading-relaxed">
+        The ultimate 300+ page digital marketing playbook. Learn basic to advance Meta Ads, Dropshipping automation, and how to scale to 7-figures.
+      </p>
+        <!-- Heading -->
+        <h1 class="text-4xl sm:text-6xl lg:text-[72px] font-black uppercase leading-[0.9] tracking-[-3px] text-glow">
+          Meta Marketing<br class="hidden sm:inline"/>
+          <span class="text-brand-blue bg-clip-text bg-gradient-to-r from-brand-blue to-brand-cyan text-transparent">Complete Guide</span>
+        </h1>
+      <!-- HIGHLIGHTS -->
+      <div class="flex flex-wrap gap-3 mt-8">
+        <div class="bg-zinc-900 border border-zinc-800 text-white px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2">
+          <i class="fa-solid fa-book-open text-blue-500"></i> 300+ Pages
+        <!-- Subheading -->
+        <p class="mt-6 text-base sm:text-lg text-zinc-400 max-w-xl font-medium leading-relaxed">
+          Grow your business with Facebook & Instagram Ads. Step-by-step guidebook written in a combined Malayalam & English format for easy understanding, packed with practical concepts, benchmarks, and configuration keys.
+        </p>
+        <!-- Highlights Row -->
+        <div class="flex flex-wrap gap-3 mt-8">
+          <div class="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2">
+            <i class="fa-solid fa-book-open text-brand-blue"></i> 48 High-Impact Pages
+          </div>
+          <div class="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2">
+            <i class="fa-solid fa-language text-brand-cyan"></i> Malayalam & English Combined
+          </div>
+          <div class="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-brand-blue"></i> Setup & Scaling Focus
+          </div>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 text-white px-4 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2">
+          <i class="fa-solid fa-headset text-blue-500"></i> Lifetime Support
+        <!-- Call to Actions -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <a href="#enroll" class="bg-brand-blue hover:bg-brand-blue/90 text-white font-black px-8 py-4 rounded-xl text-base transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,102,254,0.4)]">
+            <i class="fa-solid fa-shield-halved"></i> Secure Your Copy <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+          <a href="https://wa.me/917892393901?text=Hi%20Akhil,%20I%20want%20to%20buy%20the%20Meta%20Marketing%20Ebook" target="_blank" class="bg-[#25D366] hover:bg-[#1ebf59] text-white font-black px-8 py-4 rounded-xl text-base transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl"></i> Order via WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+        <a href="#enroll" class="bg-blue-500 hover:bg-blue-400 text-white font-black px-8 py-4 rounded-xl text-lg transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+          Secure Your Copy <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" class="bg-[#25D366] hover:bg-[#1ebf59] text-white font-black px-8 py-4 rounded-xl text-lg transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp
+        </a>
+      <!-- RIGHT CONTENT (5 cols) -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-center relative order-1 lg:order-2">
+        <div class="absolute inset-0 bg-brand-blue/20 blur-[130px] rounded-full w-full h-full z-0"></div>
+        <div class="book-container relative z-10 py-6">
+          <div class="book-mockup overflow-hidden !p-0">
+            <!-- Spine shadow overlay to make it look like a book spine crease -->
+            <div class="absolute left-0 top-0 bottom-0 w-3 bg-gradient-to-r from-black/80 to-transparent z-10"></div>
+            <!-- Right edge page border glow -->
+            <div class="absolute right-0 top-[2px] bottom-[2px] w-2 bg-gradient-to-l from-white/10 to-transparent z-10 rounded-r-[16px]"></div>
+            <!-- Glossy laminate overlay -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/10 z-10 pointer-events-none"></div>
+            <img src="meta-marketing-cover.jpg" alt="Meta Marketing Book Cover" class="w-full h-full object-cover rounded-r-[12px] relative z-0">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT CONTENT -->
+    <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+        <div class="absolute inset-0 bg-blue-600/20 blur-[100px] rounded-full w-full h-full z-0"></div>
+        <div class="book-mockup relative z-10">
+            <i class="fa-brands fa-meta text-blue-500 text-8xl sm:text-[140px] drop-shadow-[0_0_40px_rgba(59,130,246,0.8)]" style="filter: drop-shadow(0 0 60px rgba(59,130,246,0.6));"></i>
+            <div class="bg-white/10 border border-white/20 text-white px-6 py-2 font-black rounded-full tracking-[4px] uppercase mt-4 text-sm sm:text-base backdrop-blur-md">
+                Meta E-Book
+            </div>
+        </div>
+    </div>
+  </section>
+  </div>
+</section>
+  <!-- Section Divider -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+<!-- Features / Curriculum Section -->
+<section class="py-24 px-5 relative z-10 border-t border-white/10 bg-zinc-950">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-[-2px] mb-4">Why This <span class="text-blue-500">E-Book?</span></h2>
+      <p class="text-zinc-400 text-lg max-w-2xl mx-auto">Everything you need to run profitable campaigns packed into one comprehensive guide.</p>
+  <!-- Your Journey Inside (Chapter Outline) -->
+  <section id="journey" class="py-20 px-6 relative z-10 max-w-[1600px] mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-3">Chapter <span class="text-brand-blue">Outline</span></h2>
+      <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto">The book is structured into 6 highly informative sections taking you from absolute basics to advanced configurations.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="max-w-4xl mx-auto space-y-6">
+      
+      <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl hover:border-blue-500/50 transition-all group">
+        <div class="w-14 h-14 bg-black border border-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+          <i class="fa-solid fa-bullseye text-blue-500 text-2xl"></i>
+      <div class="flex flex-col sm:flex-row gap-6 bg-white/[0.02] border border-white/10 p-8 rounded-2xl items-start sm:items-center hover:border-brand-blue/30 transition-all duration-300">
+        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-brand-blue/40 to-brand-cyan/20 select-none">01</div>
+        <div>
+          <h3 class="text-xl font-bold mb-1 text-white">ഭാഗം 1: നിങ്ങൾ പരസ്യം ചെയ്യുന്നത് എന്ത്, എന്തിനുവേണ്ടി?</h3>
+          <p class="text-zinc-400 text-sm">
+            Understanding Auction systems, Reach vs Frequency, and setting up campaign objectives (Awareness, Consideration, Conversions).
+          </p>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Meta Ads Mastery</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Exact campaign structures, bidding strategies, and algorithms used by top marketers.</p>
+      </div>
+      <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl hover:border-blue-500/50 transition-all group">
+        <div class="w-14 h-14 bg-black border border-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+          <i class="fa-solid fa-users text-blue-500 text-2xl"></i>
+      <div class="flex flex-col sm:flex-row gap-6 bg-white/[0.02] border border-white/10 p-8 rounded-2xl items-start sm:items-center hover:border-brand-blue/30 transition-all duration-300">
+        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-brand-blue/40 to-brand-cyan/20 select-none">02</div>
+        <div>
+          <h3 class="text-xl font-bold mb-1 text-white">ഭാഗം 2: പ്രേക്ഷകരെ / ഓടിയൻസിനെ തിരഞ്ഞെടുക്കൽ</h3>
+          <p class="text-zinc-400 text-sm">
+            Core, Custom, and Lookalike audiences. Detailed breakdown of Location, Demographics, Interests, Behaviors, and Facebook Pixel setup.
+          </p>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Audience Targeting</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Find, target, and reach your perfect customers using advanced behavioral data.</p>
+      </div>
+      <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl hover:border-blue-500/50 transition-all group">
+        <div class="w-14 h-14 bg-black border border-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+          <i class="fa-solid fa-robot text-blue-500 text-2xl"></i>
+      <div class="flex flex-col sm:flex-row gap-6 bg-white/[0.02] border border-white/10 p-8 rounded-2xl items-start sm:items-center hover:border-brand-blue/30 transition-all duration-300">
+        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-brand-blue/40 to-brand-cyan/20 select-none">03</div>
+        <div>
+          <h3 class="text-xl font-bold mb-1 text-white">ഭാഗം 3: ആഡ് പ്ലേസ്മെന്റ് (Ad Placements)</h3>
+          <p class="text-zinc-400 text-sm">
+            Where to display your ads. Setting up Desktop, Mobile, Instagram, and Audience Network settings for cost-efficiency.
+          </p>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Dropship Automation</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Build powerful automation flows, ManyChat sequences, and scale inventory.</p>
+      </div>
+      <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-3xl hover:border-blue-500/50 transition-all group">
+        <div class="w-14 h-14 bg-black border border-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(59,130,246,0.1)]">
+          <i class="fa-solid fa-pen-nib text-blue-500 text-2xl"></i>
+      <div class="flex flex-col sm:flex-row gap-6 bg-white/[0.02] border border-white/10 p-8 rounded-2xl items-start sm:items-center hover:border-brand-blue/30 transition-all duration-300">
+        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-brand-blue/40 to-brand-cyan/20 select-none">04</div>
+        <div>
+          <h3 class="text-xl font-bold mb-1 text-white">ഭാഗം 4: ബഡ്ജറ്റ് പ്ലാനും ആസൂത്രണവും</h3>
+          <p class="text-zinc-400 text-sm">
+            Daily vs Lifetime budgets, Automatic vs Manual bidding options, Holiday season cost variations, and industry CPM/CPA metrics.
+          </p>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Content That Sells</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">High-converting copywriting secrets and creative templates that stop the scroll.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 bg-white/[0.02] border border-white/10 p-8 rounded-2xl items-start sm:items-center hover:border-brand-blue/30 transition-all duration-300">
+        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-brand-blue/40 to-brand-cyan/20 select-none">05</div>
+        <div>
+          <h3 class="text-xl font-bold mb-1 text-white">ഭാഗം 5: പരസ്യം ക്രിയേറ്റ് ചെയ്യൽ (Ad Creatives)</h3>
+          <p class="text-zinc-400 text-sm">
+            Specifications for Single Image, Single Video (.MOV/.MP4), Carousel, Slideshow, and Canvas Ads. Headlines copywriting tips.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 bg-white/[0.02] border border-white/10 p-8 rounded-2xl items-start sm:items-center hover:border-brand-blue/30 transition-all duration-300">
+        <div class="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-brand-blue/40 to-brand-cyan/20 select-none">06</div>
+        <div>
+          <h3 class="text-xl font-bold mb-1 text-white">ഭാഗം 6: ട്രാക്കിംഗ് (Tracking & Reports)</h3>
+          <p class="text-zinc-400 text-sm">
+            Monitoring results in Ads Manager. Setting up columns (Performance, Delivery, Engagement), breakdowns, and measuring performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </section>
+<!-- Timeline Journey -->
+<section class="py-24 px-5 relative z-10">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-16">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-[-2px] mb-4">Your Journey <span class="text-blue-500">Inside</span></h2>
+      <p class="text-zinc-400 text-lg">A structured, step-by-step roadmap from beginner to absolute pro.</p>
+  <!-- Section Divider -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+  <!-- Why This E-Book? -->
+  <section id="why-ebook" class="py-20 px-6 relative z-10 max-w-[1600px] mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-3">Why This <span class="text-brand-blue">E-Book?</span></h2>
+      <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto">Understand the core algorithm mechanics of Meta Ads with clear explanations in your native language.</p>
+    </div>
+    <div class="space-y-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="flex flex-col sm:flex-row gap-6 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl items-start sm:items-center hover:border-blue-500/30 transition-all">
+        <div class="text-6xl font-black text-transparent [-webkit-text-stroke:1px_rgba(59,130,246,0.5)]">01</div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Basic To Advance</h3>
+          <p class="text-zinc-400">Set up Business Manager, understand the algorithm, and launch your first profitable campaign from scratch.</p>
+      <div class="bg-white/[0.03] border border-white/10 p-8 rounded-2xl hover:border-brand-blue/40 transition-all duration-300 group">
+        <div class="w-12 h-12 bg-zinc-950 border border-white/15 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(0,102,254,0.1)]">
+          <i class="fa-solid fa-bullseye text-brand-blue text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-brand-blue transition-colors">Simplified Concepts</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Auction mechanics, Bid limits, Reach, and Frequency explained step-by-step so anyone can understand.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl items-start sm:items-center hover:border-blue-500/30 transition-all">
+        <div class="text-6xl font-black text-transparent [-webkit-text-stroke:1px_rgba(59,130,246,0.5)]">02</div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Scaling Strategies</h3>
+          <p class="text-zinc-400">Learn horizontal and vertical scaling techniques to pump budgets without breaking the algorithm.</p>
+      <div class="bg-white/[0.03] border border-white/10 p-8 rounded-2xl hover:border-brand-blue/40 transition-all duration-300 group">
+        <div class="w-12 h-12 bg-zinc-950 border border-white/15 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(0,102,254,0.1)]">
+          <i class="fa-solid fa-users text-brand-blue text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-brand-blue transition-colors">Targeting Strategies</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">How to target demographics, user interests, and active behaviors to locate your real buyers.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 bg-zinc-900 border border-zinc-800 p-8 rounded-3xl items-start sm:items-center hover:border-blue-500/30 transition-all">
+        <div class="text-6xl font-black text-transparent [-webkit-text-stroke:1px_rgba(59,130,246,0.5)]">03</div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2">Freelancing & Clients</h3>
+          <p class="text-zinc-400">How to get Meta Ads clients, build your portfolio, and grow your marketing agency.</p>
+      <div class="bg-white/[0.03] border border-white/10 p-8 rounded-2xl hover:border-brand-blue/40 transition-all duration-300 group">
+        <div class="w-12 h-12 bg-zinc-950 border border-white/15 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(0,102,254,0.1)]">
+          <i class="fa-solid fa-code text-brand-blue text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-brand-blue transition-colors">Pixel & Conversions</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Learn to deploy the Facebook Pixel, read user paths, and configure custom & lookalike audiences.</p>
+      </div>
+      <div class="bg-white/[0.03] border border-white/10 p-8 rounded-2xl hover:border-brand-blue/40 transition-all duration-300 group">
+        <div class="w-12 h-12 bg-zinc-950 border border-white/15 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(0,102,254,0.1)]">
+          <i class="fa-solid fa-chart-line text-brand-blue text-xl"></i>
+        </div>
+        <h3 class="text-lg font-bold mb-2 group-hover:text-brand-blue transition-colors">Specs & Benchmarks</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Aspect ratios, resolutions, and text specs for single-image, video, carousel, and canvas ads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  </section>
+<!-- Pricing -->
+<section id="enroll" class="py-24 px-5 relative z-10 border-t border-white/10 bg-zinc-950">
+  <div class="max-w-3xl mx-auto text-center">
+    
+    <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-[3px] mb-8">
+      Start Today
+  <!-- Section Divider -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+  <!-- What You Will Learn (Benchmarks and Core Deliverables) -->
+  <section id="earnings" class="py-20 px-6 relative z-10 max-w-[1600px] mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-3">Core E-Book <span class="text-brand-blue">Deliverables</span></h2>
+      <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto">Get complete transparency on key industry metrics and implementation tactics explained inside.</p>
+    </div>
+    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-[-2px] mb-12">One Time <span class="text-blue-500">Payment</span></h2>
+    <div class="bg-black border border-zinc-800 rounded-[40px] p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+      <!-- Glow -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-blue-600/15 blur-[80px] rounded-full pointer-events-none"></div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      
+      <div class="bg-gradient-to-b from-white/[0.05] to-transparent border border-white/10 p-8 rounded-3xl relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-brand-blue/10 rounded-full blur-xl pointer-events-none"></div>
+        <div class="text-zinc-500 font-extrabold text-sm uppercase tracking-wider mb-2">Campaign Setup</div>
+        <div class="text-3xl font-black text-white group-hover:text-brand-blue transition-colors duration-300">Objectives Table</div>
+        <p class="mt-4 text-zinc-400 text-sm leading-relaxed">
+          Comprehensive mapping of Awareness, Traffic, Engagement, Leads, App Promotion, and Sales goals with exact conversion matches.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 mb-10 relative z-10">
+      <div class="bg-gradient-to-b from-white/[0.05] to-transparent border border-white/10 p-8 rounded-3xl relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-brand-cyan/10 rounded-full blur-xl pointer-events-none"></div>
+        <div class="text-zinc-500 font-extrabold text-sm uppercase tracking-wider mb-2">Audience Selection</div>
+        <div class="text-3xl font-black text-white group-hover:text-brand-cyan transition-colors duration-300">Targeting Blueprints</div>
+        <p class="mt-4 text-zinc-400 text-sm leading-relaxed">
+          Core targeting rules based on Place, Age, Gender, and detailed Demographics (Education, Income, Parents, Marital Status).
+        </p>
+      </div>
+      <div class="bg-gradient-to-b from-white/[0.05] to-transparent border border-white/10 p-8 rounded-3xl relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-brand-blue/10 rounded-full blur-xl pointer-events-none"></div>
+        <div class="text-zinc-500 font-extrabold text-sm uppercase tracking-wider mb-2">Industry Benchmarks</div>
+        <div class="text-3xl font-black text-white group-hover:text-brand-blue transition-colors duration-300">CPC, CTR & CVR</div>
+        <p class="mt-4 text-zinc-400 text-sm leading-relaxed">
+          Analysis tables mapping out average costs per click and conversion metrics across multiple business niches.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Section Divider -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+  <!-- About the Author -->
+  <section id="about-author" class="py-20 px-6 relative z-10 max-w-[1600px] mx-auto">
+    <div class="max-w-5xl mx-auto bg-gradient-to-b from-white/[0.03] to-transparent border border-white/10 rounded-[32px] p-8 sm:p-12 relative overflow-hidden">
+      <!-- Glow -->
+      <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-brand-blue/10 blur-[80px] rounded-full pointer-events-none"></div>
+      
+      <div class="grid md:grid-cols-12 gap-10 items-center">
+        
+        <label class="flex-1 cursor-pointer">
+          <input type="radio" name="pricing" class="peer hidden" checked>
+          <div class="border-2 border-zinc-800 bg-zinc-900 peer-checked:border-blue-500 peer-checked:bg-blue-500/10 rounded-2xl p-6 transition-all text-left">
+            <h4 class="text-zinc-400 font-bold mb-1">Digital E-Book</h4>
+            <div class="text-4xl font-black text-white mb-2">₹399</div>
+            <p class="text-xs font-bold text-blue-400 uppercase tracking-widest"><i class="fa-solid fa-bolt"></i> Instant Access</p>
+        <!-- Profile Column (4 cols) -->
+        <div class="md:col-span-4 flex flex-col items-center text-center">
+          <div class="relative w-32 h-32 rounded-full bg-gradient-to-tr from-brand-blue to-brand-cyan p-[3px] shadow-[0_0_30px_rgba(0,102,254,0.3)]">
+            <div class="w-full h-full rounded-full bg-zinc-950 flex items-center justify-center overflow-hidden">
+              <i class="fa-solid fa-user-tie text-zinc-500 text-5xl"></i>
+            </div>
+            <div class="absolute bottom-1 right-1 w-7 h-7 bg-brand-blue rounded-full border-4 border-[#03000a] flex items-center justify-center shadow-lg">
+              <i class="fa-solid fa-check text-[10px] text-white"></i>
+            </div>
+          </div>
+        </label>
+          <h3 class="text-xl font-extrabold mt-4">Akhil Anand</h3>
+          <p class="text-xs font-bold text-brand-cyan uppercase tracking-widest mt-1">Founder & CEO, Naadanvibes</p>
+          
+          <!-- Skills tags -->
+          <div class="flex flex-wrap justify-center gap-1.5 mt-5 max-w-[240px]">
+            <span class="bg-white/5 border border-white/10 text-zinc-300 text-[10px] font-bold px-2.5 py-1 rounded-md">Meta Media Buying</span>
+            <span class="bg-white/5 border border-white/10 text-zinc-300 text-[10px] font-bold px-2.5 py-1 rounded-md">Shopify Developer</span>
+            <span class="bg-white/5 border border-white/10 text-zinc-300 text-[10px] font-bold px-2.5 py-1 rounded-md">E-commerce Scaling</span>
+            <span class="bg-white/5 border border-white/10 text-zinc-300 text-[10px] font-bold px-2.5 py-1 rounded-md">Conversions API</span>
+            <span class="bg-white/5 border border-white/10 text-zinc-300 text-[10px] font-bold px-2.5 py-1 rounded-md">Ad Placements</span>
+          </div>
+        </div>
+        <label class="flex-1 cursor-pointer">
+          <input type="radio" name="pricing" class="peer hidden">
+          <div class="border-2 border-zinc-800 bg-zinc-900 peer-checked:border-blue-500 peer-checked:bg-blue-500/10 rounded-2xl p-6 transition-all text-left">
+            <h4 class="text-zinc-400 font-bold mb-1">Printed Book</h4>
+            <div class="text-4xl font-black text-white mb-2">₹499</div>
+            <p class="text-xs font-bold text-blue-400 uppercase tracking-widest"><i class="fa-solid fa-truck"></i> Free Delivery</p>
+        <!-- Biography Column (8 cols) -->
+        <div class="md:col-span-8 flex flex-col text-left">
+          <div class="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 text-brand-blue px-3 py-1 rounded-md text-[10px] font-black uppercase tracking-widest w-fit mb-4">
+            About The Author
+          </div>
+        </label>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mb-4">Digital Marketing & E-Commerce Expert</h2>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+            Akhil Anand is a renowned digital marketing e-commerce expert with over 4+ years of experience in the field. As the founder and CEO of <strong>naadanvibes.com</strong>, he has successfully helped numerous businesses grow their online presence, build robust sales funnels, and expand their audience reach. 
+          </p>
+          
+          <!-- Author Highlights -->
+          <div class="grid sm:grid-cols-2 gap-4 border-t border-white/10 pt-6">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-brand-cyan mt-1 text-sm"></i>
+              <div>
+                <h4 class="text-white text-sm font-bold">Practical Tutoring</h4>
+                <p class="text-zinc-500 text-xs">Features live personal classes with nominal fees for advanced concepts.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-brand-cyan mt-1 text-sm"></i>
+              <div>
+                <h4 class="text-white text-sm font-bold">Contact Support</h4>
+                <p class="text-zinc-500 text-xs">Direct support line: <strong>+91 7892393901</strong> or email contact.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      <button class="w-full bg-blue-500 hover:bg-blue-400 text-white font-black py-5 rounded-2xl text-xl uppercase tracking-wider transition-all relative z-10 shadow-[0_0_30px_rgba(59,130,246,0.4)]">
+        Get The E-Book Now
+      </button>
+  <!-- Section Divider -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <p class="mt-6 text-sm text-zinc-500 font-medium relative z-10">
+        <i class="fa-solid fa-shield-halved"></i> 100% Secure Checkout • Lifetime Access
+      </p>
+  <!-- Pricing (Secure Checkout) -->
+  <section id="enroll" class="py-20 px-6 relative z-10 bg-brand-dark/30 max-w-[1600px] mx-auto">
+    <div class="max-w-3xl mx-auto text-center">
+      
+      <div class="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 text-brand-blue px-5 py-2.5 rounded-full text-xs font-black uppercase tracking-[3px] mb-6">
+        Secure Instant Access
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-12">One-Time <span class="text-brand-blue">Investment</span></h2>
+    </div>
+      <div class="bg-black border border-zinc-800 rounded-[32px] p-6 sm:p-10 shadow-2xl relative overflow-hidden text-left">
+        <!-- Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] h-[350px] bg-brand-blue/10 blur-[80px] rounded-full pointer-events-none"></div>
+  </div>
+</section>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8 relative z-10">
+          
+          <!-- Option 1: Digital -->
+          <label class="flex-1 cursor-pointer">
+            <input type="radio" name="pricing" id="pricing-digital" class="peer hidden" checked onchange="updateCheckout('digital')">
+            <div class="border border-zinc-800 bg-zinc-900/50 peer-checked:border-brand-blue peer-checked:bg-brand-blue/5 rounded-2xl p-6 transition-all">
+              <h4 class="text-zinc-400 font-bold text-sm mb-1">Digital E-Book</h4>
+              <div class="text-3xl font-black text-white mb-2 flex items-baseline gap-1">
+                <span>₹299</span>
+                <span class="text-xs text-zinc-500 line-through font-normal">₹999</span>
+              </div>
+              <p class="text-[10px] font-bold text-brand-blue uppercase tracking-wider"><i class="fa-solid fa-bolt"></i> Instant Download • Malayalam & English</p>
+            </div>
+          </label>
+<!-- Footer -->
+<footer class="py-12 px-5 border-t border-white/10 text-center relative z-10">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-black tracking-tight mb-6">Entee<span class="text-blue-500">com</span></h2>
+    <div class="flex justify-center gap-6 mb-8">
+      <a href="#" class="text-zinc-400 hover:text-white text-xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="text-zinc-400 hover:text-white text-xl transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" class="text-zinc-400 hover:text-white text-xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+          <!-- Option 2: Printed -->
+          <label class="flex-1 cursor-pointer">
+            <input type="radio" name="pricing" id="pricing-printed" class="peer hidden" onchange="updateCheckout('printed')">
+            <div class="border border-zinc-800 bg-zinc-900/50 peer-checked:border-brand-blue peer-checked:bg-brand-blue/5 rounded-2xl p-6 transition-all">
+              <div class="flex justify-between items-start">
+                <h4 class="text-zinc-400 font-bold text-sm mb-1">Printed Edition</h4>
+                <span class="bg-red-500/10 border border-red-500/20 text-red-500 font-bold text-[9px] px-2 py-0.5 rounded-full uppercase tracking-wider">Hot</span>
+              </div>
+              <div class="text-3xl font-black text-white mb-2 flex items-baseline gap-1">
+                <span>₹399</span>
+                <span class="text-xs text-zinc-500 line-through font-normal">₹1,499</span>
+              </div>
+              <p class="text-[10px] font-bold text-brand-cyan uppercase tracking-wider"><i class="fa-solid fa-truck"></i> Free Delivery in India • Malayalam & English</p>
+            </div>
+          </label>
+        </div>
+        <!-- Checkout Buttons -->
+        <div class="space-y-4 relative z-10">
+          <a id="main-checkout-btn" href="https://rzp.io/l/digital-meta-ads-ebook" target="_blank" class="w-full bg-brand-blue hover:bg-brand-blue/90 text-white font-black py-4 rounded-xl text-lg uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(0,102,254,0.3)]">
+            <i class="fa-solid fa-lock text-sm"></i> Get Digital E-Book (₹299)
+          </a>
+          
+          <a href="https://wa.me/917892393901?text=Hi%20Akhil,%20I%20want%20to%20buy%20the%20Meta%20Marketing%20Ebook" target="_blank" class="w-full bg-[#25D366] hover:bg-[#1ebf59] text-white font-black py-4 rounded-xl text-lg uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-2xl"></i> Buy via WhatsApp
+          </a>
+        </div>
+        <p class="mt-6 text-center text-xs text-zinc-500 font-semibold relative z-10 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-shield-halved text-brand-blue text-sm"></i> 100% Encrypted Checkout • Lifetime Updates Included
+        </p>
+      </div>
+    </div>
+    <p class="text-zinc-600 text-sm font-medium">&copy; 2024 Enteecom. Digital Marketing & Meta Ads.</p>
+  </div>
+</footer>
+  </section>
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/10 text-center relative z-10 max-w-[1600px] mx-auto bg-[#020106]">
+    <h2 class="text-xl font-black tracking-tight mb-4">Entee<span class="text-brand-blue">com</span></h2>
+    <div class="flex justify-center gap-6 mb-6">
+      <a href="https://wa.me/917892393901" target="_blank" class="text-zinc-500 hover:text-white text-lg transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com" target="_blank" class="text-zinc-500 hover:text-white text-lg transition-colors"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <p class="text-zinc-600 text-xs font-semibold">&copy; 2026 Enteecom & Akhil Anand. Meta Media Buying & Performance Marketing.</p>
+  </footer>
+  <script>
+    function updateCheckout(type) {
+      const checkoutBtn = document.getElementById('main-checkout-btn');
+      if (type === 'digital') {
+        checkoutBtn.innerText = 'Get Digital E-Book (₹299)';
+        checkoutBtn.href = 'https://rzp.io/l/digital-meta-ads-ebook';
+      } else {
+        checkoutBtn.innerText = 'Order Printed Book (₹399)';
+        checkoutBtn.href = 'https://rzp.io/l/printed-meta-ads-ebook';
+      }
+    }
+  </script>
+</body>
+</html>
