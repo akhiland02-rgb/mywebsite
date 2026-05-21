@@ -89,12 +89,13 @@ body{
     </a>
 
     <button 
+<button 
   onclick="window.open('https://wa.me/917892393901?text=' + encodeURIComponent('Hi, I want to learn more about this course'), '_blank')"
-  class="inline-flex items-center gap-2 bg-lime-400 hover:bg-lime-300 text-black font-bold px-4 py-2 rounded-xl text-sm transition-all duration-200 hover:scale-105">
+  class="flex items-center gap-3 bg-lime-400 hover:bg-lime-300 text-black font-black px-4 py-3 rounded-2xl transition-all duration-200 min-w-[145px] justify-center">
 
-  <!-- WHATSAPP ICON -->
+  <!-- BIG WHATSAPP ICON -->
   <svg xmlns="http://www.w3.org/2000/svg"
-    class="w-4 h-4"
+    class="w-6 h-6 flex-shrink-0"
     fill="currentColor"
     viewBox="0 0 24 24">
 
@@ -103,11 +104,20 @@ body{
 
   </svg>
 
-  WhatsApp Now
+  <!-- TEXT -->
+  <div class="flex flex-col leading-none text-left">
 
-</button>
+    <span class="text-[10px] font-semibold uppercase tracking-wide">
+      Chat On
+    </span>
+
+    <span class="text-sm font-black">
+      WhatsApp
+    </span>
 
   </div>
+
+</button>
 
 </nav><!-- Hero -->
 <!-- Hero -->
