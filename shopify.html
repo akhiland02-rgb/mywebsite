@@ -175,65 +175,212 @@
         </div>
       </div>
 
-      <!-- RIGHT: Ebook mockup & purchase card -->
-      <div class="lg:col-span-5 order-2 flex justify-center lg:justify-end">
-        <div class="relative group w-full max-w-[420px]">
-          <!-- Ambient Glow behind book card -->
-          <div class="absolute -inset-1.5 bg-gradient-to-tr from-lime-400 to-green-500 rounded-[32px] blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
-          
-          <!-- Mockup & Purchase Card -->
-          <div class="relative bg-zinc-950 border border-white/10 rounded-[32px] p-6 shadow-2xl transition duration-500">
-            
-            <!-- Book Image Mockup -->
-<!-- Full Book Image -->
-<img
-  src="shopify_blueprint_book_1785313819884.jpg"
-  alt="Build. Launch. Sell. Book Mockup"
-  class="w-full h-auto object-contain mx-auto drop-shadow-[0_25px_50px_rgba(163,230,53,0.18)]"
-/>
+<!-- RIGHT: Ebook Purchase Section -->
+<div class="lg:col-span-5 order-2 flex justify-center lg:justify-end">
 
-            <!-- Ebook details and Pricing -->
-            <div class="mt-6 space-y-4">
-              <div class="text-center">
-                <span class="inline-block bg-lime-400/10 border border-lime-400/20 text-lime-400 text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                  Digital PDF Edition
-                </span>
-              </div>
+    <style>
+        .ebook-wrapper{
+            width:100%;
+            max-width:420px;
+            margin:0 auto;
+        }
 
-              <div class="border-t border-white/10 pt-4 flex items-center justify-between">
-                <div>
-                  <span class="text-zinc-500 text-xs font-bold uppercase tracking-wider block">Promo Price</span>
-                  <div class="flex items-baseline gap-2 mt-0.5">
-                    <span class="text-4xl font-black text-lime-400">₹299</span>
-                    <span class="text-zinc-500 line-through text-base font-semibold">₹999</span>
-                  </div>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs bg-lime-400 text-black px-2.5 py-1 rounded-lg font-black uppercase tracking-wider">
-                    70% OFF
-                  </span>
-                </div>
-              </div>
+        .ebook-cover{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
 
-              <!-- CTA BUTTON -->
-              <button 
-                onclick="trackBookClick()"
-                class="w-full flex items-center justify-center gap-3 bg-lime-400 hover:bg-lime-300 text-black font-black px-6 py-4 rounded-2xl text-base transition-all duration-200 hover:scale-[1.02] shadow-xl">
-                <!-- WHATSAPP ICON -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.52 3.48A11.79 11.79 0 0012.03 0C5.4 0 .02 5.38.02 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.03 24C18.66 24 24 18.62 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.03 21.82c-1.8 0-3.57-.48-5.12-1.4l-.37-.22-3.67.96.98-3.57-.24-.37a9.73 9.73 0 01-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.87 6.92c0 5.42-4.4 9.82-9.7 9.82zm5.4-7.37c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.77-1.67-2.07-.17-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.7.3 1.25.47 1.67.6.7.22 1.35.2 1.85.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35z" />
-                </svg>
-                <span>Buy Ebook on WhatsApp</span>
-              </button>
-            </div>
-            
-          </div>
+        .ebook-cover img{
+            width:100%;
+            max-width:340px;
+            height:auto;
+            display:block;
+            object-fit:contain;
+            user-select:none;
+            transition:.35s ease;
+        }
+
+        .ebook-cover:hover img{
+            transform:translateY(-8px) scale(1.02);
+        }
+
+        .ebook-content{
+            margin-top:2rem;
+            text-align:center;
+        }
+
+        .ebook-badge{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            padding:10px 18px;
+            border-radius:999px;
+            background:rgba(163,230,53,.08);
+            color:#a3e635;
+            font-size:.72rem;
+            font-weight:700;
+            letter-spacing:.18em;
+            text-transform:uppercase;
+        }
+
+        .price-label{
+            margin-top:1.8rem;
+            font-size:.8rem;
+            color:#71717a;
+            font-weight:600;
+            letter-spacing:.15em;
+            text-transform:uppercase;
+        }
+
+        .price-box{
+            display:flex;
+            justify-content:center;
+            align-items:flex-end;
+            gap:12px;
+            margin-top:8px;
+        }
+
+        .price-current{
+            font-size:58px;
+            line-height:1;
+            font-weight:900;
+            color:#fff;
+        }
+
+        .price-old{
+            font-size:22px;
+            color:#71717a;
+            text-decoration:line-through;
+            font-weight:600;
+        }
+
+        .price-save{
+            display:inline-block;
+            margin-top:12px;
+            color:#a3e635;
+            font-size:15px;
+            font-weight:700;
+        }
+
+        .buy-btn{
+            width:100%;
+            margin-top:32px;
+            background:#a3e635;
+            color:#000;
+            border:none;
+            border-radius:18px;
+            padding:18px 24px;
+            font-size:16px;
+            font-weight:800;
+            cursor:pointer;
+            transition:.25s;
+        }
+
+        .buy-btn:hover{
+            background:#bef264;
+            transform:translateY(-2px);
+        }
+
+        .buy-btn-inner{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+        }
+
+        .buy-btn svg{
+            width:24px;
+            height:24px;
+        }
+
+        .ebook-trust{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:20px;
+            margin-top:24px;
+            color:#a1a1aa;
+            font-size:14px;
+        }
+
+        @media(max-width:768px){
+
+            .ebook-cover img{
+                max-width:260px;
+            }
+
+            .price-current{
+                font-size:46px;
+            }
+
+            .price-old{
+                font-size:18px;
+            }
+
+            .buy-btn{
+                padding:16px;
+            }
+
+        }
+    </style>
+
+    <div class="ebook-wrapper">
+
+        <!-- Book -->
+        <div class="ebook-cover">
+            <img
+                src="shopify_blueprint_book_1785313819884.jpg"
+                alt="Shopify Blueprint Ebook">
         </div>
-      </div>
+
+        <!-- Content -->
+        <div class="ebook-content">
+
+            <span class="ebook-badge">
+                Digital PDF Edition
+            </span>
+
+            <div class="price-label">
+                Limited Time Offer
+            </div>
+
+            <div class="price-box">
+                <div class="price-current">₹299</div>
+                <div class="price-old">₹999</div>
+            </div>
+
+            <div class="price-save">
+                Save 70% Today
+            </div>
+
+            <button
+                onclick="trackBookClick()"
+                class="buy-btn">
+
+                <div class="buy-btn-inner">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.52 3.48A11.79 11.79 0 0012.03 0C5.4 0 .02 5.38.02 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.03 24C18.66 24 24 18.62 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.03 21.82c-1.8 0-3.57-.48-5.12-1.4l-.37-.22-3.67.96.98-3.57-.24-.37a9.73 9.73 0 01-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.87 6.92c0 5.42-4.4 9.82-9.7 9.82zm5.4-7.37c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.77-1.67-2.07-.17-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.7.3 1.25.47 1.67.6.7.22 1.35.2 1.85.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35z"/>
+                    </svg>
+
+                    <span>Buy Ebook on WhatsApp</span>
+
+                </div>
+
+            </button>
+
+            <div class="ebook-trust">
+                <span>✓ Instant Download</span>
+                <span>✓ Lifetime Access</span>
+                <span>✓ Free Updates</span>
+            </div>
+
+        </div>
 
     </div>
-  </section>
 
+</div>
   <!-- Who Is This Course For? (Simplified) -->
   <section class="py-16 px-6 bg-black border-t border-white/5 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
