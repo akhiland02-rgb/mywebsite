@@ -1,892 +1,1624 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '995606873174462');
-    fbq('track', 'PageView');
-    fbq('track', 'ViewContent', { content_name: 'Shopify Blueprint Ebook', content_category: 'Ebook', content_ids: ['shopify_book_001'], content_type: 'product', value: 299.00, currency: 'INR' });
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>Shopify Development Agency in Qatar &amp; India | Enteecom</title>
+<meta name="description" content="Enteecom builds custom Shopify themes, high-converting ecommerce stores, redesigns and CRO solutions for brands in Qatar, UAE, India and global markets."/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<meta name="author" content="Enteecom"/>
+<meta name="theme-color" content="#f5f4ef"/>
+<link rel="canonical" href="https://enteecom.in/"/>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Enteecom"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:title" content="Shopify Development Agency in Qatar &amp; India | Enteecom"/>
+<meta property="og:description" content="Custom Shopify themes, ecommerce development, store redesign and CRO services for ambitious brands."/>
+<meta property="og:url" content="https://enteecom.in/"/>
+<meta property="og:image" content="https://enteecom.in/assets/enteecom-social-cover.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Enteecom Shopify and ecommerce development studio"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Shopify Development Agency | Enteecom"/>
+<meta name="twitter:description" content="Custom Shopify themes, ecommerce development, store redesign and CRO services."/>
+<meta name="twitter:image" content="https://enteecom.in/assets/enteecom-social-cover.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://enteecom.in/#organization",
+      "name": "Enteecom",
+      "url": "https://enteecom.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://enteecom.in/assets/enteecom-mark.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://enteecom.in/assets/enteecom-social-cover.png",
+      "description": "Shopify development and ecommerce studio offering custom themes, store redesign, CRO and integrations.",
+      "email": "hello@enteecom.in",
+      "founder": {
+        "@type": "Person",
+        "name": "Akhil Anand"
+      },
+      "areaServed": ["Qatar", "United Arab Emirates", "India", "United Kingdom", "Canada"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://enteecom.in/#website",
+      "url": "https://enteecom.in/",
+      "name": "Enteecom",
+      "alternateName": "Enteecom Shopify & eCommerce Studio",
+      "publisher": {"@id": "https://enteecom.in/#organization"},
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f5f4ef;
+  --surface:#ffffff;
+  --soft:#eceee9;
+  --soft-2:#e7e3da;
+  --text:#0e1510;
+  --muted:#606a62;
+  --line:#d9ddd6;
+  --green:#80c900;
+  --green-dark:#4c7900;
+  --green-soft:#eef7dc;
+  --dark:#111713;
+  --dark-soft:#1b211d;
+  --container:1240px;
+  --radius:26px;
+  --shadow:0 26px 70px rgba(22,30,24,.10);
+  --gutter-desktop:20px;
+  --gutter-tablet:18px;
+  --gutter-mobile:20px;
+}
 
-    // Track conversions on WhatsApp Click
-    function trackBookClick() {
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'InitiateCheckout', {
-          content_name: 'Build. Launch. Sell. Book',
-          content_category: 'Ebook',
-          content_ids: ['shopify_book_001'],
-          content_type: 'product',
-          value: 299.00,
-          currency: 'INR'
-        });
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;width:100%;max-width:100%;overflow-x:hidden}
+body{
+  margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  font-family:"Instrument Sans",Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+body.menu-open{overflow:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+
+.container{width:min(var(--container),calc(100% - (var(--gutter-desktop) * 2)));margin-inline:auto;min-width:0}
+.section{padding:96px 0;position:relative;overflow:hidden}
+.section-white{background:var(--surface)}
+.section-soft{background:var(--soft-2)}
+.section-dark{background:var(--dark);color:#fff}
+.section-heading{max-width:720px;margin-bottom:38px}
+.section-heading.narrow{max-width:640px}
+.section-heading.center{margin-inline:auto;text-align:center}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#315d00;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+}
+.kicker::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(128,201,0,.12)}
+.section-dark .kicker{color:#c8ee8d}
+h1,h2,h3,p{margin-top:0}
+h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-spacing:-.055em;font-weight:500}
+.lead{margin:0;color:var(--muted);font-size:17px;line-height:1.7}
+.section-dark .lead{color:#aeb6b0}
+
+.btn{
+  min-height:50px;padding:0 21px;border:1px solid transparent;border-radius:999px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;
+  transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--green);color:#152100;box-shadow:0 14px 30px rgba(128,201,0,.20)}
+.btn-outline{border-color:#9fa7a0;background:transparent}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-light{background:#fff;color:var(--text)}
+.btn-arrow{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.74);color:#111}
+
+/* Header */
+.site-header{position:absolute;inset:0 0 auto;z-index:100;padding-top:18px;width:100%;overflow:hidden}
+.navbar{
+  min-height:66px;padding:9px 10px 9px 19px;border:1px solid rgba(255,255,255,.95);
+  border-radius:999px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  box-shadow:0 12px 36px rgba(20,32,23,.07)
+}
+.brand{display:flex;align-items:center;gap:9px;font-size:22px;font-weight:700;letter-spacing:-.04em;white-space:nowrap}
+.brand-mark{width:31px;height:25px;position:relative;flex:0 0 auto}
+.brand-mark i{position:absolute;right:0;height:5px;border-radius:999px;background:var(--green)}
+.brand-mark i:nth-child(1){top:1px;width:23px;transform:rotate(-10deg)}
+.brand-mark i:nth-child(2){top:10px;width:31px}
+.brand-mark i:nth-child(3){top:19px;width:24px;transform:rotate(8deg)}
+.nav-links{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:600}
+.nav-links a{transition:opacity .2s ease}.nav-links a:hover{opacity:.55}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.menu-button{display:none;width:42px;height:42px;border:0;border-radius:50%;background:var(--soft);font-size:21px}
+.mobile-panel{display:none}
+
+/* Hero */
+.hero{
+  min-height:800px;padding:132px 0 70px;
+  width:100%;max-width:100%;overflow:hidden;
+  background:radial-gradient(circle at 78% 36%,rgba(236,217,163,.45),transparent 29%),var(--bg)
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:42px;align-items:center;min-width:0}
+.hero-copy{max-width:720px;min-width:0}
+.hero-title{margin:28px 0 20px;font-size:clamp(58px,6.3vw,91px);line-height:.97;letter-spacing:-.072em;font-weight:600}
+.hero-title .line{display:block}
+.underlined{display:inline-block;position:relative;z-index:1}
+.underlined::after{
+  content:"";position:absolute;left:0;bottom:-4px;width:100%;height:11px;border-radius:99px;background:var(--green);z-index:-1;
+  transform:scaleX(0);transform-origin:left;animation:drawUnderline .9s cubic-bezier(.2,.8,.2,1) .4s forwards
+}
+@keyframes drawUnderline{to{transform:scaleX(1)}}
+.hero-copy .lead{max-width:650px;font-size:18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust-row{display:flex;flex-wrap:wrap;gap:13px 24px;margin-top:30px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600}
+.trust-item span{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);color:#315d00;font-size:11px}
+
+.hero-visual{position:relative;min-width:0;max-width:100%;overflow:visible;border-radius:0;isolation:isolate;background:transparent}
+.hero-preview{
+  position:absolute;right:-35px;top:110px;width:380px;z-index:0;
+  border-radius:28px;box-shadow:var(--shadow);opacity:.42;transform:rotate(3deg);
+  filter:saturate(.72) contrast(.96);
+}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(90deg,transparent 78%,var(--bg) 100%);
+}
+
+/* RIGHT VISUAL */
+
+    .source-visual {
+      min-height: 675px;
+
+      display: grid;
+      place-items: center;
+
+      position: relative;
+      perspective: 1200px;
+      isolation: isolate;
+    }
+
+    .source-visual-glow {
+      position: absolute;
+
+      width: 520px;
+      height: 520px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255, 245, 204, 0.98),
+          rgba(255, 215, 135, 0.28) 48%,
+          transparent 72%
+        );
+
+      z-index: -4;
+
+      animation:
+        sourceGlowPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes sourceGlowPulse {
+      0%,
+      100% {
+        transform: scale(0.94);
+        opacity: 0.75;
       }
-      window.open('https://wa.me/917892393901?text=' + encodeURIComponent('Hi, I want to purchase the eBook: Build. Launch. Sell. for Rs 299. Please send payment details.'), '_blank');
-    }
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=995606873174462&ev=PageView&noscript=1" />
-  </noscript>
-  <!-- End Meta Pixel Code -->
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build. Launch. Sell. | Shopify Blueprint for Indian Entrepreneurs</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Malayalam:wght@100..900&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      box-sizing: border-box;
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
     }
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      background: black;
-      color: white;
-      font-family: 'Inter', 'Noto Sans Malayalam', sans-serif;
+    /* MARBLE PEDESTAL */
+
+    .source-pedestal {
+      position: absolute;
+      bottom: 30px;
+
+      width: min(620px, 90%);
+      height: 126px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          ellipse at 50% 15%,
+          #ffffff,
+          #eee5d8 48%,
+          #cbbba4
+        );
+
+      border-bottom: 8px solid #b88d4a;
+
+      box-shadow:
+        0 34px 60px rgba(71, 51, 17, 0.28),
+        inset 0 8px 15px rgba(255, 255, 255, 0.95);
+
+      z-index: -1;
     }
 
-    /* HERO TITLE */
-    .hero-title {
-      font-family: 'Inter', 'Noto Sans Malayalam', sans-serif;
-      font-size: clamp(38px, 6vw, 68px);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -2px;
+    /* ROTATING LIGHT RINGS */
+
+    .source-ring {
+      position: absolute;
+      left: 50%;
+      bottom: 52px;
+
+      border:
+        1px solid rgba(255, 219, 146, 0.95);
+
+      border-radius: 50%;
+
+      filter:
+        drop-shadow(
+          0 0 12px rgba(255, 216, 134, 0.95)
+        );
+
+      z-index: -2;
     }
 
-    .hero-title .highlight {
-      color: #A3E635;
-      font-family: 'Noto Sans Malayalam', sans-serif;
-      display: inline-block;
+    .source-ring-one {
+      width: 720px;
+      height: 228px;
+
+      margin-left: -360px;
+
+      animation:
+        sourceRotateRingOne 13s linear infinite;
     }
 
-    .hero-title .sub-line {
-      display: block;
-      margin-top: 14px;
-      font-size: clamp(20px, 3.5vw, 40px);
-      line-height: 1.2;
+    .source-ring-two {
+      width: 520px;
+      height: 166px;
+
+      margin-left: -260px;
+
+      animation:
+        sourceRotateRingTwo 9s linear infinite;
+    }
+
+    @keyframes sourceRotateRingOne {
+      from {
+        transform:
+          rotateX(72deg)
+          rotateZ(0deg);
+      }
+
+      to {
+        transform:
+          rotateX(72deg)
+          rotateZ(360deg);
+      }
+    }
+
+    @keyframes sourceRotateRingTwo {
+      from {
+        transform:
+          rotateX(72deg)
+          rotateZ(360deg);
+      }
+
+      to {
+        transform:
+          rotateX(72deg)
+          rotateZ(0deg);
+      }
+    }
+
+    /* PHONE */
+
+    .source-phone-wrapper {
+      position: relative;
+      z-index: 8;
+
+      transform-style: preserve-3d;
+
+      animation:
+        sourcePhoneFloat 4.2s ease-in-out infinite;
+    }
+
+    @keyframes sourcePhoneFloat {
+      0%,
+      100% {
+        transform:
+          translateY(3px)
+          rotateY(-9deg)
+          rotateZ(1.6deg);
+      }
+
+      50% {
+        transform:
+          translateY(-16px)
+          rotateY(-5deg)
+          rotateZ(0.4deg);
+      }
+    }
+
+    .source-phone {
+      width: 316px;
+      height: 602px;
+
+      padding: 11px;
+
+      border-radius: 48px;
+
+      background:
+        linear-gradient(
+          140deg,
+          #090909,
+          #747474 46%,
+          #151515
+        );
+
+      box-shadow:
+        0 40px 75px rgba(54, 38, 8, 0.32);
+    }
+
+    .source-phone-screen {
+      height: 100%;
+      padding: 25px 20px;
+
+      border-radius: 38px;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff,
+          #f7f7f3
+        );
+    }
+
+    .source-phone-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
       font-weight: 800;
-      letter-spacing: -1px;
+    }
+
+    .source-phone-shopify {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      background: transparent;
+      border-radius: 0;
+      transform: none;
+    }
+    .source-phone-shopify img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+    }
+
+    .source-greeting {
+      margin-top: 22px;
+
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .source-phone-subtitle {
+      margin-top: 5px;
+
+      color: #7e877f;
+      font-size: 10px;
+    }
+
+    /* DASHBOARD CARDS */
+
+    .source-dashboard-card {
+      margin-top: 14px;
+      padding: 14px;
+
+      background: white;
+      border-radius: 17px;
+
+      box-shadow:
+        0 12px 30px rgba(23, 47, 31, 0.08);
+    }
+
+    .source-dashboard-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .source-label {
+      color: #7c857d;
+      font-size: 10px;
+    }
+
+    .source-sales-value {
+      display: block;
+      margin-top: 4px;
+
+      font-size: 21px;
+    }
+
+    .source-growth {
+      padding: 5px 7px;
+
+      color: #58982e;
+      background: #edf7e7;
+
+      border-radius: 999px;
+
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .source-chart {
+      width: 100%;
+      height: 88px;
+
+      margin-top: 10px;
+    }
+
+    .source-chart path {
+      fill: none;
+      stroke: #72ad3b;
+      stroke-width: 3;
+      stroke-linecap: round;
+
+      stroke-dasharray: 720;
+      stroke-dashoffset: 720;
+
+      animation:
+        sourceDrawChart 2.8s ease forwards 0.8s;
+    }
+
+    @keyframes sourceDrawChart {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .source-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+
+    .source-metric strong {
+      display: block;
+      margin: 6px 0 8px;
+
+      font-size: 18px;
+    }
+
+    .source-channel {
+      display: flex;
+      justify-content: space-between;
+
+      color: #647069;
+      font-size: 10px;
+    }
+
+    .source-bar {
+      height: 4px;
+      margin: 6px 0 12px;
+
+      background: #e7ece6;
+
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .source-bar span {
+      display: block;
+      height: 100%;
+
+      background: #75ad3e;
+      border-radius: inherit;
+
+      transform: scaleX(0);
+      transform-origin: left;
+
+      animation:
+        sourceGrowBar 1.4s ease forwards 1.2s;
+    }
+
+    @keyframes sourceGrowBar {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    /* ORDER NOTIFICATIONS */
+
+    .source-notification {
+      width: 236px;
+      padding: 14px 15px;
+
+      position: absolute;
+      z-index: 13;
+
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.95);
+
+      border-radius: 19px;
+
+      box-shadow:
+        0 16px 45px rgba(63, 44, 10, 0.14),
+        0 0 40px rgba(255, 223, 154, 0.35);
+
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .source-notification-one {
+      left: 0;
+      top: 126px;
+    }
+
+    .source-notification-two {
+      left: -5px;
+      bottom: 147px;
+    }
+
+    .source-notification-three {
+      right: -4px;
+      top: 210px;
+    }
+
+    .source-notification-four {
+      right: 4%;
+      bottom: 126px;
+    }
+
+    .source-notification-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 12px;
+    }
+
+    .source-new-order {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      font-weight: 700;
+    }
+
+    .source-new-order::before {
+      content: "";
+
+      width: 9px;
+      height: 9px;
+
+      background: #8ec726;
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 15px rgba(142, 199, 38, 0.9);
+    }
+
+    .source-notification-time {
+      color: #8a918c;
+      font-size: 11px;
+    }
+
+    .source-notification-body {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-top: 11px;
+    }
+
+    .source-product-image {
+      flex-shrink: 0;
+
+      width: 47px;
+      height: 47px;
+
+      display: grid;
+      place-items: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff8e8,
+          #f0e0c2
+        );
+
+      border-radius: 12px;
+      font-size: 24px;
+    }
+
+    .source-product-name {
+      font-size: 13px;
+    }
+
+    .source-product-price {
+      margin-top: 4px;
+
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    /* SOUND WAVES */
+
+    .source-sound-waves {
+      width: 70px;
+      height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+
+      position: absolute;
+      top: 110px;
+      right: 5%;
+      z-index: 15;
+    }
+
+    .source-sound-waves span {
+      display: block;
+
+      border-right: 3px solid white;
+      border-radius: 50%;
+
+      opacity: 0;
+
+      animation:
+        sourceSoundWave 1.4s ease-out infinite;
+    }
+
+    .source-sound-waves span:nth-child(1) {
+      width: 18px;
+      height: 32px;
+    }
+
+    .source-sound-waves span:nth-child(2) {
+      width: 28px;
+      height: 48px;
+
+      animation-delay: 0.18s;
+    }
+
+    .source-sound-waves span:nth-child(3) {
+      width: 40px;
+      height: 66px;
+
+      animation-delay: 0.36s;
+    }
+
+    @keyframes sourceSoundWave {
+      0% {
+        opacity: 0;
+        transform: scale(0.72);
+      }
+
+      45% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.15);
+      }
+    }
+
+    /* SOUND BUTTON */
+
+    .source-sound-button {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+
+      padding: 13px 17px;
+
       color: white;
+      background: var(--dark);
+
+      border: 0;
+      border-radius: 999px;
+
+      font-weight: 700;
+      cursor: pointer;
+
+      box-shadow:
+        0 14px 36px rgba(23, 49, 33, 0.28);
     }
 
-    @media (max-width: 768px) {
-      .hero-title {
-        line-height: 1.1;
-        letter-spacing: -1px;
-      }
+    
 
-      .hero-title .sub-line {
-        margin-top: 10px;
-        line-height: 1.3;
-      }
-    }
-  </style>
+/* Uploaded animated visual integrated into the existing hero. */
+.hero-visual::after{display:none}
+.hero-visual{overflow:visible;background:transparent}
+.source-visual{width:100%;max-width:100%;overflow:visible;border-radius:0;background:transparent}
+.source-sound-button{right:14px;bottom:12px;padding:9px 12px;font-size:10px;z-index:30}
+@media(max-width:1050px){
+  .source-visual{min-height:650px}
+}
+@media(max-width:820px){
+  .hero-visual{
+    width:100vw;
+    max-width:none;
+    margin-left:calc(50% - 50vw);
+    margin-right:calc(50% - 50vw);
+    overflow:hidden;
+    border-radius:0;
+    background:transparent;
+    padding:0;
+  }
+  .source-visual{
+    width:100%;
+    min-height:610px;
+    transform:none;
+    margin:0;
+    overflow:hidden;
+    border-radius:0;
+    background:transparent;
+  }
+}
+@media(max-width:620px){
+  .source-visual{min-height:535px;margin:0}
+  .source-visual-glow{width:430px;height:430px;opacity:.72}
+  .source-phone-wrapper{scale:.70;z-index:8}
+  .source-pedestal{width:330px;height:74px;bottom:34px;border-bottom-width:4px;box-shadow:0 22px 42px rgba(71,51,17,.18),inset 0 6px 12px rgba(255,255,255,.88)}
+  .source-ring-one{width:460px;height:145px;margin-left:-230px;bottom:43px}
+  .source-ring-two{width:340px;height:108px;margin-left:-170px;bottom:31px}
+  .source-notification-two,.source-notification-four{display:none}
+  .source-notification{
+    width:108px;
+    padding:9px;
+    border-radius:14px;
+    z-index:10;
+    box-shadow:0 12px 28px rgba(63,44,10,.14),0 0 24px rgba(255,223,154,.28);
+  }
+  .source-notification-one{left:10px;top:162px}
+  .source-notification-three{right:10px;top:292px}
+  .source-notification-header{font-size:8px;gap:4px}
+  .source-new-order{gap:5px;white-space:nowrap}
+  .source-new-order::before{width:6px;height:6px;box-shadow:0 0 9px rgba(142,199,38,.8)}
+  .source-notification-time{display:none}
+  .source-notification-body{gap:6px;margin-top:7px;align-items:center}
+  .source-product-image{width:28px;height:28px;border-radius:8px;font-size:14px}
+  .source-product-name{font-size:8px;line-height:1.15;max-width:52px}
+  .source-product-price{margin-top:2px;font-size:12px;line-height:1}
+  .source-sound-waves{right:18px;top:116px;scale:.72}
+  .source-sound-button{right:50%;bottom:3px;transform:translateX(50%);padding:8px 11px;font-size:9px;white-space:nowrap}
+}
+@media(max-width:390px){
+  .source-visual{min-height:515px}
+  .source-phone-wrapper{scale:.66}
+  .source-notification{width:102px;padding:8px}
+  .source-notification-one{left:7px;top:158px}
+  .source-notification-three{right:7px;top:282px}
+  .source-pedestal{width:310px;bottom:31px}
+}
+
+/* Work carousel — image only */
+.work-section{background:var(--dark);color:#fff;padding-bottom:82px}
+.work-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}
+.work-head .section-heading{margin:0}.work-head .lead{color:#aeb6b0}.carousel-note{font-size:11px;color:#8f9791;white-space:nowrap}
+.work-viewport{width:100%;max-width:100%;overflow:hidden;contain:paint;clip-path:inset(0)}
+.work-track{width:max-content;display:flex;gap:16px;animation:marquee 36s linear infinite;will-change:transform;padding:0 5px}
+.work-viewport:hover .work-track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(calc(-50% - 8px))}}
+.work-card{width:450px;aspect-ratio:16/9;flex:0 0 auto;margin:0;border-radius:22px;overflow:hidden;background:#262d28;border:1px solid rgba(255,255,255,.08);position:relative;display:block;cursor:pointer;box-shadow:0 18px 42px rgba(0,0,0,.18)}
+.work-card img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .45s ease}
+.work-card:hover img{transform:scale(1.025)}
+.work-card:focus-visible{outline:3px solid var(--green);outline-offset:5px}
+.work-label{position:absolute;left:16px;bottom:16px;z-index:2;margin:0;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.94);color:#111713;font-size:11px;font-weight:600;line-height:1;box-shadow:0 8px 24px rgba(0,0,0,.12);backdrop-filter:blur(10px);white-space:nowrap;pointer-events:none}
+@media(max-width:560px){.work-label{left:12px;bottom:12px;padding:7px 11px;font-size:10px}}
+
+/* Services */
+.services-shell{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:start}
+.service-list{border-top:1px solid var(--line)}
+.service-row{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:25px 0;border-bottom:1px solid var(--line)}
+.service-num{color:#8a918b;font-size:12px}.service-row h3{margin-bottom:8px;font-size:24px;letter-spacing:-.04em;font-weight:500}.service-row p{margin:0;color:var(--muted);font-size:14px;line-height:1.7;max-width:620px}
+.services-side{position:sticky;top:110px;padding:30px;border-radius:26px;background:var(--soft);border:1px solid #e0e3dd}
+.services-side p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}.services-side .btn{margin-top:24px}
+
+/* Results */
+.results-section{background:var(--soft-2)}
+.results-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:74px;align-items:start}
+.results-copy{position:sticky;top:110px}
+.results-list{border-top:1px solid rgba(14,21,16,.18)}
+.result-row{min-height:105px;padding:20px 0;border-bottom:1px solid rgba(14,21,16,.18);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.result-number{font-size:clamp(43px,5vw,64px);font-weight:500;letter-spacing:-.07em;line-height:1}
+.result-label{padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.62);font-size:12px;white-space:nowrap}
+.result-note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.65}
+
+/* Process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#343a36;border:1px solid #343a36;border-radius:24px;overflow:hidden}
+.process-card{padding:28px;background:var(--dark-soft);min-height:285px}
+.process-step{font-size:11px;color:#8d968f;margin-bottom:70px}.process-card h3{font-size:22px;font-weight:500;letter-spacing:-.04em;margin-bottom:11px}.process-card p{font-size:13px;line-height:1.7;color:#aeb6b0;margin:0}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price-card{padding:27px;border:1px solid var(--line);border-radius:22px;background:#fff;display:flex;flex-direction:column;min-height:438px}
+.price-card.featured{background:var(--dark);color:#fff;border-color:var(--dark)}
+.price-badge{align-self:flex-start;padding:6px 10px;border-radius:99px;background:var(--soft);font-size:10px;font-weight:700;margin-bottom:28px}
+.featured .price-badge{background:#273028;color:#d9e3da}
+.price-card h3{font-size:25px;letter-spacing:-.045em;font-weight:500;margin-bottom:8px}.price-copy{font-size:13px;line-height:1.65;color:var(--muted);min-height:66px}.featured .price-copy{color:#aeb7b0}
+.price{font-size:43px;letter-spacing:-.06em;font-weight:500;margin:18px 0 4px}.price small{font-size:12px;letter-spacing:0;font-weight:500;color:var(--muted)}.featured .price small{color:#aeb7b0}
+.features{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:11px}.features li{display:flex;gap:9px;font-size:12px;line-height:1.5}.features li::before{content:"✓";color:var(--green-dark);font-weight:700}.featured .features li::before{color:#b8f36a}
+.price-card .btn{margin-top:auto;width:100%}.featured .btn{background:var(--green);color:#152100}
+.pricing-note{text-align:center;margin:18px 0 0;color:var(--muted);font-size:12px}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}.faq-question{width:100%;padding:21px 0;border:0;background:transparent;display:flex;justify-content:space-between;gap:20px;text-align:left;font-size:15px;font-weight:600;color:var(--text)}
+.faq-question span:last-child{font-size:20px;font-weight:400;transition:transform .2s}.faq-item.open .faq-question span:last-child{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}.faq-answer p{padding:0 34px 20px 0;margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+
+/* Footer */
+.site-footer{background:#fff;border-top:1px solid var(--line);overflow:hidden}
+.footer-top{padding:76px 0 42px;display:grid;grid-template-columns:.82fr 1.18fr;gap:75px}
+.footer-form h2{font-size:clamp(42px,4.8vw,65px);margin:14px 0 12px}.footer-form>.lead{font-size:15px;margin-bottom:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{width:100%;min-height:48px;padding:0 14px;border:1px solid transparent;border-radius:10px;background:#f2f3f1;color:var(--text);outline:none}.field:focus{border-color:#abb2ac;background:#fff}.field.full{grid-column:1/-1}.textarea{min-height:78px;padding-top:13px;resize:vertical}.form-status{min-height:20px;margin:10px 0 0;color:#396d00;font-size:12px}
+.footer-right{display:flex;flex-direction:column}.footer-links{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:0 0 30px;border-bottom:1px solid var(--line)}
+.footer-col h3{font-size:12px;font-weight:600;margin-bottom:14px}.footer-col a{display:block;margin:7px 0;color:#343d36;font-size:12px}
+.footer-contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding-top:28px}.contact-title{font-size:12px;font-weight:600;margin-bottom:15px}.person{display:flex;align-items:center;gap:11px}.avatar{width:45px;height:45px;border-radius:12px;background:linear-gradient(145deg,#d7d9d5,#8c938e);display:grid;place-items:center;color:#fff;font-weight:700}.person-name{font-size:13px;font-weight:700}.person-role{font-size:10px;color:var(--muted);margin-top:2px}.support-list{margin-top:23px;display:grid;gap:11px}.support-item{display:flex;gap:10px;font-size:11px;color:#4f5851}.support-icon{width:34px;height:34px;border-radius:9px;background:#f1f2ef;display:grid;place-items:center;flex:0 0 auto}.support-item strong{display:block;color:var(--text);font-size:12px;margin-top:1px;overflow-wrap:anywhere}.socials{display:flex;gap:7px;margin-top:18px}.socials a{width:34px;height:34px;border-radius:8px;background:#f1f2ef;display:grid;place-items:center;font-size:12px;font-weight:700}
+.shopify-partner-badge{margin-top:18px;width:max-content;max-width:100%;padding:10px 13px;display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:13px;background:#f8f9f6;color:var(--text)}
+.shopify-partner-badge img{width:27px;height:27px;object-fit:contain;flex:0 0 auto}
+.shopify-partner-badge strong{display:block;font-size:12px;line-height:1.15}
+.shopify-partner-badge small{display:block;margin-top:3px;color:var(--muted);font-size:9px;line-height:1.2}
+.footer-bottom{min-height:68px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;color:#707972;font-size:11px}
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:80;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#1fb85a;color:#fff;font-size:23px;box-shadow:0 15px 38px rgba(31,184,90,.28)}
+
+/* Responsive */
+@media(max-width:1050px){
+  .container{width:min(var(--container),calc(100% - (var(--gutter-tablet) * 2)));}
+  .hero-grid{grid-template-columns:1fr}.hero-copy{text-align:center;margin-inline:auto}.hero-copy .lead{margin-inline:auto}.hero-actions,.trust-row{justify-content:center}.hero-visual{max-width:720px;margin-inline:auto}.hero-preview{right:-10px;opacity:.28}.phone-stage{min-height:590px;margin-top:10px}
+  .services-shell{grid-template-columns:1fr;gap:36px}.services-side{position:static}
+  .results-grid,.faq-wrap{grid-template-columns:1fr;gap:38px}.results-copy{position:static}.process-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr;gap:48px}
+}
+@media(max-width:820px){
+  .section{padding:72px 0}
+  .container{width:calc(100% - (var(--gutter-mobile) * 2));max-width:calc(100% - (var(--gutter-mobile) * 2));margin-left:var(--gutter-mobile);margin-right:var(--gutter-mobile)}
+  .nav-links,.nav-actions>.btn{display:none}.menu-button{display:grid;place-items:center}
+  .mobile-panel{position:fixed;inset:0;background:rgba(247,247,243,.98);z-index:99;padding:105px 20px 30px;display:flex;flex-direction:column;gap:8px;transform:translateY(-105%);transition:transform .3s ease;overflow-y:auto}.mobile-panel.open{transform:translateY(0)}.mobile-panel a{padding:15px 0;border-bottom:1px solid var(--line);font-size:22px;font-weight:600;letter-spacing:-.03em}.mobile-panel .btn{margin-top:16px;border:0}
+  .hero{min-height:auto;padding:120px 0 50px}.hero-title{font-size:clamp(51px,12vw,72px)}.hero-copy .lead{font-size:16px}
+  .hero-preview{display:none}
+  .hero-visual{overflow:hidden;border-radius:0;padding:0}
+  .phone-stage{min-height:570px;margin-top:4px;overflow:visible}
+  .order-popup{width:190px}
+  .order-popup.order-left{left:4px;top:154px}
+  .order-popup.order-right{right:4px;top:282px}
+  .work-card{width:min(78vw,350px)}.work-track{animation-duration:32s}
+  .pricing-grid{grid-template-columns:1fr}.price-card{min-height:auto}.footer-links{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  :root{--gutter-mobile:22px}
+  .section{padding:58px 0}h2{font-size:39px}.section-heading{margin-bottom:28px}.lead{font-size:15px}
+  .hero{padding-bottom:34px}.hero-title{font-size:48px;margin-top:24px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.trust-row{justify-content:flex-start;flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;margin-inline:auto}
+  .hero-visual{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+  .phone-stage{min-height:510px;transform:none;margin-bottom:0}
+  .order-popup{width:184px;padding:11px 12px}
+  .order-popup.order-left{left:0;top:150px}
+  .order-popup.order-right{right:0;top:276px}
+  .work-head{align-items:flex-start;flex-direction:column}.carousel-note{display:none}.work-card{width:min(78vw,315px)}.work-track{gap:12px}
+  .services-side,.price-card,.process-card,.footer-form form{border-radius:22px}
+  .service-row{grid-template-columns:42px 1fr;gap:10px;padding:22px 0}.service-row h3{font-size:21px}
+  .result-row{min-height:90px;padding:18px 0}.result-number{font-size:44px}.result-label{font-size:10px;padding:6px 9px}
+  .process-grid{grid-template-columns:1fr}.process-card{min-height:auto;padding:23px}.process-step{margin-bottom:34px}
+  .faq-question{font-size:14px}.footer-top{padding-top:54px}.footer-form h2{font-size:43px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-links{grid-template-columns:1fr 1fr;gap:26px 18px}.footer-contact{grid-template-columns:1fr}.footer-bottom{padding:18px 0;align-items:flex-start;flex-direction:column}.whatsapp{width:50px;height:50px;right:12px;bottom:12px}
+}
+@media(max-width:390px){
+  :root{--gutter-mobile:18px}
+  .hero-title{font-size:44px}
+  .phone-stage{transform:none;margin-bottom:0}
+  .order-popup{width:178px}
+  .work-card{width:80vw}
+  .result-row{gap:12px}
+  .result-label{white-space:normal;text-align:right;max-width:110px}
+  .footer-links{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
 </head>
-
 <body>
-
-  <!-- Background Glow -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-lime-500/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl"></div>
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Enteecom home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Enteecom</a>
+      <div class="nav-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+      <div class="nav-actions"><a class="btn btn-dark" href="#contact">Book a free call ↗</a><button class="menu-button" id="menuButton" aria-expanded="false" aria-label="Open menu">☰</button></div>
+    </nav>
   </div>
+</header>
+<div class="mobile-panel" id="mobilePanel" aria-hidden="true"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#contact">Book a free call</a></div>
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-3">
-      <a href="/shopify" class="flex items-center gap-3">
-        <img src="ChatGPT Image May 12, 2026, 02_08_46 PM.png" class="w-20 h-20 object-contain scale-150" alt="Enteecom Logo" />
-        <div>
-          <h2 class="text-2xl font-black">
-            Entee<span class="text-lime-400">com</span>
-          </h2>
-          <p class="text-[10px] uppercase tracking-[4px] text-zinc-400">
-            Shopify Expert
-          </p>
-        </div>
-      </a>
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">Shopify &amp; eCommerce studio</div>
+      <h1 class="hero-title"><span class="line">We build stores</span><span class="line">that look better</span><span class="line">and <span class="underlined">sell more.</span></span></h1>
+      <p class="lead">Enteecom designs high-converting Shopify stores, custom themes and eCommerce systems for ambitious brands in India, Qatar, UAE, UK and beyond.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#contact">Get a free store audit <span class="btn-arrow">↗</span></a><a class="btn btn-outline" href="#work">View selected work</a></div>
+      <div class="trust-row"><div class="trust-item"><span>✓</span>Shopify Partner</div><div class="trust-item"><span>✓</span>Custom theme development</div><div class="trust-item"><span>✓</span>CRO-focused design</div></div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center pt-28 pb-20 px-5 overflow-hidden">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center w-full relative z-10">
-      
-      <!-- LEFT: Headline and book details -->
-      <div class="lg:col-span-7 order-1 space-y-6">
-        <!-- TAG -->    
-        <div class="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/20 text-lime-400 px-5 py-2.5 rounded-full text-[11px] sm:text-xs font-black uppercase tracking-[3px]">
-          Best-Seller Blueprint
-        </div>
-        
-        <!-- HERO HEADING -->
-        <h1 class="hero-title">
-          Shopify Developer <span class="highlight">ആകാം 🚀</span>
-          <span class="sub-line">
-            "Build. Launch. Sell." — The Shopify Blueprint for Indian Entrepreneurs
-          </span>
-        </h1>
+    <div class="hero-visual">
+<div class="source-visual">
 
-        <p class="text-base sm:text-lg leading-relaxed text-zinc-300 max-w-2xl font-medium">
-          Indian eCommerce market-ൽ സ്വന്തമായി ഒരു business പടുത്തുയർത്താൻ ആവശ്യമായ step-by-step PDF ഗൈഡ്. Supplier integration മുതൽ scaling വരെയുള്ള കാര്യങ്ങൾ വളരെ എളുപ്പത്തിൽ പഠിക്കാം.
-        </p>
+        <div class="source-visual-glow"></div>
 
-        <!-- Bullet Highlights -->
-        <div class="space-y-3">
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-lime-400"></span>
-            <span class="text-zinc-200 text-sm font-semibold">51 Complete Chapters + 10 Step Advanced Theme Dev Section</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-lime-400"></span>
-            <span class="text-zinc-200 text-sm font-semibold">COD management & RTO കുറയ്ക്കാനുള്ള direct strategies</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="w-2 h-2 rounded-full bg-lime-400"></span>
-            <span class="text-zinc-200 text-sm font-semibold">Razorpay & Shiprocket local Indian configurations</span>
-          </div>
+        <div class="source-pedestal"></div>
+
+        <div class="source-ring source-ring-one"></div>
+        <div class="source-ring source-ring-two"></div>
+
+        <div class="source-sound-waves">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <!-- Mini Tags -->
-        <div class="flex flex-wrap gap-2 pt-2">
-          <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-xs font-semibold text-zinc-300">
-            Instant Access
-          </span>
-          <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-xs font-semibold text-zinc-300">
-            GST & Tax Guide
-          </span>
-          <span class="bg-white/5 border border-white/10 px-4 py-2 rounded-xl text-xs font-semibold text-zinc-300">
-            Meta Ads Scaling
-          </span>
-        </div>
-      </div>
+        <!-- ORDER 1 -->
 
-<!-- RIGHT: Ebook Purchase Section -->
-<div class="lg:col-span-5 order-2 flex justify-center lg:justify-end">
+        <div class="source-notification source-notification-one">
 
-    <style>
-        .ebook-wrapper{
-            width:100%;
-            max-width:420px;
-            margin:0 auto;
-        }
+          <div class="source-notification-header">
 
-        .ebook-cover{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
-
-        .ebook-cover img{
-            width:100%;
-            max-width:340px;
-            height:auto;
-            display:block;
-            object-fit:contain;
-            user-select:none;
-            transition:.35s ease;
-        }
-
-        .ebook-cover:hover img{
-            transform:translateY(-8px) scale(1.02);
-        }
-
-        .ebook-content{
-            margin-top:2rem;
-            text-align:center;
-        }
-
-        .ebook-badge{
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            padding:10px 18px;
-            border-radius:999px;
-            background:rgba(163,230,53,.08);
-            color:#a3e635;
-            font-size:.72rem;
-            font-weight:700;
-            letter-spacing:.18em;
-            text-transform:uppercase;
-        }
-
-        .price-label{
-            margin-top:1.8rem;
-            font-size:.8rem;
-            color:#71717a;
-            font-weight:600;
-            letter-spacing:.15em;
-            text-transform:uppercase;
-        }
-
-        .price-box{
-            display:flex;
-            justify-content:center;
-            align-items:flex-end;
-            gap:12px;
-            margin-top:8px;
-        }
-
-        .price-current{
-            font-size:58px;
-            line-height:1;
-            font-weight:900;
-            color:#fff;
-        }
-
-        .price-old{
-            font-size:22px;
-            color:#71717a;
-            text-decoration:line-through;
-            font-weight:600;
-        }
-
-        .price-save{
-            display:inline-block;
-            margin-top:12px;
-            color:#a3e635;
-            font-size:15px;
-            font-weight:700;
-        }
-
-        .buy-btn{
-            width:100%;
-            margin-top:32px;
-            background:#a3e635;
-            color:#000;
-            border:none;
-            border-radius:18px;
-            padding:18px 24px;
-            font-size:16px;
-            font-weight:800;
-            cursor:pointer;
-            transition:.25s;
-        }
-
-        .buy-btn:hover{
-            background:#bef264;
-            transform:translateY(-2px);
-        }
-
-        .buy-btn-inner{
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap:12px;
-        }
-
-        .buy-btn svg{
-            width:24px;
-            height:24px;
-        }
-
-        .ebook-trust{
-            display:flex;
-            justify-content:center;
-            flex-wrap:wrap;
-            gap:20px;
-            margin-top:24px;
-            color:#a1a1aa;
-            font-size:14px;
-        }
-
-        @media(max-width:768px){
-
-            .ebook-cover img{
-                max-width:260px;
-            }
-
-            .price-current{
-                font-size:46px;
-            }
-
-            .price-old{
-                font-size:18px;
-            }
-
-            .buy-btn{
-                padding:16px;
-            }
-
-        }
-    </style>
-
-    <div class="ebook-wrapper">
-
-        <!-- Book -->
-        <div class="ebook-cover">
-            <img
-                src="shopify_blueprint_book_1785313819884.jpg"
-                alt="Shopify Blueprint Ebook">
-        </div>
-
-        <!-- Content -->
-        <div class="ebook-content">
-
-            <span class="ebook-badge">
-                Digital PDF Edition
-            </span>
-
-            <div class="price-label">
-                Limited Time Offer
+            <div class="source-new-order">
+              New order
             </div>
 
-            <div class="price-box">
-                <div class="price-current">₹299</div>
-                <div class="price-old">₹999</div>
+            <div class="source-notification-time">
+              2m ago
             </div>
 
-            <div class="price-save">
-                Save 70% Today
+          </div>
+
+          <div class="source-notification-body">
+
+            <div class="source-product-image">
+              🧴
             </div>
 
-            <button
-                onclick="trackBookClick()"
-                class="buy-btn">
+            <div>
+              <div class="source-product-name">
+                Cityman Perfume
+              </div>
 
-                <div class="buy-btn-inner">
+              <div class="source-product-price">
+                ₹1,299
+              </div>
+            </div>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.52 3.48A11.79 11.79 0 0012.03 0C5.4 0 .02 5.38.02 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.03 24C18.66 24 24 18.62 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.03 21.82c-1.8 0-3.57-.48-5.12-1.4l-.37-.22-3.67.96.98-3.57-.24-.37a9.73 9.73 0 01-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.87 6.92c0 5.42-4.4 9.82-9.7 9.82zm5.4-7.37c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.77-1.67-2.07-.17-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.7.3 1.25.47 1.67.6.7.22 1.35.2 1.85.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35z"/>
-                    </svg>
+          </div>
 
-                    <span>Buy Ebook on WhatsApp</span>
+        </div>
+
+        <!-- ORDER 2 -->
+
+        <div class="source-notification source-notification-two">
+
+          <div class="source-notification-header">
+
+            <div class="source-new-order">
+              New order
+            </div>
+
+            <div class="source-notification-time">
+              1m ago
+            </div>
+
+          </div>
+
+          <div class="source-notification-body">
+
+            <div class="source-product-image">
+              🍯
+            </div>
+
+            <div>
+              <div class="source-product-name">
+                Ayurvedic Wellness
+              </div>
+
+              <div class="source-product-price">
+                ₹799
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ORDER 3 -->
+
+        <div class="source-notification source-notification-three">
+
+          <div class="source-notification-header">
+
+            <div class="source-new-order">
+              New order
+            </div>
+
+            <div class="source-notification-time">
+              33s ago
+            </div>
+
+          </div>
+
+          <div class="source-notification-body">
+
+            <div class="source-product-image">
+              🩳
+            </div>
+
+            <div>
+              <div class="source-product-name">
+                Men's Shorts Combo
+              </div>
+
+              <div class="source-product-price">
+                ₹649
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ORDER 4 -->
+
+        <div class="source-notification source-notification-four">
+
+          <div class="source-notification-header">
+
+            <div class="source-new-order">
+              New order
+            </div>
+
+            <div class="source-notification-time">
+              Just now
+            </div>
+
+          </div>
+
+          <div class="source-notification-body">
+
+            <div class="source-product-image">
+              ⌚
+            </div>
+
+            <div>
+              <div class="source-product-name">
+                Premium Watch
+              </div>
+
+              <div class="source-product-price">
+                ₹2,499
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- MAIN PHONE -->
+
+        <div class="source-phone-wrapper">
+
+          <div class="source-phone">
+
+            <div class="source-phone-screen">
+
+              <div class="source-phone-header">
+
+                <div class="source-phone-shopify">
+                  <img src="assets/shopify-bag.png" alt="Shopify" width="29" height="29"/>
+                </div>
+
+                <div>
+                  ☰
+                </div>
+
+              </div>
+
+              <div class="source-greeting">
+                Good morning, Enteecom 👋
+              </div>
+
+              <div class="source-phone-subtitle">
+                Here’s what’s happening with your store today.
+              </div>
+
+              <!-- SALES -->
+
+              <div class="source-dashboard-card">
+
+                <div class="source-dashboard-row">
+
+                  <div>
+                    <div class="source-label">
+                      Total Sales
+                    </div>
+
+                    <strong
+                      id="sourceTotalSales"
+                      class="source-sales-value"
+                    >
+                      ₹28,45,650
+                    </strong>
+                  </div>
+
+                  <span class="source-growth">
+                    ▲ 24.6%
+                  </span>
 
                 </div>
 
-            </button>
-
-            <div class="ebook-trust">
-                <span>✓ Instant Download</span>
-                <span>✓ Lifetime Access</span>
-                <span>✓ Free Updates</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-  <!-- Who Is This Course For? (Simplified) -->
-  <section class="py-16 px-6 bg-black border-t border-white/5 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-5xl font-black leading-tight">
-          Who Is This <span class="text-lime-400">Book For?</span>
-        </h2>
-        <p class="mt-4 text-zinc-400 max-w-2xl mx-auto text-base">
-          Shopify dropshipping, custom theme code, ecommerce business start ചെയ്യാൻ ആഗ്രഹിക്കുന്നവർക്ക് വേണ്ടിയുള്ളതാണ് ഈ ഗൈഡ്.
-        </p>
-      </div>
-
-      <!-- Simplified horizontal list layout -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-lime-400/30 transition-all duration-300">
-          <div class="text-3xl mb-2">🎓</div>
-          <div class="font-bold text-sm text-white">Students</div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-lime-400/30 transition-all duration-300">
-          <div class="text-3xl mb-2">💻</div>
-          <div class="font-bold text-sm text-white">Freelancers</div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-lime-400/30 transition-all duration-300">
-          <div class="text-3xl mb-2">🛒</div>
-          <div class="font-bold text-sm text-white">Store Owners</div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-lime-400/30 transition-all duration-300">
-          <div class="text-3xl mb-2">🚀</div>
-          <div class="font-bold text-sm text-white">Job Seekers</div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-lime-400/30 transition-all duration-300">
-          <div class="text-3xl mb-2">📦</div>
-          <div class="font-bold text-sm text-white">Dropshippers</div>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:border-lime-400/30 transition-all duration-300">
-          <div class="text-3xl mb-2">🌍</div>
-          <div class="font-bold text-sm text-white">Beginners</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Shopify -->
-  <section class="py-20 px-6 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-5xl font-black uppercase leading-tight">
-          Why <span class="text-lime-400">Shopify?</span>
-        </h2>
-        <p class="mt-4 text-zinc-400 max-w-3xl mx-auto text-base">
-          Shopify holds a massive share of the global eCommerce ecosystem. Sourcing, theme development, and coding present unlimited remote career growth.
-        </p>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-6">
-        <!-- BOX 1 -->
-        <div class="bg-white/5 border border-white/10 rounded-[15px] p-8 hover:border-lime-400/15 transition-all duration-150">
-          <h3 class="text-xl font-black uppercase text-lime-400 mb-3">
-            Local Sourcing & Dropshipping
-          </h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">
-            Unlike international dropshipping, the Indian market has unique components like COD (Cash on Delivery) and logistics providers (Shiprocket, Delhivery) that require specialized setups to scale profitably.
-          </p>
-        </div>
-
-        <!-- BOX 2 -->
-        <div class="bg-white/5 border border-white/10 rounded-[15px] p-8 hover:border-lime-400/15 transition-all duration-150">
-          <h3 class="text-xl font-black uppercase text-lime-400 mb-3">
-            Custom Theme Coding
-          </h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">
-            Learn Shopify Liquid coding, theme architectures, template logic, configuration panels (settings_schema.json), dynamic custom sections, and push code directly through Shopify CLI.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Accordion: Chapter Index -->
-  <section id="chapter-index" class="py-24 px-6 bg-black border-t border-white/5 relative overflow-hidden">
-    <div class="max-w-4xl mx-auto">
-      <!-- HEADER -->
-      <div class="text-center mb-16">
-        <div class="inline-flex items-center gap-2 bg-lime-500/10 border border-lime-500/20 px-5 py-2 rounded-full text-lime-400 text-sm font-bold uppercase tracking-wider mb-6">
-          eBook Blueprint Curriculum
-        </div>
-        <h2 class="text-4xl md:text-5xl font-black uppercase leading-tight">
-          Complete eBook <span class="text-lime-400">— Chapter Index</span>
-        </h2>
-        <p class="mt-4 text-zinc-400 text-base">
-          Click on any part below to explore the detailed step-by-step chapters and advanced learning steps included in the eBook.
-        </p>
-      </div>
-
-      <!-- Accordion Container -->
-      <div class="space-y-4">
-        
-        <!-- Accordion Item 1 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(1)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 1</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Getting Started with Shopify</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">5 Chapters</span>
-              <svg id="accordion-icon-1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 1:</strong> What is Shopify?</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 2:</strong> Creating Your Shopify Account</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 3:</strong> Understanding Your Shopify Dashboard</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 4:</strong> Choosing the Right Shopify Plan</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 5:</strong> Setting Up Your Basic Store Information</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 2 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(2)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 2</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Building Your Product Catalog</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">4 Chapters</span>
-              <svg id="accordion-icon-2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 6:</strong> Adding Your First Product</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 7:</strong> Adding Product Variants</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 8:</strong> Organizing Products into Collections</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 9:</strong> Importing Products via CSV</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 3 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(3)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 3</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Theme Customization & Development</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">7 Chapters</span>
-              <svg id="accordion-icon-3" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 10:</strong> Understanding Shopify Themes</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 11:</strong> Choosing & Installing a Theme</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 12:</strong> The Theme Editor — Full Walkthrough</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 13:</strong> Navigation Menus</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 14:</strong> Important Pages to Create</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 15:</strong> Code Editing (Beginner to Advanced)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 16:</strong> Theme Speed Optimization</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 4: Custom Theme Development -->
-        <div class="border border-lime-400/20 rounded-2xl bg-gradient-to-br from-lime-400/5 to-transparent overflow-hidden transition-all duration-300 hover:border-lime-400/50">
-          <button onclick="toggleAccordion(4)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Bonus Section</span>
-              <h4 class="text-lg sm:text-xl font-black text-white flex items-center gap-2">
-                🎨 Custom Theme Development
-              </h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-lime-400 text-xs font-bold bg-lime-400/10 border border-lime-400/20 px-3 py-1.5 rounded-full">10 Steps</span>
-              <svg id="accordion-icon-4" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 1:</strong> Setting Up Local Development Environment</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 2:</strong> Creating Your Theme with Shopify CLI</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 3:</strong> Understanding the Complete File Structure</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 4:</strong> The Master Layout (theme.liquid)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 5:</strong> How Templates Work (.json files)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 6:</strong> Building a Custom Section from Scratch</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 7:</strong> settings_schema.json (Theme Settings Panel)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 8:</strong> Pushing Your Theme to Shopify</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 9:</strong> Version Control with Git</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Step 10:</strong> Performance Best Practices</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 5 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(5)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 4</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Setting Up Payments</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">7 Chapters</span>
-              <svg id="accordion-icon-5" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 17:</strong> Understanding Payment Options in India</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 18:</strong> Setting Up Razorpay</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 19:</strong> Setting Up Cash on Delivery (COD)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 20:</strong> Setting Up UPI Payments</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 21:</strong> Payment Settings & Configuration</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 22:</strong> Testing Your Complete Payment Flow</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 23:</strong> Understanding Payment Terminology</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 6 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(6)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 5</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Shipping & Delivery Setup</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">9 Chapters</span>
-              <svg id="accordion-icon-6" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 24:</strong> Understanding Shopify Shipping</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 25:</strong> Setting Up Shipping Zones & Rates</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 26:</strong> Delivery Profiles for Special Products</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 27:</strong> Connecting a Courier Partner (Shiprocket)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 28:</strong> Managing COD Shipping & Reducing RTO</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 29:</strong> Packaging & Fulfillment</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 30:</strong> International Shipping (Optional)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 31:</strong> Shopify Shipping Final Configuration</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 32:</strong> Shipping Policy Page</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 7 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(7)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 6</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Legal Pages & Store Policies</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">11 Chapters</span>
-              <svg id="accordion-icon-7" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-7" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 33:</strong> Why Legal Pages Matter</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 34:</strong> Auto-Generating Policies with Shopify</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 35:</strong> Refund & Return Policy</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 36:</strong> Privacy Policy</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 37:</strong> Terms of Service</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 38:</strong> Shipping Policy</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 39:</strong> Adding Policies to Your Store</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 40:</strong> GST & Tax Setup for India</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 41:</strong> Consumer Protection Compliance (India)</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 42:</strong> Checkout Legal Requirements</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 43:</strong> About Us Page That Converts</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion Item 8 -->
-        <div class="border border-white/10 rounded-2xl bg-white/5 overflow-hidden transition-all duration-300 hover:border-lime-400/30">
-          <button onclick="toggleAccordion(8)" class="w-full flex items-center justify-between p-6 text-left focus:outline-none">
-            <div>
-              <span class="text-lime-400 text-xs font-bold uppercase tracking-wider block mb-1">Part 7</span>
-              <h4 class="text-lg sm:text-xl font-black text-white">Launching Your Store</h4>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="text-zinc-500 text-xs font-semibold bg-white/5 px-3 py-1.5 rounded-full border border-white/5">8 Chapters</span>
-              <svg id="accordion-icon-8" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-400 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </button>
-          <div id="accordion-content-8" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-6 pt-0 border-t border-white/5 bg-black/20 text-zinc-400 space-y-3">
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 44:</strong> Pre-Launch Store Audit</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 45:</strong> Placing Your Final Test Order</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 46:</strong> Connecting Your Custom Domain</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 47:</strong> Removing Password Protection</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 48:</strong> Setting Up Google Analytics 4</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 49:</strong> Setting Up Facebook & Instagram Pixel</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 50:</strong> Going Live — Final Steps</span></div>
-              <div class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span><span><strong>Chapter 51:</strong> Your First 24 Hours After Launch</span></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Floating Ebook Purchase CTA Under Accordion -->
-      <div class="mt-12 text-center">
-        <button 
-          onclick="trackBookClick()"
-          class="inline-flex items-center justify-center gap-3 bg-lime-400 hover:bg-lime-300 text-black font-black px-10 py-5 rounded-2xl text-lg transition-all duration-200 hover:scale-105 shadow-2xl">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20.52 3.48A11.79 11.79 0 0012.03 0C5.4 0 .02 5.38.02 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.03 24C18.66 24 24 18.62 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.03 21.82c-1.8 0-3.57-.48-5.12-1.4l-.37-.22-3.67.96.98-3.57-.24-.37a9.73 9.73 0 01-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.87 6.92c0 5.42-4.4 9.82-9.7 9.82zm5.4-7.37c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.77-1.67-2.07-.17-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.7.3 1.25.47 1.67.6.7.22 1.35.2 1.85.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35z" />
-          </svg>
-          <span>Get The Ebook Now - ₹299</span>
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- About The Author / Mentor Section -->
-  <section class="py-24 px-6 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="bg-white/5 border border-white/10 rounded-[40px] p-8 sm:p-12 backdrop-blur-xl">
-        <div class="grid md:grid-cols-12 gap-12 items-center">
-          
-          <!-- PROFILE -->
-          <div class="md:col-span-4 flex flex-col items-center text-center">
-            <!-- IMAGE -->
-            <div class="relative w-36 h-36 rounded-full bg-gradient-to-tr from-lime-400 to-green-500 p-[3px] shadow-[0_0_40px_rgba(163,230,53,0.25)]">
-              <div class="w-full h-full rounded-full bg-black overflow-hidden">
-                <img src="akhil.jpg" alt="Akhil Anand" class="w-full h-full object-cover" />
-              </div>
-              <!-- VERIFIED -->
-              <div class="absolute bottom-2 right-2 w-8 h-8 bg-lime-400 rounded-full border-4 border-black flex items-center justify-center shadow-xl">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                <svg
+                  class="source-chart"
+                  viewBox="0 0 300 100"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="
+                    M0,76
+                    C18,61 25,83 42,67
+                    S71,73 89,58
+                    S116,74 133,54
+                    S163,67 180,47
+                    S210,58 227,42
+                    S252,63 269,31
+                    S286,40 300,12
+                    "
+                  ></path>
                 </svg>
+
               </div>
-            </div>
 
-            <h3 class="text-3xl font-black mt-6">Akhil Anand</h3>
-            <p class="text-sm font-bold text-lime-400 uppercase tracking-[4px] mt-2">
-              Founder • Enteecom
-            </p>
-          </div>
+              <!-- METRICS -->
 
-          <!-- CONTENT -->
-          <div class="md:col-span-8 space-y-6">
-            <div class="inline-flex items-center gap-2 bg-lime-400/10 border border-lime-400/20 text-lime-400 px-5 py-2 rounded-full text-xs font-black uppercase tracking-[3px]">
-              Meet The Author
-            </div>
+              <div class="source-metrics">
 
-            <h2 class="text-3xl sm:text-4xl font-black leading-tight">
-              Shopify Developer & <span class="text-lime-400">Ecommerce Consultant 🚀</span>
-            </h2>
+                <div class="source-dashboard-card source-metric">
 
-            <p class="text-zinc-400 text-base sm:text-lg leading-relaxed">
-              Hi, I’m Akhil Anand — founder of Enteecom. 
-              Over the last few years, I’ve worked with ecommerce brands, Shopify businesses & international clients helping them build premium online stores, custom Shopify themes & conversion-focused ecommerce experiences.
-            </p>
+                  <div class="source-label">
+                    Total Orders
+                  </div>
 
-            <div class="grid sm:grid-cols-2 gap-4 pt-2">
-              <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5">
-                <div class="w-12 h-12 rounded-xl bg-lime-400 text-black flex items-center justify-center text-xl font-black shrink-0">🚀</div>
-                <div>
-                  <h4 class="text-base font-black">Proven Blueprints</h4>
-                  <p class="text-zinc-400 text-xs mt-1">Direct frameworks validated by building real Shopify projects.</p>
+                  <strong id="sourceTotalOrders">
+                    1,248
+                  </strong>
+
+                  <span class="source-growth">
+                    ▲ 18.7%
+                  </span>
+
                 </div>
-              </div>
-              <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-5">
-                <div class="w-12 h-12 rounded-xl bg-lime-400 text-black flex items-center justify-center text-xl font-black shrink-0">💬</div>
-                <div>
-                  <h4 class="text-base font-black">Direct Sourcing Contacts</h4>
-                  <p class="text-zinc-400 text-xs mt-1">Get contacts of trusted local courier settings & wholesalers.</p>
+
+                <div class="source-dashboard-card source-metric">
+
+                  <div class="source-label">
+                    Conversion Rate
+                  </div>
+
+                  <strong>
+                    3.62%
+                  </strong>
+
+                  <span class="source-growth">
+                    ▲ 9.4%
+                  </span>
+
                 </div>
+
               </div>
+
+              <!-- CHANNELS -->
+
+              <div class="source-dashboard-card">
+
+                <strong style="font-size: 12px">
+                  Top Channels
+                </strong>
+
+                <div class="source-channel">
+                  <span>Online Store</span>
+                  <span>72%</span>
+                </div>
+
+                <div class="source-bar">
+                  <span style="width: 72%"></span>
+                </div>
+
+                <div class="source-channel">
+                  <span>Search</span>
+                  <span>18%</span>
+                </div>
+
+                <div class="source-bar">
+                  <span style="width: 18%"></span>
+                </div>
+
+                <div class="source-channel">
+                  <span>Social</span>
+                  <span>10%</span>
+                </div>
+
+                <div class="source-bar">
+                  <span style="width: 10%"></span>
+                </div>
+
+              </div>
+
             </div>
+
           </div>
 
         </div>
+
       </div>
+
+  <button id="sourceSoundButton" class="source-sound-button">🔇 Enable order sound</button>
+</div>
+  </div>
+</section>
+
+<section class="section work-section" id="work">
+  <div class="container work-head"><div class="section-heading"><div class="kicker">Selected work</div><h2>Recent commerce work, shown without distractions.</h2><p class="lead">Image-only project previews. Replace the files in the assets folder with your own project images.</p></div><div class="carousel-note">Auto scrolling · Hover to pause</div></div>
+  <div class="work-viewport" aria-label="Selected project image carousel">
+    <div class="work-track">
+      <a class="work-card" href="https://vibesqa.shop" target="_blank" rel="noopener" aria-label="Visit VibesQA website"><img src="assets/work-01.webp" alt="VibesQA Qatar fashion Shopify store" loading="lazy"/><span class="work-label">VibesQA</span></a>
+      <a class="work-card" href="https://slimytea.com" target="_blank" rel="noopener" aria-label="Visit Slim-y Herbal Life website"><img src="assets/work-02.webp" alt="Slim-y Herbal Life custom Shopify theme" loading="lazy"/><span class="work-label">Slim-y Herbal Life</span></a>
+      <a class="work-card" href="https://acaciasports.com" target="_blank" rel="noopener" aria-label="Visit Acacia Sports US website"><img src="assets/work-03.webp" alt="Acacia Sports US ecommerce CRO project" loading="lazy"/><span class="work-label">Acacia Sports US</span></a>
+      <a class="work-card" href="https://nayura.in" target="_blank" rel="noopener" aria-label="Visit Nayura website"><img src="assets/work-04.webp" alt="Nayura Ayurvedic ecommerce store" loading="lazy"/><span class="work-label">Nayura</span></a>
+      <a class="work-card" href="https://aaronskitchen.in" target="_blank" rel="noopener" aria-label="Visit Aaron's Kitchen website"><img src="assets/work-05.webp" alt="Aaron's Kitchen custom Shopify theme" loading="lazy"/><span class="work-label">Aaron's Kitchen</span></a>
+      <a class="work-card" href="https://cultales.com" target="_blank" rel="noopener" aria-label="Visit Cultales website"><img src="assets/work-06.webp" alt="Cultales custom Shopify theme" loading="lazy"/><span class="work-label">Cultales</span></a>
+      <a class="work-card" href="https://acaciasports.ca" target="_blank" rel="noopener" aria-label="Visit Acacia Sports Canada website"><img src="assets/work-07.webp" alt="Acacia Sports Canada ecommerce CRO project" loading="lazy"/><span class="work-label">Acacia Sports Canada</span></a>
+      <a class="work-card" href="https://kapdaclub.com" target="_blank" rel="noopener" aria-label="Visit Kapda Club website"><img src="assets/work-08.webp" alt="Kapda Club fashion ecommerce store" loading="lazy"/><span class="work-label">Kapda Club</span></a>
+      <a class="work-card" href="https://vibesqa.shop" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-01.webp" alt="" loading="lazy"/><span class="work-label">VibesQA</span></a>
+      <a class="work-card" href="https://slimytea.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-02.webp" alt="" loading="lazy"/><span class="work-label">Slim-y Herbal Life</span></a>
+      <a class="work-card" href="https://acaciasports.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-03.webp" alt="" loading="lazy"/><span class="work-label">Acacia Sports US</span></a>
+      <a class="work-card" href="https://nayura.in" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-04.webp" alt="" loading="lazy"/><span class="work-label">Nayura</span></a>
+      <a class="work-card" href="https://aaronskitchen.in" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-05.webp" alt="" loading="lazy"/><span class="work-label">Aaron's Kitchen</span></a>
+      <a class="work-card" href="https://cultales.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-06.webp" alt="" loading="lazy"/><span class="work-label">Cultales</span></a>
+      <a class="work-card" href="https://acaciasports.ca" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-07.webp" alt="" loading="lazy"/><span class="work-label">Acacia Sports Canada</span></a>
+      <a class="work-card" href="https://kapdaclub.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-08.webp" alt="" loading="lazy"/><span class="work-label">Kapda Club</span></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="py-14 px-6 bg-zinc-950 border-t border-white/10">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
-      
-      <!-- LEFT -->
-      <div class="text-center lg:text-left">
-        <h2 class="text-3xl font-black">
-          Entee<span class="text-lime-400">com</span>
-        </h2>
-        <p class="text-zinc-500 mt-3 text-sm leading-relaxed">
-          Shopify Development • Dropshipping • Custom Theme Development
-        </p>
-
-        <div class="mt-6 space-y-4 text-xs text-zinc-400">
-          <div class="flex items-center justify-center lg:justify-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span>Kannur, Kelakam</span>
-          </div>
-          <div class="flex items-center justify-center lg:justify-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <span>Doha, Qatar</span>
-          </div>
-          <div class="flex items-center justify-center lg:justify-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            <span>+91 7892393901</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT -->
-      <div class="flex flex-col items-center lg:items-end gap-6">
-        <!-- FOOTER MENU -->
-        <div class="flex flex-wrap justify-center lg:justify-end gap-3 text-sm font-semibold">
-          <a href="https://www.enteecom.in" class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-lime-400 transition-all duration-150">
-            Shopify Websites
-          </a>
-          <a href="/shopify" class="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-lime-400 transition-all duration-150">
-            Shopify Academy
-          </a>
-        </div>
-
-        <!-- SOCIAL BUTTONS -->
-        <div class="flex flex-wrap justify-center gap-4">
-          <!-- INSTAGRAM -->
-          <a href="https://instagram.com/" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-lime-400 hover:bg-lime-400 hover:text-black transition-all duration-150 font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z" />
-            </svg>
-            Instagram
-          </a>
-
-          <!-- WHATSAPP -->
-          <a href="https://wa.me/917892393901" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-2xl bg-lime-400 text-black hover:bg-lime-150 transition-all duration-150 font-black">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.52 3.48A11.79 11.79 0 0012.03 0C5.4 0 .02 5.38.02 12c0 2.11.55 4.17 1.6 5.99L0 24l6.18-1.62A11.96 11.96 0 0012.03 24C18.66 24 24 18.62 24 12c0-3.2-1.25-6.2-3.48-8.52zM12.03 21.82c-1.8 0-3.57-.48-5.12-1.4l-.37-.22-3.67.96.98-3.57-.24-.37a9.73 9.73 0 01-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.87 6.92c0 5.42-4.4 9.82-9.7 9.82zm5.4-7.37c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.77-1.67-2.07-.17-.3-.02-.47.13-.62.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.7.3 1.25.47 1.67.6.7.22 1.35.2 1.85.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35z" />
-            </svg>
-            WhatsApp
-          </a>
-        </div>
-      </div>
+<section class="section section-white" id="services">
+  <div class="container services-shell">
+    <aside class="services-side"><div class="kicker">What we do</div><h2>Focused eCommerce work.</h2><p>Strategy, design and Shopify development stay connected from the first audit to launch. This keeps the experience clear for the customer and easier for your team to manage.</p><a class="btn btn-dark" href="#contact">Discuss your store ↗</a></aside>
+    <div class="service-list">
+      <article class="service-row"><div class="service-num">01</div><div><h3>Shopify store builds</h3><p>Complete store setup with product structure, navigation, payments, shipping and essential integrations.</p></div></article>
+      <article class="service-row"><div class="service-num">02</div><div><h3>Custom theme development</h3><p>Merchant-friendly Shopify themes built around your catalogue, workflows and brand system.</p></div></article>
+      <article class="service-row"><div class="service-num">03</div><div><h3>Store redesign and CRO</h3><p>Sharper page hierarchy, improved product pages and a clearer path from discovery to checkout.</p></div></article>
+      <article class="service-row"><div class="service-num">04</div><div><h3>Migration and integrations</h3><p>Platform migration, analytics, tracking, feeds, pixels, merchant tools and third-party integrations.</p></div></article>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Accordion Toggle JavaScript -->
-  <script>
-    function toggleAccordion(id) {
-      const content = document.getElementById(`accordion-content-${id}`);
-      const icon = document.getElementById(`accordion-icon-${id}`);
-      
-      // Close all other accordions (makes it clean and focused)
-      const allContents = document.querySelectorAll('[id^="accordion-content-"]');
-      const allIcons = document.querySelectorAll('[id^="accordion-icon-"]');
-      
-      allContents.forEach((c) => {
-        if (c.id !== `accordion-content-${id}`) {
-          c.style.maxHeight = null;
-        }
-      });
-      
-      allIcons.forEach((i) => {
-        if (i.id !== `accordion-icon-${id}`) {
-          i.classList.remove('rotate-180');
-        }
-      });
+<section class="section results-section" id="results">
+  <div class="container results-grid">
+    <div class="results-copy"><div class="kicker">Practical experience</div><h2>Work measured by what improves.</h2><p class="lead">Clearer buying journeys, reliable Shopify systems and improvements your team can continue using after launch.</p></div>
+    <div><div class="results-list"><div class="result-row"><div class="result-number">20+</div><div class="result-label">Stores worked on</div></div><div class="result-row"><div class="result-number">₹2Cr+</div><div class="result-label">Revenue influenced</div></div><div class="result-row"><div class="result-number">5+</div><div class="result-label">Markets served</div></div><div class="result-row"><div class="result-number">2hr</div><div class="result-label">Response target</div></div></div><p class="result-note">Every number represents practical work completed for a real store, campaign or commerce team.</p></div>
+  </div>
+</section>
 
-      // Toggle active accordion
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-        icon.classList.remove('rotate-180');
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        icon.classList.add('rotate-180');
-      }
+<section class="section section-dark">
+  <div class="container"><div class="section-heading"><div class="kicker">How we work</div><h2>A direct process from brief to launch.</h2><p class="lead">Fewer handovers, clearer communication and decisions made around the customer journey.</p></div>
+    <div class="process-grid"><article class="process-card"><div class="process-step">01 · Understand</div><h3>Audit the opportunity</h3><p>We review the brand, catalogue, users, competition and current buying journey.</p></article><article class="process-card"><div class="process-step">02 · Plan</div><h3>Set the structure</h3><p>We define page hierarchy, features, content needs, integrations and milestones.</p></article><article class="process-card"><div class="process-step">03 · Build</div><h3>Design and develop</h3><p>The store is designed responsively, developed in Shopify and tested across key devices.</p></article><article class="process-card"><div class="process-step">04 · Improve</div><h3>Launch and optimise</h3><p>We monitor the experience, fix friction and add improvements as the store grows.</p></article></div>
+  </div>
+</section>
+
+<section class="section section-white" id="pricing">
+  <div class="container"><div class="section-heading center"><div class="kicker">Straightforward pricing</div><h2>Choose the level of build your store needs.</h2><p class="lead">Clear starting prices. Final scope is confirmed after a short store and requirement review.</p></div>
+    <div class="pricing-grid"><article class="price-card"><div class="price-badge">Store launch</div><h3>Shopify Setup</h3><p class="price-copy">A professional starter store using a reliable theme and a clean conversion-ready structure.</p><div class="price">₹6,999 <small>starting</small></div><ul class="features"><li>Theme setup and branding</li><li>Core pages and navigation</li><li>Payments and shipping</li><li>Mobile optimisation</li><li>Basic analytics setup</li></ul><a class="btn btn-outline" href="#contact">Discuss setup</a></article><article class="price-card featured"><div class="price-badge">Most requested</div><h3>Store Redesign</h3><p class="price-copy">A stronger visual direction and improved buying flow for an existing Shopify store.</p><div class="price">₹12,999 <small>starting</small></div><ul class="features"><li>UX and CRO review</li><li>Homepage and product page redesign</li><li>Mobile-first improvements</li><li>Trust and offer structure</li><li>Performance clean-up</li></ul><a class="btn" href="#contact">Request redesign</a></article><article class="price-card"><div class="price-badge">Custom build</div><h3>Custom Theme</h3><p class="price-copy">A distinct Shopify experience developed for your products, brand system and workflows.</p><div class="price">₹18,999 <small>starting</small></div><ul class="features"><li>Custom responsive design</li><li>Reusable Shopify sections</li><li>Advanced product experience</li><li>Integrations and tracking</li><li>Launch support</li></ul><a class="btn btn-outline" href="#contact">Plan custom build</a></article></div>
+    <p class="pricing-note">Bug fixes, custom sections and integrations are also available as standalone projects.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container faq-wrap"><div class="section-heading"><div class="kicker">Common questions</div><h2>Before we begin.</h2><p class="lead">A few practical answers about timelines, content and working together remotely.</p></div><div class="faq-list"><article class="faq-item"><button class="faq-question"><span>How long does a Shopify store take?</span><span>+</span></button><div class="faq-answer"><p>A standard setup usually takes 7–14 working days. Redesigns and custom themes take longer depending on catalogue size, content, integrations and feedback cycles.</p></div></article><article class="faq-item"><button class="faq-question"><span>Can you work with clients outside India?</span><span>+</span></button><div class="faq-answer"><p>Yes. Enteecom works remotely with brands in Qatar, UAE, the UK, Canada and other markets using clear milestones, shared previews and scheduled reviews.</p></div></article><article class="faq-item"><button class="faq-question"><span>Do you provide ongoing support?</span><span>+</span></button><div class="faq-answer"><p>Yes. Support can cover fixes, new sections, campaign landing pages, product-page improvements, integrations and ongoing CRO work.</p></div></article><article class="faq-item"><button class="faq-question"><span>Will the store be easy for our team to edit?</span><span>+</span></button><div class="faq-answer"><p>Yes. Sections and settings are built so the merchant can update content, images, offers and most layouts without editing code.</p></div></article></div></div>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-top">
+    <div class="footer-form"><div class="kicker">Got a project in mind?</div><h2>Let’s build it together.</h2><p class="lead">Share the basics. We’ll reply with the best next step for your store.</p><form id="contactForm"><div class="form-grid"><input class="field" name="name" placeholder="Full name" required/><input class="field" name="email" placeholder="Email address" required type="email"/><input class="field full" name="phone" placeholder="Phone / WhatsApp number"/><select class="field full" name="service"><option value="">Select a service</option><option>Shopify store setup</option><option>Store redesign</option><option>Custom theme development</option><option>CRO optimisation</option><option>Bug fixing / integration</option></select><textarea class="field full textarea" name="message" placeholder="Share your project idea..." required></textarea></div><p class="form-status" id="formStatus" aria-live="polite"></p><button class="btn btn-primary" type="submit">Send enquiry <span class="btn-arrow">↗</span></button></form></div>
+    <div class="footer-right"><div class="footer-links"><div class="footer-col"><h3>Company</h3><a href="#top">Home</a><a href="#services">Services</a><a href="#results">Results</a><a href="#contact">Contact</a></div><div class="footer-col"><h3>Explore</h3><a href="#work">Selected work</a><a href="#pricing">Pricing</a><a href="#">Case studies</a><a href="#">Insights</a></div><div class="footer-col"><h3>Platform builds</h3><a href="#services">Shopify stores</a><a href="#services">Custom themes</a><a href="#services">Store redesigns</a><a href="#services">Migrations</a></div><div class="footer-col"><h3>Growth</h3><a href="#services">CRO reviews</a><a href="#services">Product pages</a><a href="#services">Analytics</a><a href="#services">Integrations</a></div></div><div class="footer-contact"><div><div class="contact-title">Talk to us</div><div class="person"><div class="avatar">AA</div><div><div class="person-name">Akhil Anand</div><div class="person-role">Founder · Shopify Developer</div></div></div><div class="support-list"><div class="support-item"><div class="support-icon">✉</div><div>Email<strong>hello@enteecom.in</strong></div></div><div class="support-item"><div class="support-icon">◉</div><div>Availability<strong>Qatar · Kerala · Remote</strong></div></div></div><div class="socials"><a aria-label="LinkedIn" href="#">in</a><a aria-label="Instagram" href="#">ig</a><a aria-label="Facebook" href="#">f</a></div><div class="shopify-partner-badge" aria-label="Shopify Partner"><img src="assets/shopify-bag.png" alt="Shopify" width="27" height="27"/><span><strong>Shopify Partner</strong><small>Design · Development · CRO</small></span></div></div><div><div class="contact-title">Project enquiries</div><div class="support-list"><div class="support-item"><div class="support-icon">↗</div><div>Free audit<strong>Available for selected stores</strong></div></div><div class="support-item"><div class="support-icon">⌁</div><div>Response target<strong>Within 2 working hours</strong></div></div><div class="support-item"><div class="support-icon">✓</div><div>Working style<strong>Clear scope and milestones</strong></div></div></div></div></div></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Enteecom. All rights reserved.</span><span>Shopify design · Development · CRO</span></div>
+</footer>
+<a class="whatsapp" href="https://wa.me/97400000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◔</a>
+
+<script>
+// Mobile menu
+const menuButton=document.getElementById('menuButton');
+const mobilePanel=document.getElementById('mobilePanel');
+function closeMenu(){mobilePanel.classList.remove('open');document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');mobilePanel.setAttribute('aria-hidden','true');menuButton.textContent='☰'}
+menuButton.addEventListener('click',()=>{const open=!mobilePanel.classList.contains('open');mobilePanel.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);menuButton.setAttribute('aria-expanded',String(open));mobilePanel.setAttribute('aria-hidden',String(!open));menuButton.textContent=open?'×':'☰'});
+mobilePanel.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+// Animated Shopify orders — taken from the supplied animation code
+const notificationCards =
+      document.querySelectorAll(".source-notification");
+
+    const totalSalesElement =
+      document.getElementById("sourceTotalSales");
+
+    const totalOrdersElement =
+      document.getElementById("sourceTotalOrders");
+
+    const sourceSoundButton =
+      document.getElementById("sourceSoundButton");
+
+    const orderAmounts = [
+      1299,
+      799,
+      649,
+      2499
+    ];
+
+    let currentOrder = 0;
+    let sourceTotalSales = 2845650;
+    let sourceTotalOrders = 1248;
+
+    let soundEnabled = false;
+    let audioContext = null;
+
+    function formatIndianNumber(number) {
+      return number.toLocaleString("en-IN");
     }
-  </script>
 
+    function playOrderSound() {
+      if (!soundEnabled) {
+        return;
+      }
+
+      if (!audioContext) {
+        audioContext =
+          new (
+            window.AudioContext ||
+            window.webkitAudioContext
+          )();
+      }
+
+      const oscillator =
+        audioContext.createOscillator();
+
+      const gain =
+        audioContext.createGain();
+
+      oscillator.type = "sine";
+
+      oscillator.frequency.setValueAtTime(
+        820,
+        audioContext.currentTime
+      );
+
+      oscillator.frequency.exponentialRampToValueAtTime(
+        1320,
+        audioContext.currentTime + 0.14
+      );
+
+      gain.gain.setValueAtTime(
+        0.0001,
+        audioContext.currentTime
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.07,
+        audioContext.currentTime + 0.02
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        audioContext.currentTime + 0.24
+      );
+
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+
+      oscillator.start();
+
+      oscillator.stop(
+        audioContext.currentTime + 0.25
+      );
+    }
+
+    function animateDashboardNumber(element) {
+      element.animate(
+        [
+          {
+            transform: "scale(1)",
+            color: "#10251a"
+          },
+          {
+            transform: "scale(1.08)",
+            color: "#7cae22"
+          },
+          {
+            transform: "scale(1)",
+            color: "#10251a"
+          }
+        ],
+        {
+          duration: 520,
+          easing: "ease-out"
+        }
+      );
+    }
+
+    function showNextOrder() {
+      const card =
+        notificationCards[
+          currentOrder %
+          notificationCards.length
+        ];
+
+      const orderAmount =
+        orderAmounts[
+          currentOrder %
+          orderAmounts.length
+        ];
+
+      card.getAnimations().forEach(
+        animation => animation.cancel()
+      );
+
+      card.animate(
+        [
+          {
+            opacity: 0,
+            transform:
+              "translateY(28px) scale(0.72) rotate(-3deg)",
+            filter: "blur(8px)"
+          },
+          {
+            opacity: 1,
+            transform:
+              "translateY(-5px) scale(1.04)",
+            filter: "blur(0px)",
+            offset: 0.72
+          },
+          {
+            opacity: 1,
+            transform:
+              "translateY(0) scale(1)",
+            filter: "blur(0px)"
+          }
+        ],
+        {
+          duration: 720,
+          easing:
+            "cubic-bezier(.2,.88,.28,1.24)",
+          fill: "forwards"
+        }
+      );
+
+      sourceTotalSales += orderAmount;
+      sourceTotalOrders += 1;
+
+      totalSalesElement.textContent =
+        "₹" + formatIndianNumber(sourceTotalSales);
+
+      totalOrdersElement.textContent =
+        formatIndianNumber(sourceTotalOrders);
+
+      animateDashboardNumber(
+        totalSalesElement
+      );
+
+      animateDashboardNumber(
+        totalOrdersElement
+      );
+
+      playOrderSound();
+
+      setTimeout(() => {
+        card.animate(
+          [
+            {
+              opacity: 1,
+              transform:
+                "translateY(0) scale(1)"
+            },
+            {
+              opacity: 0,
+              transform:
+                "translateY(-20px) scale(0.94)",
+              filter: "blur(5px)"
+            }
+          ],
+          {
+            duration: 440,
+            easing: "ease-in",
+            fill: "forwards"
+          }
+        );
+      }, 1850);
+
+      currentOrder += 1;
+    }
+
+    sourceSoundButton.addEventListener(
+      "click",
+      async function () {
+        soundEnabled = !soundEnabled;
+
+        if (soundEnabled) {
+          if (!audioContext) {
+            audioContext =
+              new (
+                window.AudioContext ||
+                window.webkitAudioContext
+              )();
+          }
+
+          await audioContext.resume();
+
+          sourceSoundButton.textContent =
+            "🔊 Order sound enabled";
+        } else {
+          sourceSoundButton.textContent =
+            "🔇 Enable order sound";
+        }
+      }
+    );
+
+    setTimeout(
+      showNextOrder,
+      700
+    );
+
+    setInterval(
+      showNextOrder,
+      2500
+    );
+
+// FAQ
+ document.querySelectorAll('.faq-item').forEach(item=>{const btn=item.querySelector('.faq-question'),answer=item.querySelector('.faq-answer');btn.addEventListener('click',()=>{const opening=!item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(openItem=>{openItem.classList.remove('open');openItem.querySelector('.faq-answer').style.maxHeight=null});item.classList.toggle('open',opening);answer.style.maxHeight=opening?answer.scrollHeight+'px':null})});
+
+// Demo contact form
+const contactForm=document.getElementById('contactForm'),formStatus=document.getElementById('formStatus');
+contactForm.addEventListener('submit',e=>{e.preventDefault();if(!contactForm.reportValidity())return;formStatus.textContent='Thank you — connect this form to your email or CRM before publishing.';contactForm.reset()});
+</script>
 </body>
-
 </html>
