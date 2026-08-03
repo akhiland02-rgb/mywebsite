@@ -1,1126 +1,484 @@
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Enteecom | #1 Shopify Agency Kerala</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <style type="text/tailwindcss">
-:root {
-    --electric-mint: #a3e635;
-    --dark-accent: #0B0F0D;
-    --card-bg: #101312;
-    --terminal-black: #050505;
-  --grid-color: rgba(163, 230, 53, 0.02);
-    --white-heading: #F8FAFC;
-    --soft-text: #A1A1AA;
-    --mouse-x: 50%;
-    --mouse-y: 50%;
-}
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: var(--terminal-black);
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--electric-mint);
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(var(--grid-color) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-            position: relative;
-            min-height: 100vh;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            background: radial-gradient(
-                600px circle at var(--mouse-x) var(--mouse-y),
-                rgba(163, 230, 53, 0.06)
-                transparent 80%
-            );
-        }
-        .text-mint { color: var(--electric-mint); }
-        .text-heading { color: var(--white-heading); }
-        .border-mint { border-color: var(--electric-mint); }
-        .bg-terminal { background-color: var(--terminal-black); }
-        .bg-card { background-color: var(--card-bg); }
-        .cursor-blink {
-            display: inline-block;
-            width: 8px;
-            height: 1.2em;
-            background-color: var(--electric-mint);
-            margin-left: 4px;
-            vertical-align: middle;
-            animation: blink 1s step-end infinite;
-        }
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-        .terminal-window {
-            border: 1px solid var(--electric-mint);
-            background: var(--card-bg);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            position: relative;
-            z-index: 5;
-        }
-        .terminal-header {
-            background: var(--dark-accent);
-            color: var(--electric-mint);
-            padding: 4px 12px;
-            font-weight: 800;
-            font-size: 0.75rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--electric-mint);
-        }
-.code-card {
-    border: 1px solid rgba(255,255,255,0.06);
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    background: rgba(16,19,18,0.7);
-    backdrop-filter: blur(16px);
-    border-radius: 24px;
-    position: relative;
-    z-index: 5;
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="description" content="Enteecom builds premium, conversion-focused Shopify stores, custom themes and eCommerce systems."/>
+<meta name="theme-color" content="#f5f4ef"/>
+<title>Enteecom — Shopify &amp; eCommerce Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f5f4ef;
+  --surface:#ffffff;
+  --soft:#eceee9;
+  --soft-2:#e7e3da;
+  --text:#0e1510;
+  --muted:#606a62;
+  --line:#d9ddd6;
+  --green:#80c900;
+  --green-dark:#4c7900;
+  --green-soft:#eef7dc;
+  --dark:#111713;
+  --dark-soft:#1b211d;
+  --container:1240px;
+  --radius:26px;
+  --shadow:0 26px 70px rgba(22,30,24,.10);
+  --gutter-desktop:20px;
+  --gutter-tablet:18px;
+  --gutter-mobile:20px;
 }
 
-.code-card:hover {
-    border-color: rgba(91,229,132,0.3);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;width:100%;max-width:100%;overflow-x:hidden}
+body{
+  margin:0;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  font-family:"Instrument Sans",Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
 }
-        .btn-terminal {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border: 1px solid var(--electric-mint);
-            color: var(--electric-mint);
-            transition: all 0.2s;
-            position: relative;
-            background: transparent;
-            z-index: 10;
-        }
-        .btn-terminal:hover {
-            background: var(--electric-mint);
-            color: var(--terminal-black);
-        }
-        .pseudo-code {
-            position: fixed;
-            font-size: 10px;
-            opacity: 0.15;
-            pointer-events: none;
-            white-space: pre;
-            z-index: 0;
-        }
-        ::selection {
-            background: var(--electric-mint);
-            color: var(--terminal-black);
-        }
-        header, main {
-            position: relative;
-            z-index: 5;
-        }
-        #mobile-menu-overlay {
-            display: none;
-        }
-        #mobile-menu-overlay.active {
-            display: flex;
-        }
-        .hamburger-line {
-            height: 2px;
-            width: 24px;
-            background-color: var(--electric-mint);
-            box-shadow: 0 0 8px var(--electric-mint);
-            margin: 4px 0;
-        }
-        footer {
-            background-color: #000000 !important;
-            background-image: none !important;
-            position: relative;
-            z-index: 50;
-        }
-        .recommended-glow {
-            box-shadow: 0 0 30px rgba(20, 255, 130, 0.2);
-            border: 2px solid var(--electric-mint) !important;
-        }
-        .badge-glow {
-            box-shadow: 0 0 15px var(--electric-mint);
-        }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary .toggle-icon {
-            transform: rotate(180deg);
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .carousel-container {
-            scroll-snap-type: x mandatory;
-        }
-        .carousel-item {
-            scroll-snap-align: start;
-        }
-    </style>
+body.menu-open{overflow:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+
+.container{width:min(var(--container),calc(100% - (var(--gutter-desktop) * 2)));margin-inline:auto;min-width:0}
+.section{padding:96px 0;position:relative;overflow:hidden}
+.section-white{background:var(--surface)}
+.section-soft{background:var(--soft-2)}
+.section-dark{background:var(--dark);color:#fff}
+.section-heading{max-width:720px;margin-bottom:38px}
+.section-heading.narrow{max-width:640px}
+.section-heading.center{margin-inline:auto;text-align:center}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  color:#315d00;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+}
+.kicker::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(128,201,0,.12)}
+.section-dark .kicker{color:#c8ee8d}
+h1,h2,h3,p{margin-top:0}
+h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-spacing:-.055em;font-weight:500}
+.lead{margin:0;color:var(--muted);font-size:17px;line-height:1.7}
+.section-dark .lead{color:#aeb6b0}
+
+.btn{
+  min-height:50px;padding:0 21px;border:1px solid transparent;border-radius:999px;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:700;
+  transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--green);color:#152100;box-shadow:0 14px 30px rgba(128,201,0,.20)}
+.btn-outline{border-color:#9fa7a0;background:transparent}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-light{background:#fff;color:var(--text)}
+.btn-arrow{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.74);color:#111}
+
+/* Header */
+.site-header{position:absolute;inset:0 0 auto;z-index:100;padding-top:18px;width:100%;overflow:hidden}
+.navbar{
+  min-height:66px;padding:9px 10px 9px 19px;border:1px solid rgba(255,255,255,.95);
+  border-radius:999px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  box-shadow:0 12px 36px rgba(20,32,23,.07)
+}
+.brand{display:flex;align-items:center;gap:9px;font-size:22px;font-weight:700;letter-spacing:-.04em;white-space:nowrap}
+.brand-mark{width:31px;height:25px;position:relative;flex:0 0 auto}
+.brand-mark i{position:absolute;right:0;height:5px;border-radius:999px;background:var(--green)}
+.brand-mark i:nth-child(1){top:1px;width:23px;transform:rotate(-10deg)}
+.brand-mark i:nth-child(2){top:10px;width:31px}
+.brand-mark i:nth-child(3){top:19px;width:24px;transform:rotate(8deg)}
+.nav-links{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:600}
+.nav-links a{transition:opacity .2s ease}.nav-links a:hover{opacity:.55}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.menu-button{display:none;width:42px;height:42px;border:0;border-radius:50%;background:var(--soft);font-size:21px}
+.mobile-panel{display:none}
+
+/* Hero */
+.hero{
+  min-height:800px;padding:132px 0 70px;
+  width:100%;max-width:100%;overflow:hidden;
+  background:radial-gradient(circle at 78% 36%,rgba(236,217,163,.45),transparent 29%),var(--bg)
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:42px;align-items:center;min-width:0}
+.hero-copy{max-width:720px;min-width:0}
+.hero-title{margin:28px 0 20px;font-size:clamp(58px,6.3vw,91px);line-height:.97;letter-spacing:-.072em;font-weight:600}
+.hero-title .line{display:block}
+.underlined{display:inline-block;position:relative;z-index:1}
+.underlined::after{
+  content:"";position:absolute;left:0;bottom:-4px;width:100%;height:11px;border-radius:99px;background:var(--green);z-index:-1;
+  transform:scaleX(0);transform-origin:left;animation:drawUnderline .9s cubic-bezier(.2,.8,.2,1) .4s forwards
+}
+@keyframes drawUnderline{to{transform:scaleX(1)}}
+.hero-copy .lead{max-width:650px;font-size:18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust-row{display:flex;flex-wrap:wrap;gap:13px 24px;margin-top:30px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600}
+.trust-item span{width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);color:#315d00;font-size:11px}
+
+.hero-visual{position:relative;min-width:0;max-width:100%;overflow:hidden;border-radius:36px;isolation:isolate}
+.hero-preview{
+  position:absolute;right:-35px;top:110px;width:380px;z-index:0;
+  border-radius:28px;box-shadow:var(--shadow);opacity:.42;transform:rotate(3deg);
+  filter:saturate(.72) contrast(.96);
+}
+.hero-visual::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(90deg,transparent 78%,var(--bg) 100%);
+}
+
+/* Animated phone — preserved */
+.phone-stage{min-height:620px;width:100%;max-width:100%;position:relative;display:grid;place-items:center;isolation:isolate;z-index:2}
+.stage-glow{position:absolute;width:570px;height:570px;border-radius:50%;background:radial-gradient(circle,rgba(244,224,166,.72),rgba(244,224,166,.18) 45%,transparent 70%);z-index:-5;animation:glow 4s ease-in-out infinite}
+@keyframes glow{50%{transform:scale(1.05);opacity:.85}}
+.platform{position:absolute;bottom:39px;width:470px;height:96px;border-radius:50%;background:radial-gradient(ellipse at top,#fff,#e9e5dc 62%,#d2cabd);border-bottom:3px solid #b58d43;box-shadow:0 28px 50px rgba(50,40,22,.18);z-index:-1}
+.orbit{position:absolute;bottom:50px;width:610px;height:165px;border:1px solid rgba(192,149,71,.35);border-radius:50%;transform:rotate(-11deg);z-index:-2;animation:orbit 8s ease-in-out infinite}
+.orbit.alt{width:430px;height:120px;bottom:23px;transform:rotate(16deg);opacity:.55;animation-direction:reverse}
+@keyframes orbit{50%{transform:rotate(-5deg) scale(1.03)}}
+.phone-wrap{position:relative;z-index:5;animation:phoneFloat 4.4s ease-in-out infinite}
+@keyframes phoneFloat{0%,100%{transform:translateY(5px) rotate(-1.4deg)}50%{transform:translateY(-12px) rotate(0)}}
+.phone{width:304px;height:574px;padding:10px;border-radius:41px;background:linear-gradient(145deg,#111,#5a5b5d 48%,#101010);box-shadow:0 28px 65px rgba(0,0,0,.28)}
+.phone-screen{height:100%;padding:18px 15px 15px;border-radius:32px;background:#f8f9f6;overflow:hidden}
+.phone-head{display:flex;align-items:center;justify-content:space-between}
+.shopify-bag{width:27px;height:29px;border-radius:7px 7px 8px 8px;display:grid;place-items:center;background:#76b82d;color:#fff;font-weight:700;font-size:13px;position:relative;transform:rotate(-5deg)}
+.shopify-bag::before{content:"";position:absolute;left:6px;top:-4px;width:12px;height:7px;border:2px solid #76b82d;border-bottom:0;border-radius:10px 10px 0 0}
+.phone-menu{font-size:19px;font-weight:700;color:#314039}
+.phone-greeting{margin:20px 0 4px;font-size:14px;font-weight:700;letter-spacing:-.02em}
+.phone-sub{margin:0 0 13px;color:#7b837d;font-size:9px}
+.dash-card{padding:13px;border-radius:18px;background:#eef0ed}
+.dash-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.dash-label{font-size:9px;color:#747b76}.dash-value{margin-top:3px;color:#2d7417;font-size:18px;font-weight:700;letter-spacing:-.04em}
+.growth{padding:5px 7px;border-radius:99px;background:#e4f2dc;color:#58982c;font-size:8px;font-weight:700;white-space:nowrap}
+.chart{height:82px;width:100%;margin-top:7px;overflow:visible}
+.chart path{fill:none;stroke:#64a820;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:560;stroke-dashoffset:560;animation:drawChart 2.2s ease .5s forwards}
+@keyframes drawChart{to{stroke-dashoffset:0}}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.mini-card{min-height:84px;padding:12px;border-radius:16px;background:#eef0ed}
+.mini-card strong{display:block;margin:4px 0 8px;font-size:15px;letter-spacing:-.03em}
+.channels{margin-top:10px;padding:12px;border-radius:16px;background:#eef0ed}
+.channels-title{font-size:11px;font-weight:700;margin-bottom:8px}
+.channel{margin-top:8px}.channel-label{display:flex;justify-content:space-between;color:#616963;font-size:8.5px;margin-bottom:4px}
+.bar{height:4px;border-radius:99px;background:#d8ddd6;overflow:hidden}.bar i{display:block;height:100%;border-radius:inherit;background:#68a62c;transform:scaleX(0);transform-origin:left;animation:growBar 1.2s ease 1s forwards}
+@keyframes growBar{to{transform:scaleX(1)}}
+.order-popup{
+  position:absolute;z-index:14;width:218px;padding:12px 13px 13px;overflow:visible;
+  border:1px solid rgba(255,255,255,.96);border-radius:19px;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(244,247,241,.88));
+  backdrop-filter:blur(18px) saturate(1.15);-webkit-backdrop-filter:blur(18px) saturate(1.15);
+  box-shadow:0 28px 58px rgba(31,38,26,.22),0 9px 18px rgba(31,38,26,.10),inset 0 1px 0 rgba(255,255,255,.95);
+  opacity:0;pointer-events:none;transform-style:preserve-3d;will-change:transform,opacity,filter;
+}
+.order-popup::before{content:"";position:absolute;inset:1px 1px auto;height:42%;border-radius:18px 18px 55% 55%;background:linear-gradient(180deg,rgba(255,255,255,.75),transparent);pointer-events:none}
+.order-popup::after{content:"";position:absolute;left:12%;right:12%;bottom:-16px;height:22px;border-radius:50%;background:rgba(28,36,25,.18);filter:blur(12px);z-index:-1}
+.order-popup.order-left{left:14px;top:145px}
+.order-popup.order-right{right:10px;top:276px}
+.order-head{position:relative;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#7b847d;z-index:1}
+.order-brand{display:flex;align-items:center;gap:7px;color:#203027;font-size:10px;font-weight:700}
+.mini-bag{width:23px;height:24px;border-radius:6px 6px 7px 7px;display:grid;place-items:center;background:linear-gradient(145deg,#84c83a,#5ca52a);color:#fff;font-size:9px;font-weight:700;position:relative;box-shadow:0 7px 14px rgba(92,165,42,.25)}
+.mini-bag::before{content:"";position:absolute;left:5px;top:-4px;width:10px;height:6px;border:2px solid #76b82d;border-bottom:0;border-radius:8px 8px 0 0}
+.order-message{position:relative;margin-top:8px;color:#667069;font-size:9px;font-weight:600;z-index:1}
+.order-status{display:inline-flex;align-items:center;gap:5px;margin-left:5px;color:#458526}.order-status::before{content:"";width:5px;height:5px;border-radius:50%;background:#72bd31;box-shadow:0 0 0 4px rgba(114,189,49,.12)}
+.order-body{position:relative;display:flex;align-items:center;gap:10px;margin-top:10px;padding:9px;border-radius:14px;background:rgba(238,241,235,.86);box-shadow:inset 0 1px 0 rgba(255,255,255,.8);z-index:1}
+.order-thumb{width:42px;height:42px;flex:0 0 auto;border-radius:11px;background:linear-gradient(145deg,#fff,#e9ece6);display:grid;place-items:center;font-size:19px;box-shadow:0 8px 16px rgba(28,38,29,.08)}
+.order-name{font-size:10px;font-weight:650;color:#354039}.order-price{margin-top:3px;font-size:16px;font-weight:700;letter-spacing:-.03em}
+.sound-waves{position:absolute;right:45px;top:120px;width:62px;height:65px}
+.sound-waves i{position:absolute;right:0;top:50%;border-right:2px solid rgba(255,255,255,.95);border-radius:50%;opacity:0;animation:wave 1.4s ease-out infinite}
+.sound-waves i:nth-child(1){width:15px;height:26px}.sound-waves i:nth-child(2){width:28px;height:42px;animation-delay:.18s}.sound-waves i:nth-child(3){width:42px;height:60px;animation-delay:.36s}
+@keyframes wave{0%{opacity:0;transform:translateY(-50%) scale(.75)}40%{opacity:.9}100%{opacity:0;transform:translateY(-50%) scale(1.18)}}
+.sound-toggle{position:absolute;right:20px;bottom:8px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.82);padding:8px 11px;font-size:10px;font-weight:600;color:#59625c;z-index:8}
+
+/* Work carousel — image only */
+.work-section{background:var(--dark);color:#fff;padding-bottom:82px}
+.work-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:34px}
+.work-head .section-heading{margin:0}.work-head .lead{color:#aeb6b0}.carousel-note{font-size:11px;color:#8f9791;white-space:nowrap}
+.work-viewport{width:100%;max-width:100%;overflow:hidden;contain:paint;clip-path:inset(0)}
+.work-track{width:max-content;display:flex;gap:16px;animation:marquee 36s linear infinite;will-change:transform;padding:0 5px}
+.work-viewport:hover .work-track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(calc(-50% - 8px))}}
+.work-card{width:410px;aspect-ratio:4/3;flex:0 0 auto;margin:0;border-radius:22px;overflow:hidden;background:#262d28;border:1px solid rgba(255,255,255,.08)}
+.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.work-card:hover img{transform:scale(1.025)}
+
+/* Services */
+.services-shell{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:start}
+.service-list{border-top:1px solid var(--line)}
+.service-row{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:25px 0;border-bottom:1px solid var(--line)}
+.service-num{color:#8a918b;font-size:12px}.service-row h3{margin-bottom:8px;font-size:24px;letter-spacing:-.04em;font-weight:500}.service-row p{margin:0;color:var(--muted);font-size:14px;line-height:1.7;max-width:620px}
+.services-side{position:sticky;top:110px;padding:30px;border-radius:26px;background:var(--soft);border:1px solid #e0e3dd}
+.services-side p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}.services-side .btn{margin-top:24px}
+
+/* Results */
+.results-section{background:var(--soft-2)}
+.results-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:74px;align-items:start}
+.results-copy{position:sticky;top:110px}
+.results-list{border-top:1px solid rgba(14,21,16,.18)}
+.result-row{min-height:105px;padding:20px 0;border-bottom:1px solid rgba(14,21,16,.18);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.result-number{font-size:clamp(43px,5vw,64px);font-weight:500;letter-spacing:-.07em;line-height:1}
+.result-label{padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.62);font-size:12px;white-space:nowrap}
+.result-note{margin-top:20px;color:var(--muted);font-size:14px;line-height:1.65}
+
+/* Process */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#343a36;border:1px solid #343a36;border-radius:24px;overflow:hidden}
+.process-card{padding:28px;background:var(--dark-soft);min-height:285px}
+.process-step{font-size:11px;color:#8d968f;margin-bottom:70px}.process-card h3{font-size:22px;font-weight:500;letter-spacing:-.04em;margin-bottom:11px}.process-card p{font-size:13px;line-height:1.7;color:#aeb6b0;margin:0}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price-card{padding:27px;border:1px solid var(--line);border-radius:22px;background:#fff;display:flex;flex-direction:column;min-height:438px}
+.price-card.featured{background:var(--dark);color:#fff;border-color:var(--dark)}
+.price-badge{align-self:flex-start;padding:6px 10px;border-radius:99px;background:var(--soft);font-size:10px;font-weight:700;margin-bottom:28px}
+.featured .price-badge{background:#273028;color:#d9e3da}
+.price-card h3{font-size:25px;letter-spacing:-.045em;font-weight:500;margin-bottom:8px}.price-copy{font-size:13px;line-height:1.65;color:var(--muted);min-height:66px}.featured .price-copy{color:#aeb7b0}
+.price{font-size:43px;letter-spacing:-.06em;font-weight:500;margin:18px 0 4px}.price small{font-size:12px;letter-spacing:0;font-weight:500;color:var(--muted)}.featured .price small{color:#aeb7b0}
+.features{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:11px}.features li{display:flex;gap:9px;font-size:12px;line-height:1.5}.features li::before{content:"✓";color:var(--green-dark);font-weight:700}.featured .features li::before{color:#b8f36a}
+.price-card .btn{margin-top:auto;width:100%}.featured .btn{background:var(--green);color:#152100}
+.pricing-note{text-align:center;margin:18px 0 0;color:var(--muted);font-size:12px}
+
+/* FAQ */
+.faq-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}.faq-question{width:100%;padding:21px 0;border:0;background:transparent;display:flex;justify-content:space-between;gap:20px;text-align:left;font-size:15px;font-weight:600;color:var(--text)}
+.faq-question span:last-child{font-size:20px;font-weight:400;transition:transform .2s}.faq-item.open .faq-question span:last-child{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}.faq-answer p{padding:0 34px 20px 0;margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+
+/* Footer */
+.site-footer{background:#fff;border-top:1px solid var(--line);overflow:hidden}
+.footer-top{padding:76px 0 42px;display:grid;grid-template-columns:.82fr 1.18fr;gap:75px}
+.footer-form h2{font-size:clamp(42px,4.8vw,65px);margin:14px 0 12px}.footer-form>.lead{font-size:15px;margin-bottom:22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{width:100%;min-height:48px;padding:0 14px;border:1px solid transparent;border-radius:10px;background:#f2f3f1;color:var(--text);outline:none}.field:focus{border-color:#abb2ac;background:#fff}.field.full{grid-column:1/-1}.textarea{min-height:78px;padding-top:13px;resize:vertical}.form-status{min-height:20px;margin:10px 0 0;color:#396d00;font-size:12px}
+.footer-right{display:flex;flex-direction:column}.footer-links{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:0 0 30px;border-bottom:1px solid var(--line)}
+.footer-col h3{font-size:12px;font-weight:600;margin-bottom:14px}.footer-col a{display:block;margin:7px 0;color:#343d36;font-size:12px}
+.footer-contact{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding-top:28px}.contact-title{font-size:12px;font-weight:600;margin-bottom:15px}.person{display:flex;align-items:center;gap:11px}.avatar{width:45px;height:45px;border-radius:12px;background:linear-gradient(145deg,#d7d9d5,#8c938e);display:grid;place-items:center;color:#fff;font-weight:700}.person-name{font-size:13px;font-weight:700}.person-role{font-size:10px;color:var(--muted);margin-top:2px}.support-list{margin-top:23px;display:grid;gap:11px}.support-item{display:flex;gap:10px;font-size:11px;color:#4f5851}.support-icon{width:34px;height:34px;border-radius:9px;background:#f1f2ef;display:grid;place-items:center;flex:0 0 auto}.support-item strong{display:block;color:var(--text);font-size:12px;margin-top:1px;overflow-wrap:anywhere}.socials{display:flex;gap:7px;margin-top:18px}.socials a{width:34px;height:34px;border-radius:8px;background:#f1f2ef;display:grid;place-items:center;font-size:12px;font-weight:700}
+.footer-bottom{min-height:68px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;color:#707972;font-size:11px}
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:80;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#1fb85a;color:#fff;font-size:23px;box-shadow:0 15px 38px rgba(31,184,90,.28)}
+
+/* Responsive */
+@media(max-width:1050px){
+  .container{width:min(var(--container),calc(100% - (var(--gutter-tablet) * 2)));}
+  .hero-grid{grid-template-columns:1fr}.hero-copy{text-align:center;margin-inline:auto}.hero-copy .lead{margin-inline:auto}.hero-actions,.trust-row{justify-content:center}.hero-visual{max-width:720px;margin-inline:auto}.hero-preview{right:-10px;opacity:.28}.phone-stage{min-height:590px;margin-top:10px}
+  .services-shell{grid-template-columns:1fr;gap:36px}.services-side{position:static}
+  .results-grid,.faq-wrap{grid-template-columns:1fr;gap:38px}.results-copy{position:static}.process-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr;gap:48px}
+}
+@media(max-width:820px){
+  .section{padding:72px 0}
+  .container{width:calc(100% - (var(--gutter-mobile) * 2));max-width:calc(100% - (var(--gutter-mobile) * 2));margin-left:var(--gutter-mobile);margin-right:var(--gutter-mobile)}
+  .nav-links,.nav-actions>.btn{display:none}.menu-button{display:grid;place-items:center}
+  .mobile-panel{position:fixed;inset:0;background:rgba(247,247,243,.98);z-index:99;padding:105px 20px 30px;display:flex;flex-direction:column;gap:8px;transform:translateY(-105%);transition:transform .3s ease;overflow-y:auto}.mobile-panel.open{transform:translateY(0)}.mobile-panel a{padding:15px 0;border-bottom:1px solid var(--line);font-size:22px;font-weight:600;letter-spacing:-.03em}.mobile-panel .btn{margin-top:16px;border:0}
+  .hero{min-height:auto;padding:120px 0 50px}.hero-title{font-size:clamp(51px,12vw,72px)}.hero-copy .lead{font-size:16px}
+  .hero-preview{display:none}
+  .hero-visual{width:100%;max-width:100%;overflow:hidden;border-radius:30px;padding-inline:2px}
+  .phone-stage{min-height:570px;margin-top:4px;overflow:visible}
+  .order-popup{width:190px}
+  .order-popup.order-left{left:4px;top:154px}
+  .order-popup.order-right{right:4px;top:282px}
+  .work-card{width:min(78vw,350px)}.work-track{animation-duration:32s}
+  .pricing-grid{grid-template-columns:1fr}.price-card{min-height:auto}.footer-links{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  :root{--gutter-mobile:22px}
+  .section{padding:58px 0}h2{font-size:39px}.section-heading{margin-bottom:28px}.lead{font-size:15px}
+  .hero{padding-bottom:34px}.hero-title{font-size:48px;margin-top:24px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.trust-row{justify-content:flex-start;flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;margin-inline:auto}
+  .hero-visual{margin-left:0;margin-right:0}
+  .phone-stage{min-height:510px;transform:scale(.82);transform-origin:top center;margin-bottom:-80px}
+  .order-popup{width:184px;padding:11px 12px}
+  .order-popup.order-left{left:0;top:150px}
+  .order-popup.order-right{right:0;top:276px}
+  .work-head{align-items:flex-start;flex-direction:column}.carousel-note{display:none}.work-card{width:min(78vw,315px)}.work-track{gap:12px}
+  .services-side,.price-card,.process-card,.footer-form form{border-radius:22px}
+  .service-row{grid-template-columns:42px 1fr;gap:10px;padding:22px 0}.service-row h3{font-size:21px}
+  .result-row{min-height:90px;padding:18px 0}.result-number{font-size:44px}.result-label{font-size:10px;padding:6px 9px}
+  .process-grid{grid-template-columns:1fr}.process-card{min-height:auto;padding:23px}.process-step{margin-bottom:34px}
+  .faq-question{font-size:14px}.footer-top{padding-top:54px}.footer-form h2{font-size:43px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-links{grid-template-columns:1fr 1fr;gap:26px 18px}.footer-contact{grid-template-columns:1fr}.footer-bottom{padding:18px 0;align-items:flex-start;flex-direction:column}.whatsapp{width:50px;height:50px;right:12px;bottom:12px}
+}
+@media(max-width:390px){
+  :root{--gutter-mobile:18px}
+  .hero-title{font-size:44px}
+  .phone-stage{transform:scale(.76);margin-bottom:-112px}
+  .order-popup{width:178px}
+  .work-card{width:80vw}
+  .result-row{gap:12px}
+  .result-label{white-space:normal;text-align:right;max-width:110px}
+  .footer-links{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
 </head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Enteecom home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Enteecom</a>
+      <div class="nav-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+      <div class="nav-actions"><a class="btn btn-dark" href="#contact">Book a free call ↗</a><button class="menu-button" id="menuButton" aria-expanded="false" aria-label="Open menu">☰</button></div>
+    </nav>
+  </div>
+</header>
+<div class="mobile-panel" id="mobilePanel" aria-hidden="true"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#contact">Book a free call</a></div>
 
-<body class="antialiased overflow-x-hidden"
-    onmousemove="document.documentElement.style.setProperty('--mouse-x', event.clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', event.clientY + 'px')"
-    ontouchmove="document.documentElement.style.setProperty('--mouse-x', event.touches[0].clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', event.touches[0].clientY + 'px')"
-    ontouchstart="document.documentElement.style.setProperty('--mouse-x', event.touches[0].clientX + 'px'); document.documentElement.style.setProperty('--mouse-y', event.touches[0].clientY + 'px')">
-    <div class="pseudo-code top-20 left-10 text-mint">function initializeStore() {<br /> shopify.auth();<br />
-        theme.push();<br />}</div>
-    <div class="pseudo-code bottom-40 right-10 text-mint">while(active) {<br /> optimize(conversion);<br />
-        scale(growth);<br />}</div>
-    <header class="border-b border-mint/20 py-4 px-6 sticky top-0 bg-black/95 backdrop-blur-md z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2">
-               <a href="/shopify" class="flex items-center gap-2">
-    <img src="ChatGPT Image May 12, 2026, 02_08_46 PM.png"
-         alt="Enteecom Logo"
-         class="h-14 w-auto object-contain scale-125">
-
-    <div class="leading-none">
-        <div class="text-white text-lg font-black tracking-tight">
-            Entee<span class="text-mint">com</span>
-        </div>
-        <div class="text-[8px] uppercase tracking-[3px] text-white/50 font-bold mt-1">
-            Shopify Experts
-        </div>
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">Shopify &amp; eCommerce studio</div>
+      <h1 class="hero-title"><span class="line">We build stores</span><span class="line">that look better</span><span class="line">and <span class="underlined">sell more.</span></span></h1>
+      <p class="lead">Enteecom designs high-converting Shopify stores, custom themes and eCommerce systems for ambitious brands in India, Qatar, UAE, UK and beyond.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#contact">Get a free store audit <span class="btn-arrow">↗</span></a><a class="btn btn-outline" href="#work">View selected work</a></div>
+      <div class="trust-row"><div class="trust-item"><span>✓</span>Shopify Partner</div><div class="trust-item"><span>✓</span>Custom theme development</div><div class="trust-item"><span>✓</span>CRO-focused design</div></div>
     </div>
-</a>
-            </div>
-            <nav class="hidden lg:flex gap-6 text-xs uppercase font-bold">
-                <a class="hover:text-white transition-colors text-mint" href="#about">About</a>
-                <a class="hover:text-white transition-colors text-mint" href="#services">&lt;Services /&gt;</a>
-                <a class="hover:text-white transition-colors text-mint" href="#why-choose-us">&lt;Why /&gt;</a>
-                <a class="hover:text-white transition-colors text-mint" href="#portfolio">&lt;Portfolio /&gt;</a>
-                <a class="hover:text-white transition-colors text-mint" href="#pricing">&lt;Pricing /&gt;</a>
-                <a class="hover:text-white transition-colors text-mint" href="#faq">&lt;FAQ /&gt;</a>
-                <a class="hover:text-white transition-colors text-mint" href="#contact">&lt;Contact /&gt;</a>
-                <a class="hover:text-white transition-colors text-mint" href="/shopify"><span
-                        class="text-mint">&lt;</span><span class="text-white">ACADEMY</span> <span
-                        class="text-mint">/&gt;</span></a>
-            </nav>
-            <button class="lg:hidden flex flex-col justify-center items-end"
-                onclick="document.getElementById('mobile-menu-overlay').classList.add('active')">
-                <div class="hamburger-line w-8"></div>
-                <div class="hamburger-line w-6"></div>
-                <div class="hamburger-line w-8"></div>
-            </button>
-            <div class="hidden xl:block text-[10px] text-mint opacity-60 uppercase font-bold">System: v3.0.1_KERALA_NODE
-            </div>
-        </div>
-    </header>
-    <div class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[100] flex-col items-center justify-center p-6 text-center space-y-8"
-        id="mobile-menu-overlay">
-        <button class="absolute top-6 right-6 text-mint"
-            onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">
-            <span class="material-symbols-outlined text-4xl">close</span>
-        </button>
-        <div class="text-xs text-mint mb-8 font-mono opacity-50 tracking-widest">// root@ente_ecom:~$ navigate --select
-        </div>
-        <nav class="flex flex-col gap-6 text-xl uppercase font-extrabold tracking-tighter">
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#about"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;About /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#services"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Services
-                /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#why-choose-us"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Why Choose Us
-                /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#portfolio"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Portfolio
-                /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#pricing"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Pricing
-                /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#faq"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;FAQ /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="#contact"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;Contact
-                /&gt;</a>
-            <a class="text-mint hover:text-white transition-all transform hover:scale-110" href="/shopify"
-                onclick="document.getElementById('mobile-menu-overlay').classList.remove('active')">&lt;ACADEMY
-                /&gt;</a>
-        </nav>
-    </div>
-    <main>
-        <section class="min-h-screen flex flex-col justify-center px-6 relative" id="hero">
-            <div class="max-w-4xl mx-auto w-full space-y-10">
-                <div class="space-y-6">
-                    <div class="text-mint text-sm font-bold tracking-wider">$ status: Official Shopify Partner</div>
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-heading">
-                        We Build <span
-                            class="text-mint underline decoration-2 underline-offset-8">High-Converting</span> Shopify
-                        Stores.
-                    </h1>
-                    <div class="space-y-2">
-                        <p class="text-lg md:text-xl text-slate-400 font-mono">// Custom Store Setup, Theme
-                            Customization &amp; Ecommerce Growth</p>
-                        <p class="text-sm md:text-base text-mint/80 font-mono">// 20+ Stores Launched | ₹2Cr+ Revenue
-                            Generated</p>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-6">
-                    <a class="btn-terminal text-lg font-bold" href="#contact">[ Get a Quote ]</a>
-                    <a class="btn-terminal text-lg font-bold" href="tel:+917892393901">[ Call Now ]</a>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="about">
-            <div class="max-w-7xl mx-auto">
-                <div class="max-w-3xl mx-auto space-y-8">
-                    <h2 class="text-5xl font-bold text-heading text-center lg:text-left">About<span
-                            class="text-mint">()</span></h2>
-                    <div class="text-slate-400 leading-relaxed text-lg">
-                        <p class="mb-6 text-mint opacity-80 font-bold text-xl">// We are the technical backbone for
-                            elite ecommerce brands.</p>
-                        <p class="mb-6">Based in Kerala, we specialize in high-stakes Shopify development. We don't just
-                            "install themes"—we architect conversion machines that handle millions in revenue with
-                            precision engineering and localized expertise.</p>
-                    </div>
-                    <div class="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="p-8 border border-mint/20 bg-card">
-                            <div class="text-mint font-bold mb-2 text-4xl">20+</div>
-                            <div class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Elite Stores
-                                Deployed</div>
-                        </div>
-                        <div class="p-8 border border-mint/20 bg-card">
-                            <div class="text-mint font-bold mb-2 text-4xl">₹2Cr+</div>
-                            <div class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bold">Revenue Powered
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="services">
-            <div class="max-w-7xl mx-auto">
-                <div class="mb-20 text-center">
-                    <h2 class="text-5xl font-extrabold mb-4 text-heading">Services<span class="text-mint">()</span></h2>
-                    <h3 class="text-xl text-mint mb-4 uppercase tracking-tighter font-bold">Solutions for Scale</h3>
-                    <div class="text-mint opacity-60 font-bold tracking-widest uppercase text-xs">// Pricing.matrix_v2
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">01_setup</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Shopify Store Setup
-                            </h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹6,999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 5–7 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">02_custom</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Custom Theme Dev</h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹18,999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 10–20 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">03_redesign</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Store Redesign</h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹12,999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 7–14 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">04_debug</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Bug Fixing</h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 1–2 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">05_api</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">App Integration</h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹1,499</span>
-                                <span class="text-[11px] text-white/70">Timeline: 1–3 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">06_perf</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Speed Optimization</h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹3,999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 2–4 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">07_migration</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Migration to Shopify
-                            </h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹14,999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 7–15 days</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="code-card !p-4 flex flex-col justify-between border-mint/10">
-                        <div>
-                            <div class="text-xs text-mint/50 font-mono mb-2">08_dropship</div>
-                            <h4 class="text-white font-bold text-sm mb-4 h-10 flex items-center">Dropshipping Setup</h4>
-                        </div>
-                        <div class="space-y-3">
-                            <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Parameters:
-                            </div>
-                            <div class="flex flex-col gap-1">
-                                <span class="text-[11px] text-mint">Starting: ₹9,999</span>
-                                <span class="text-[11px] text-white/70">Timeline: 5–10 days</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="why-choose-us">
-            <div class="max-w-7xl mx-auto">
-                <div class="mb-16">
-                    <h2 class="text-4xl font-bold text-heading">WhyChooseUs<span class="text-mint">()</span></h2>
-                    <p class="text-xs text-mint mt-2 opacity-60 uppercase font-bold tracking-widest">// Evaluation.logic
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="space-y-4">
-                        <div class="text-mint font-bold text-lg">// Performance Driven</div>
-                        <div class="p-6 border-l-2 border-mint bg-card/40 hover:bg-card transition-colors">
-                            <p class="text-slate-400 text-sm leading-relaxed">Optimizing for Core Web Vitals to ensure
-                                sub-second load times and maximum SEO juice.</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="text-mint font-bold text-lg">// Shopify Native</div>
-                        <div class="p-6 border-l-2 border-mint bg-card/40 hover:bg-card transition-colors">
-                            <p class="text-slate-400 text-sm leading-relaxed">Mastering Liquid and Hydrogen. We don't
-                                use bloated page builders; we code directly on Shopify.</p>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="text-mint font-bold text-lg">// Clean Code</div>
-                        <div class="p-6 border-l-2 border-mint bg-card/40 hover:bg-card transition-colors">
-                            <p class="text-slate-400 text-sm leading-relaxed">Maintainable, scalable, and documented
-                                code architecture that grows with your business.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="portfolio">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex justify-between items-end mb-16">
-                    <h2 class="text-4xl font-bold text-heading">Portfolio<span class="text-mint">[]</span></h2>
-                    <div class="flex items-center gap-4">
-                        <button
-                            class="text-mint border border-mint/30 p-2 hover:bg-mint hover:text-black transition-all"
-                            onclick="document.getElementById('portfolio-carousel').scrollBy({left: -400, behavior: 'smooth'})">
-                            <span class="material-symbols-outlined">arrow_back</span>
-                        </button>
-                        <button
-                            class="text-mint border border-mint/30 p-2 hover:bg-mint hover:text-black transition-all"
-                            onclick="document.getElementById('portfolio-carousel').scrollBy({left: 400, behavior: 'smooth'})">
-                            <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="flex gap-8 overflow-x-auto no-scrollbar carousel-container pb-8" id="portfolio-carousel">
-                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
-                        <div
-                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
-                            <div class="terminal-header">Project.v1</div>
-                            <a href="https://nayura.in/" target="_blank">
-                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
-                                    <img alt="Nayura Wellness Ayurveda Store"
-                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                        src="https://image2url.com/r2/default/images/1771857586754-cfe05482-3f65-4f55-af95-24464a25a3fe.png" />
-                                    <div
-                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
-                                        <div
-                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
-                                            Nayura Wellness
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-bold text-white font-mono text-sm">Ayurveda E-com</span>
-                                    <span
-                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
-                                </div>
-                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// Natural healing products
-                                    &amp; wellness interface.</p>
-                                <div
-                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
-                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
-                                    <span class="text-white font-bold">Timeline: 14 Days</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
-                        <div
-                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
-                            <div class="terminal-header">Project.v2</div>
-                            <a href="https://www.thankamsherbal.com/" target="_blank">
-                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
-                                    <img alt="Nayura Wellness Ayurveda Store"
-                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                        src="https://image2url.com/r2/default/images/1771858105471-6b7ccd95-2838-42ee-af0d-3b97c7d14dc3.png" />
-                                    <div
-                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
-                                        <div
-                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
-                                            Thankamsherbal
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-bold text-white font-mono text-sm">Thankamsherbal</span>
-                                    <span
-                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
-                                </div>
-                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// Natural healing products
-                                    &amp; wellness interface.</p>
-                                <div
-                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
-                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
-                                    <span class="text-white font-bold">Timeline: 14 Days</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
-                        <div
-                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
-                            <div class="terminal-header">Project.v3</div>
-                            <a href="https://kapdaclub.com/" target="_blank">
-                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
-                                    <img alt="Nayura Wellness Ayurveda Store"
-                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                        src="https://image2url.com/r2/default/images/1771858277372-2a02b5bb-4a70-4cd8-ade6-63256edf9696.png" />
-                                    <div
-                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
-                                        <div
-                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
-                                            Kapdaclub.com
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-bold text-white font-mono text-sm">mens fashion</span>
-                                    <span
-                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
-                                </div>
-                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// Clothing brand
-                                    &amp; fashion interface.</p>
-                                <div
-                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
-                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
-                                    <span class="text-white font-bold">Timeline: 20 Days</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
-                        <div
-                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
-                            <div class="terminal-header">Project.v4</div>
-                            <a href="https://devamanthra.com/" target="_blank">
-                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
-                                    <img alt="Deva Manthra"
-                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                        src="https://image2url.com/r2/default/images/1771858368872-6453b253-afaf-454d-9e9a-d9f602c971db.png" />
-                                    <div
-                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
-                                        <div
-                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
-                                            Deva Manthra
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-bold text-white font-mono text-sm">E-commerce</span>
-                                    <span
-                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
-                                </div>
-                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// E-commerce website
-                                    &amp; devotional interface.</p>
-                                <div
-                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
-                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
-                                    <span class="text-white font-bold">Timeline: 14 Days</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item flex-shrink-0 w-[300px] md:w-[400px]">
-                        <div
-                            class="terminal-window p-2 group overflow-hidden bg-card border-mint shadow-[0_0_15px_rgba(20,255,130,0.15)]">
-                            <div class="terminal-header">Project.v5</div>
-                            <a href="https://slimytea.com/" target="_blank">
-                                <div class="relative w-full h-64 overflow-hidden bg-[#1A1A1A]">
-                                    <img alt="Deva Manthra"
-                                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                                        src="https://image2url.com/r2/default/images/1771858579496-26641071-920e-4708-99a3-158b30ebfda5.png" />
-                                    <div
-                                        class="absolute bottom-0 left-0 w-full p-2 bg-gradient-to-t from-black to-transparent">
-                                        <div
-                                            class="text-white font-mono font-bold tracking-widest text-lg drop-shadow-md">
-                                            slimytea
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="p-4 bg-dark-accent/30 border-t border-mint/20">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="font-bold text-white font-mono text-sm">E-commerce</span>
-                                    <span
-                                        class="text-[10px] border border-mint/30 px-2 py-0.5 text-mint uppercase font-mono tracking-tighter shadow-[0_0_8px_rgba(20,255,130,0.2)]">LIVE_PROJECT</span>
-                                </div>
-                                <p class="text-[10px] text-slate-400 font-mono italic mb-2">// E-commerce website
-                                    &amp; health interface.</p>
-                                <div
-                                    class="flex justify-between items-center text-[9px] font-mono border-t border-mint/10 pt-2">
-                                    <span class="text-mint opacity-80">[ Starting: ₹25k ]</span>
-                                    <span class="text-white font-bold">Timeline: 14 Days</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 h-1 w-full bg-mint/10 relative">
-                    <div class="absolute top-0 left-0 h-full bg-mint w-1/4 animate-pulse"></div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="pricing">
-            <div class="max-w-7xl mx-auto">
-                <div class="mb-20 text-center">
-                    <h2 class="text-5xl font-extrabold mb-4 text-heading">Choose Your Growth Plan</h2>
-                    <div class="text-mint opacity-60 font-bold tracking-widest uppercase text-xs">//
-                        select.pricing_tier(level)</div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="terminal-window flex flex-col h-full rounded overflow-hidden">
-                        <div class="terminal-header">Starter.exe</div>
-                        <div class="p-8 bg-card flex flex-col h-full">
-                            <h3 class="text-2xl font-bold text-heading mb-2">Starter</h3>
-                            <div class="text-3xl font-bold text-mint mb-8">₹25,000</div>
-                            <div class="text-3xl font-bold text-mint mb-8">₹45,000</div>
-                            <div class="space-y-4 text-xs flex-grow mb-8 font-mono">
-                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Full Store
-                                        Setup</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Payment
-                                        Gateway</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Essential
-                                        Apps</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">[x]</span> <span>Mobile
-                                        Optimized</span></div>
-                            </div>
-                            <button class="btn-terminal text-center text-xs font-bold uppercase tracking-widest py-4">[
-                                Select ]</button>
-                        </div>
-                    </div>
-                    <div class="terminal-window recommended-glow flex flex-col h-full rounded overflow-hidden relative">
-                        <div
-                            class="absolute top-0 right-0 bg-[#14FF82] text-white text-[10px] font-bold px-4 py-1.5 uppercase z-10 badge-glow">
-                            RECOMMENDED</div>
-                        <div class="terminal-header !bg-[#14FF82] !text-white">Pro_Growth.exe</div>
-                        <div class="p-8 bg-card flex flex-col h-full">
-                            <h3 class="text-2xl font-bold text-heading mb-2">Professional</h3>
-                            <div class="text-3xl font-bold text-mint mb-8">₹35,000</div>
-                            <div class="text-3xl font-bold text-mint mb-8">₹75,000</div>
-                            <div class="space-y-4 text-xs flex-grow mb-8 font-mono">
-                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span>
-                                    <span>Everything in Starter</span>
-                                </div>
-                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span> <span>Advanced
-                                        CRO Suite</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span> <span>Deep
-                                        Analytics Dev</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">-&gt;</span> <span>Marketing
-                                        Automations</span></div>
-                            </div>
-                            <button
-                                class="btn-terminal bg-[#14FF82] text-black text-center text-xs font-bold uppercase tracking-widest py-4 hover:opacity-90">[
-                                Select ]</button>
-                        </div>
-                    </div>
-                    <div class="terminal-window flex flex-col h-full rounded overflow-hidden">
-                        <div class="terminal-header">Enterprise.exe</div>
-                        <div class="p-8 bg-card flex flex-col h-full">
-                            <h3 class="text-2xl font-bold text-heading mb-2">Enterprise</h3>
-                            <div class="text-3xl font-bold text-mint mb-8">₹55,000</div>
-                            <div class="text-3xl font-bold text-mint mb-8">₹155000</div>
-                            <div class="space-y-4 text-xs flex-grow mb-8 font-mono">
-                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>Headless
-                                        Commerce</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>PWA
-                                        Implementation</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>24/7 VIP
-                                        Maintenance</span></div>
-                                <div class="flex items-start gap-2"><span class="text-mint">::</span> <span>Unlimited
-                                        Support</span></div>
-                            </div>
-                            <button class="btn-terminal text-center text-xs font-bold uppercase tracking-widest py-4">[
-                                Select ]</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="deliverables">
-            <div class="max-w-7xl mx-auto">
-                <div class="terminal-window border border-mint overflow-hidden">
-                    <div class="terminal-header">Deliverables_Manifest.txt</div>
-                    <div class="p-10 bg-[#1A1A1A]">
-                        <div class="mb-12">
-                            <h2 class="text-3xl font-bold text-heading font-mono mb-2">Scope of Work &amp; Deliverables
-                            </h2>
-                            <p class="text-mint text-sm font-mono opacity-80">// Transparent, structured deliverables
-                                for every build.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
-                            <div class="space-y-4">
-                                <h4
-                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
-                                    01. Design &amp; Core</h4>
-                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
-                                    <li class="flex gap-2"><span>[+]</span> <span>Theme installation &amp;
-                                            optimization</span></li>
-                                    <li class="flex gap-2"><span>[+]</span> <span>Mobile-responsive UI/UX
-                                            implementation</span></li>
-                                    <li class="flex gap-2"><span>[+]</span> <span>Multi-level Navigation &amp; Mega
-                                            Menus</span></li>
-                                    <li class="flex gap-2"><span>[+]</span> <span>Product catalog entry (Up to 30
-                                            products)</span></li>
-                                </ul>
-                            </div>
-                            <div class="space-y-4">
-                                <h4
-                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
-                                    02. Payment &amp; Tech</h4>
-                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>Razorpay/Preferred Gateway
-                                            integration</span></li>
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>COD setup with OTP
-                                            verification</span></li>
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>SSL certificate activation</span>
-                                    </li>
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>Domain mapping &amp; DNS
-                                            configuration</span></li>
-                                </ul>
-                            </div>
-                            <div class="space-y-4">
-                                <h4
-                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
-                                    03. Apps &amp; Automation</h4>
-                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
-                                    <li class="flex gap-2"><span>[+]</span> <span>Photo Reviews &amp; Social Proof
-                                            widgets</span></li>
-                                    <li class="flex gap-2"><span>[+]</span> <span>Abandoned cart recovery
-                                            automation</span></li>
-                                    <li class="flex gap-2"><span>[+]</span> <span>WhatsApp Chat &amp; Instagram Feed
-                                            integration</span></li>
-                                </ul>
-                            </div>
-                            <div class="space-y-4">
-                                <h4
-                                    class="text-white font-mono font-bold text-sm tracking-widest uppercase border-b border-mint/10 pb-2">
-                                    04. Marketing &amp; SEO</h4>
-                                <ul class="space-y-2 text-xs text-slate-400 font-mono">
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>GA4, GTM &amp; Search Console
-                                            setup</span></li>
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>Meta Pixel &amp; Conversions API
-                                            (CAPI)</span></li>
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>Google Merchant Center feed
-                                            linking</span></li>
-                                    <li class="flex gap-2"><span>-&gt;</span> <span>Basic On-page SEO &amp; Meta
-                                            tagging</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="built-for-growth">
-            <div class="max-w-7xl mx-auto">
-                <div class="mb-12">
-                    <h2 class="text-4xl font-extrabold text-heading uppercase tracking-tighter">Built For Growth</h2>
-                    <p class="text-[10px] text-mint mt-2 font-bold tracking-[0.2em] opacity-60">//
-                        Scale.Ready_Deployment</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div
-                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
-                        <div
-                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-sm">verified</span>
-                        </div>
-                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">15-20 Days</div>
-                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Fast Turnaround</div>
-                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
-                    </div>
-                    <div
-                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
-                        <div
-                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-sm">verified</span>
-                        </div>
-                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">Fixed ₹25k</div>
-                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Transparent Pricing</div>
-                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
-                    </div>
-                    <div
-                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
-                        <div
-                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-sm">verified</span>
-                        </div>
-                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">1:1 Support</div>
-                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Expert Training</div>
-                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
-                    </div>
-                    <div
-                        class="bg-card border border-mint/20 p-6 relative group overflow-hidden hover:border-mint/60 transition-colors">
-                        <div
-                            class="absolute top-0 right-0 p-2 text-mint opacity-40 group-hover:opacity-100 transition-opacity">
-                            <span class="material-symbols-outlined text-sm">verified</span>
-                        </div>
-                        <div class="text-2xl font-black text-mint mb-1 tracking-tight">5 Revisions</div>
-                        <div class="text-xs font-bold text-heading uppercase tracking-widest">Proven Quality</div>
-                        <div class="mt-4 h-px w-8 bg-mint/40"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="faq">
-            <div class="max-w-4xl mx-auto">
-                <div class="mb-16">
-                    <h2 class="text-4xl font-bold text-heading font-mono uppercase tracking-tighter">FAQ<span
-                            class="text-mint">()</span></h2>
-                    <p class="text-[10px] text-mint mt-2 font-bold tracking-[0.2em] opacity-60">// Knowledge_Base.read()
-                    </p>
-                </div>
-                <div class="space-y-6">
-                    <div class="terminal-window bg-card overflow-hidden">
-                        <details class="group">
-                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
-                                <span class="text-white font-bold text-sm md:text-base pr-4">How long does a Shopify
-                                    store take to build?</span>
-                                <span
-                                    class="material-symbols-outlined text-mint toggle-icon transition-transform duration-300">expand_more</span>
-                            </summary>
-                            <div class="px-6 pb-6 pt-0 border-t border-mint/10">
-                                <p class="text-slate-400 text-sm leading-relaxed mt-4">
-                                    A standard Shopify store takes <span class="text-mint">5–12 days</span>, depending
-                                    on the design and features required. For custom or advanced stores, it can take
-                                    <span class="text-mint">2–4 weeks</span>. We provide a clear timeline before
-                                    starting the project so you always know what to expect.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="terminal-window bg-card overflow-hidden">
-                        <details class="group">
-                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
-                                <span class="text-white font-bold text-sm md:text-base pr-4">Do you offer
-                                    revisions?</span>
-                                <span
-                                    class="material-symbols-outlined text-mint toggle-icon transition-transform duration-300">expand_more</span>
-                            </summary>
-                            <div class="px-6 pb-6 pt-0 border-t border-mint/10">
-                                <p class="text-slate-400 text-sm leading-relaxed mt-4">
-                                    Yes! We offer <span class="text-mint">unlimited revisions</span> during the design
-                                    phase to ensure your store matches your vision. Development revisions are also
-                                    included for adjustments and fine-tuning until you’re fully satisfied.
-                                </p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="terminal-window bg-card overflow-hidden">
-                        <details class="group">
-                            <summary class="flex justify-between items-center p-6 cursor-pointer select-none">
-                                <span class="text-white font-bold text-sm md:text-base pr-4">What support do you
-                                    provide?</span>
-                                <span
-                                    class="material-symbols-outlined text-mint toggle-icon transition-transform duration-300">expand_more</span>
-                            </summary>
-                            <div class="px-6 pb-6 pt-0 border-t border-mint/10">
-                                <div class="text-slate-400 text-sm leading-relaxed mt-4">
-                                    <p class="mb-2">We provide:</p>
-                                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-mono text-xs">
-                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span> 30
-                                            days free post-launch support</li>
-                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span>
-                                            Store maintenance</li>
-                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span> Bug
-                                            fixes</li>
-                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span> App
-                                            support</li>
-                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span>
-                                            Theme adjustments</li>
-                                        <li class="flex items-center gap-2"><span class="text-mint">&gt;&gt;</span>
-                                            Performance tuning</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="contact">
-            <div class="max-w-4xl mx-auto">
-                <div class="terminal-window rounded overflow-hidden">
-                    <div class="terminal-header">Comm_Link.exe</div>
-                    <div class="p-8 bg-card">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            <div>
-                                <h3 class="text-2xl font-bold mb-6 text-heading">Contact<span
-                                        class="text-mint">()</span></h3>
-                                <p class="text-xs text-slate-400 leading-relaxed mb-8 italic">
-                                    // Send your project specs. Our engineers respond within 4 hours.
-                                </p>
-                                <div class="space-y-4 text-xs">
-                                    <div class="flex items-center gap-3">
-                                        <span class="material-symbols-outlined text-mint text-sm">alternate_email</span>
-                                        <span class="text-slate-300">shopify@enteecom.in</span>
-                                    </div>
-                                    <div class="flex items-center gap-3">
-                                        <span class="material-symbols-outlined text-mint text-sm">terminal</span>
-                                        <span class="text-slate-300">+91 7892393901 Akhil Anand</span>
-                                    </div>
-                                    <div class="pt-6">
-                                        <button
-                                            class="btn-terminal flex items-center gap-3 bg-[#25D366] text-black px-6 py-3 font-bold text-xs border-none hover:shadow-lg hover:brightness-110 transition-all">
-                                            <span class="material-symbols-outlined">chat</span>
-                                            OPEN_WHATSAPP_COMMS
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <form class="space-y-4" onsubmit="return false">
-                                <div>
-                                    <label
-                                        class="block text-[10px] uppercase font-bold text-mint mb-1">brand_identity</label>
-                                    <input
-                                        class="w-full bg-black border border-mint/30 p-3 text-xs focus:border-mint focus:ring-0 outline-none text-mint transition-colors placeholder:text-slate-600"
-                                        placeholder="NAME" type="text" />
-                                </div>
-                                <div>
-                                    <label
-                                        class="block text-[10px] uppercase font-bold text-mint mb-1">contact_node</label>
-                                    <input
-                                        class="w-full bg-black border border-mint/30 p-3 text-xs focus:border-mint focus:ring-0 outline-none text-mint transition-colors placeholder:text-slate-600"
-                                        placeholder="EMAIL" type="email" />
-                                </div>
-                                <div>
-                                    <label
-                                        class="block text-[10px] uppercase font-bold text-mint mb-1">mission_params</label>
-                                    <textarea
-                                        class="w-full bg-black border border-mint/30 p-3 text-xs focus:border-mint focus:ring-0 outline-none text-mint transition-colors placeholder:text-slate-600"
-                                        placeholder="DESCRIBE YOUR PROJECT" rows="4"></textarea>
-                                </div>
-                                <button
-                                    class="w-full btn-terminal text-xs font-bold py-4 hover:bg-mint hover:text-black transition-all"
-                                    type="submit">[ SUBMIT_CONTACT ]</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 px-6" id="academy">
-            <div class="max-w-7xl mx-auto">
-                <div class="terminal-window border border-mint bg-card overflow-hidden">
-                    <div class="terminal-header">Academy_Enrollment_Portal.sh</div>
-                    <div class="p-10 md:p-16 flex flex-col md:flex-row gap-12 items-center">
-                        <div class="flex-1 space-y-8">
-                            <div class="space-y-4">
-                                <div class="text-mint font-bold text-sm tracking-[0.2em] uppercase">//
-                                    Incoming_Connection: Education_Stream</div>
-                                <h2 class="text-4xl md:text-5xl font-black text-heading leading-tight">Master Shopify
-                                    <br /><span class="text-mint">Development.</span>
-                                </h2>
-                                <p class="text-slate-400 font-mono leading-relaxed">
-                                    Join the elite circle of developers in Kerala. Learn the architecture behind
-                                    high-performance e-commerce engines directly from the ente_ecom engineering team.
-                                </p>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
-                                <div class="flex items-center gap-3 text-white/80">
-                                    <span class="material-symbols-outlined text-mint text-lg">code</span>
-                                    <span>Liquid Architecture</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-white/80">
-                                    <span class="material-symbols-outlined text-mint text-lg">conversion_path</span>
-                                    <span>CRO Frameworks</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-white/80">
-                                    <span class="material-symbols-outlined text-mint text-lg">hub</span>
-                                    <span>App Ecosystem</span>
-                                </div>
-                                <div class="flex items-center gap-3 text-white/80">
-                                    <span class="material-symbols-outlined text-mint text-lg">rocket_launch</span>
-                                    <span>Scaling 101</span>
-                                </div>
-                            </div>
-                            <div class="pt-4">
-                                <a class="btn-terminal font-bold px-8 py-4" href="#contact">[
-                                    INITIALIZE_LEARNING_PROTOCOL ]</a>
-                            </div>
-                        </div>
-                        <div class="flex-1 w-full max-w-md">
-                            <div class="border border-mint/20 p-6 bg-black/40 relative">
-                                <div
-                                    class="absolute -top-3 -left-3 bg-mint text-black text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">
-                                    NEXT_BATCH: LIVE</div>
-                                <div class="space-y-6">
-                                    <div class="flex justify-between items-center border-b border-mint/10 pb-4">
-                                        <span
-                                            class="text-xs text-slate-500 uppercase font-bold tracking-widest">Enrollment
-                                            Status:</span>
-                                        <span
-                                            class="text-mint font-bold animate-pulse text-xs tracking-widest">ACTIVE</span>
-                                    </div>
-                                    <div class="space-y-4">
-                                        <div class="text-white text-sm font-mono flex justify-between">
-                                            <span>Duration:</span>
-                                            <span class="text-mint">6 Weeks</span>
-                                        </div>
-                                        <div class="text-white text-sm font-mono flex justify-between">
-                                            <span>Format:</span>
-                                            <span class="text-mint">Live Coding</span>
-                                        </div>
-                                        <div class="text-white text-sm font-mono flex justify-between">
-                                            <span>Capacity:</span>
-                                            <span class="text-mint">15 Slots Only</span>
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="bg-mint/5 p-4 border border-mint/10 text-[11px] text-mint italic font-mono">
-                                        // 100% Placement assistance for top performers at ente_ecom or partner
-                                        agencies.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="w-full px-6 py-20 border-t border-mint/10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
-            <div>
-               <a href="/shopify" class="flex items-center gap-3 mb-2">
-    <img src="ChatGPT Image May 12, 2026, 02_08_46 PM.png"
-         alt="Enteecom Logo"
-         class="h-14 w-auto object-contain scale-125">
 
-    <div class="leading-none">
-        <div class="text-white text-lg font-black tracking-tight">
-            Entee<span class="text-mint">com</span>
+    <div class="hero-visual">
+      <img class="hero-preview" src="assets/hero-store-preview.svg" alt="Premium Shopify storefront preview"/>
+      <div class="phone-stage" aria-label="Animated Shopify dashboard">
+        <div class="stage-glow"></div><div class="orbit"></div><div class="orbit alt"></div><div class="platform"></div>
+        <div class="sound-waves" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="order-popup order-left" data-order-popup="left" aria-live="polite">
+          <div class="order-head"><div class="order-brand"><span class="mini-bag">S</span>Shopify</div><span class="order-time">Just now</span></div>
+          <div class="order-message">New order <span class="order-status">Paid</span></div>
+          <div class="order-body"><div class="order-thumb">🧴</div><div><div class="order-name">Cityman Perfume</div><div class="order-price">₹1,299</div></div></div>
         </div>
-        <div class="text-[8px] uppercase tracking-[3px] text-white/50 font-bold mt-1">
-            Shopify Experts
+        <div class="order-popup order-right" data-order-popup="right" aria-live="polite">
+          <div class="order-head"><div class="order-brand"><span class="mini-bag">S</span>Shopify</div><span class="order-time">Just now</span></div>
+          <div class="order-message">New order <span class="order-status">Paid</span></div>
+          <div class="order-body"><div class="order-thumb">▣</div><div><div class="order-name">Men's Shorts Combo</div><div class="order-price">₹649</div></div></div>
         </div>
+        <div class="phone-wrap">
+          <div class="phone"><div class="phone-screen">
+            <div class="phone-head"><div class="shopify-bag">S</div><div class="phone-menu">☰</div></div>
+            <div class="phone-greeting">Good morning, Enteecom 👋</div>
+            <p class="phone-sub">Here's what's happening with your store today.</p>
+            <div class="dash-card"><div class="dash-top"><div><div class="dash-label">Total Sales</div><div class="dash-value" id="totalSales">₹29,84,144</div></div><span class="growth">▲ 24.6%</span></div><svg class="chart" preserveAspectRatio="none" viewBox="0 0 270 90"><path d="M0 67 C15 56,23 70,39 58 S63 63,79 49 S103 61,119 44 S144 57,159 35 S185 51,202 34 S227 51,241 23 S260 28,270 9"></path></svg></div>
+            <div class="dash-grid"><div class="mini-card"><div class="dash-label">Total Orders</div><strong id="totalOrders">1,354</strong><span class="growth">▲ 18.7%</span></div><div class="mini-card"><div class="dash-label">Conversion Rate</div><strong>3.62%</strong><span class="growth">▲ 9.4%</span></div></div>
+            <div class="channels"><div class="channels-title">Top Channels</div><div class="channel"><div class="channel-label"><span>Online Store</span><span>72%</span></div><div class="bar"><i style="width:72%"></i></div></div><div class="channel"><div class="channel-label"><span>Search</span><span>18%</span></div><div class="bar"><i style="width:18%"></i></div></div><div class="channel"><div class="channel-label"><span>Social</span><span>10%</span></div><div class="bar"><i style="width:10%"></i></div></div></div>
+          </div></div>
+        </div>
+        <button class="sound-toggle" id="soundToggle">🔇 Sound off</button>
+      </div>
     </div>
-</a>
-                <div class="text-[10px] text-slate-600 font-mono tracking-widest uppercase">
-                    © 2026 ente_ecom kerala. status: scaling_active.
-                </div>
-            </div>
-            <div class="flex gap-12 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                <div class="flex flex-col gap-2">
-                    <span class="text-mint mb-1">Social</span>
-                    <a class="hover:text-white transition-colors" href="#">Instagram</a>
-                    <a class="hover:text-white transition-colors" href="#">Facebook</a>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <span class="text-mint mb-1">Contact</span>
-                    <a class="hover:text-white transition-colors" href="tel:+917892393901">call</a>
-                    <a class="hover:text-white transition-colors" href="https://wa.me/917892393901">whatsapp</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  </div>
+</section>
 
+<section class="section work-section" id="work">
+  <div class="container work-head"><div class="section-heading"><div class="kicker">Selected work</div><h2>Recent commerce work, shown without distractions.</h2><p class="lead">Image-only project previews. Replace the files in the assets folder with your own project images.</p></div><div class="carousel-note">Auto scrolling · Hover to pause</div></div>
+  <div class="work-viewport" aria-label="Selected project image carousel">
+    <div class="work-track">
+      <figure class="work-card"><img src="assets/work-01.svg" alt="Fashion ecommerce project preview" loading="lazy"/></figure>
+      <figure class="work-card"><img src="assets/work-02.svg" alt="Home and electronics ecommerce project preview" loading="lazy"/></figure>
+      <figure class="work-card"><img src="assets/work-03.svg" alt="Premium accessories ecommerce project preview" loading="lazy"/></figure>
+      <figure class="work-card"><img src="assets/work-04.svg" alt="Mobile storefront project preview" loading="lazy"/></figure>
+      <figure class="work-card"><img src="assets/work-05.svg" alt="Wellness ecommerce project preview" loading="lazy"/></figure>
+      <figure class="work-card"><img src="assets/work-06.svg" alt="Perfume ecommerce project preview" loading="lazy"/></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-01.svg" alt="" loading="lazy"/></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-02.svg" alt="" loading="lazy"/></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-03.svg" alt="" loading="lazy"/></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-04.svg" alt="" loading="lazy"/></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-05.svg" alt="" loading="lazy"/></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-06.svg" alt="" loading="lazy"/></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="services">
+  <div class="container services-shell">
+    <aside class="services-side"><div class="kicker">What we do</div><h2>Focused eCommerce work.</h2><p>Strategy, design and Shopify development stay connected from the first audit to launch. This keeps the experience clear for the customer and easier for your team to manage.</p><a class="btn btn-dark" href="#contact">Discuss your store ↗</a></aside>
+    <div class="service-list">
+      <article class="service-row"><div class="service-num">01</div><div><h3>Shopify store builds</h3><p>Complete store setup with product structure, navigation, payments, shipping and essential integrations.</p></div></article>
+      <article class="service-row"><div class="service-num">02</div><div><h3>Custom theme development</h3><p>Merchant-friendly Shopify themes built around your catalogue, workflows and brand system.</p></div></article>
+      <article class="service-row"><div class="service-num">03</div><div><h3>Store redesign and CRO</h3><p>Sharper page hierarchy, improved product pages and a clearer path from discovery to checkout.</p></div></article>
+      <article class="service-row"><div class="service-num">04</div><div><h3>Migration and integrations</h3><p>Platform migration, analytics, tracking, feeds, pixels, merchant tools and third-party integrations.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section results-section" id="results">
+  <div class="container results-grid">
+    <div class="results-copy"><div class="kicker">Practical experience</div><h2>Work measured by what improves.</h2><p class="lead">Clearer buying journeys, reliable Shopify systems and improvements your team can continue using after launch.</p></div>
+    <div><div class="results-list"><div class="result-row"><div class="result-number">20+</div><div class="result-label">Stores worked on</div></div><div class="result-row"><div class="result-number">₹2Cr+</div><div class="result-label">Revenue influenced</div></div><div class="result-row"><div class="result-number">5+</div><div class="result-label">Markets served</div></div><div class="result-row"><div class="result-number">2hr</div><div class="result-label">Response target</div></div></div><p class="result-note">Every number represents practical work completed for a real store, campaign or commerce team.</p></div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container"><div class="section-heading"><div class="kicker">How we work</div><h2>A direct process from brief to launch.</h2><p class="lead">Fewer handovers, clearer communication and decisions made around the customer journey.</p></div>
+    <div class="process-grid"><article class="process-card"><div class="process-step">01 · Understand</div><h3>Audit the opportunity</h3><p>We review the brand, catalogue, users, competition and current buying journey.</p></article><article class="process-card"><div class="process-step">02 · Plan</div><h3>Set the structure</h3><p>We define page hierarchy, features, content needs, integrations and milestones.</p></article><article class="process-card"><div class="process-step">03 · Build</div><h3>Design and develop</h3><p>The store is designed responsively, developed in Shopify and tested across key devices.</p></article><article class="process-card"><div class="process-step">04 · Improve</div><h3>Launch and optimise</h3><p>We monitor the experience, fix friction and add improvements as the store grows.</p></article></div>
+  </div>
+</section>
+
+<section class="section section-white" id="pricing">
+  <div class="container"><div class="section-heading center"><div class="kicker">Straightforward pricing</div><h2>Choose the level of build your store needs.</h2><p class="lead">Clear starting prices. Final scope is confirmed after a short store and requirement review.</p></div>
+    <div class="pricing-grid"><article class="price-card"><div class="price-badge">Store launch</div><h3>Shopify Setup</h3><p class="price-copy">A professional starter store using a reliable theme and a clean conversion-ready structure.</p><div class="price">₹6,999 <small>starting</small></div><ul class="features"><li>Theme setup and branding</li><li>Core pages and navigation</li><li>Payments and shipping</li><li>Mobile optimisation</li><li>Basic analytics setup</li></ul><a class="btn btn-outline" href="#contact">Discuss setup</a></article><article class="price-card featured"><div class="price-badge">Most requested</div><h3>Store Redesign</h3><p class="price-copy">A stronger visual direction and improved buying flow for an existing Shopify store.</p><div class="price">₹12,999 <small>starting</small></div><ul class="features"><li>UX and CRO review</li><li>Homepage and product page redesign</li><li>Mobile-first improvements</li><li>Trust and offer structure</li><li>Performance clean-up</li></ul><a class="btn" href="#contact">Request redesign</a></article><article class="price-card"><div class="price-badge">Custom build</div><h3>Custom Theme</h3><p class="price-copy">A distinct Shopify experience developed for your products, brand system and workflows.</p><div class="price">₹18,999 <small>starting</small></div><ul class="features"><li>Custom responsive design</li><li>Reusable Shopify sections</li><li>Advanced product experience</li><li>Integrations and tracking</li><li>Launch support</li></ul><a class="btn btn-outline" href="#contact">Plan custom build</a></article></div>
+    <p class="pricing-note">Bug fixes, custom sections and integrations are also available as standalone projects.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container faq-wrap"><div class="section-heading"><div class="kicker">Common questions</div><h2>Before we begin.</h2><p class="lead">A few practical answers about timelines, content and working together remotely.</p></div><div class="faq-list"><article class="faq-item"><button class="faq-question"><span>How long does a Shopify store take?</span><span>+</span></button><div class="faq-answer"><p>A standard setup usually takes 7–14 working days. Redesigns and custom themes take longer depending on catalogue size, content, integrations and feedback cycles.</p></div></article><article class="faq-item"><button class="faq-question"><span>Can you work with clients outside India?</span><span>+</span></button><div class="faq-answer"><p>Yes. Enteecom works remotely with brands in Qatar, UAE, the UK, Canada and other markets using clear milestones, shared previews and scheduled reviews.</p></div></article><article class="faq-item"><button class="faq-question"><span>Do you provide ongoing support?</span><span>+</span></button><div class="faq-answer"><p>Yes. Support can cover fixes, new sections, campaign landing pages, product-page improvements, integrations and ongoing CRO work.</p></div></article><article class="faq-item"><button class="faq-question"><span>Will the store be easy for our team to edit?</span><span>+</span></button><div class="faq-answer"><p>Yes. Sections and settings are built so the merchant can update content, images, offers and most layouts without editing code.</p></div></article></div></div>
+</section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-top">
+    <div class="footer-form"><div class="kicker">Got a project in mind?</div><h2>Let’s build it together.</h2><p class="lead">Share the basics. We’ll reply with the best next step for your store.</p><form id="contactForm"><div class="form-grid"><input class="field" name="name" placeholder="Full name" required/><input class="field" name="email" placeholder="Email address" required type="email"/><input class="field full" name="phone" placeholder="Phone / WhatsApp number"/><select class="field full" name="service"><option value="">Select a service</option><option>Shopify store setup</option><option>Store redesign</option><option>Custom theme development</option><option>CRO optimisation</option><option>Bug fixing / integration</option></select><textarea class="field full textarea" name="message" placeholder="Share your project idea..." required></textarea></div><p class="form-status" id="formStatus" aria-live="polite"></p><button class="btn btn-primary" type="submit">Send enquiry <span class="btn-arrow">↗</span></button></form></div>
+    <div class="footer-right"><div class="footer-links"><div class="footer-col"><h3>Company</h3><a href="#top">Home</a><a href="#services">Services</a><a href="#results">Results</a><a href="#contact">Contact</a></div><div class="footer-col"><h3>Explore</h3><a href="#work">Selected work</a><a href="#pricing">Pricing</a><a href="#">Case studies</a><a href="#">Insights</a></div><div class="footer-col"><h3>Platform builds</h3><a href="#services">Shopify stores</a><a href="#services">Custom themes</a><a href="#services">Store redesigns</a><a href="#services">Migrations</a></div><div class="footer-col"><h3>Growth</h3><a href="#services">CRO reviews</a><a href="#services">Product pages</a><a href="#services">Analytics</a><a href="#services">Integrations</a></div></div><div class="footer-contact"><div><div class="contact-title">Talk to us</div><div class="person"><div class="avatar">AA</div><div><div class="person-name">Akhil Anand</div><div class="person-role">Founder · Shopify Developer</div></div></div><div class="support-list"><div class="support-item"><div class="support-icon">✉</div><div>Email<strong>hello@enteecom.in</strong></div></div><div class="support-item"><div class="support-icon">◉</div><div>Availability<strong>Qatar · Kerala · Remote</strong></div></div></div><div class="socials"><a aria-label="LinkedIn" href="#">in</a><a aria-label="Instagram" href="#">ig</a><a aria-label="Facebook" href="#">f</a></div></div><div><div class="contact-title">Project enquiries</div><div class="support-list"><div class="support-item"><div class="support-icon">↗</div><div>Free audit<strong>Available for selected stores</strong></div></div><div class="support-item"><div class="support-icon">⌁</div><div>Response target<strong>Within 2 working hours</strong></div></div><div class="support-item"><div class="support-icon">✓</div><div>Working style<strong>Clear scope and milestones</strong></div></div></div></div></div></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Enteecom. All rights reserved.</span><span>Shopify design · Development · CRO</span></div>
+</footer>
+<a class="whatsapp" href="https://wa.me/97400000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◔</a>
+
+<script>
+// Mobile menu
+const menuButton=document.getElementById('menuButton');
+const mobilePanel=document.getElementById('mobilePanel');
+function closeMenu(){mobilePanel.classList.remove('open');document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');mobilePanel.setAttribute('aria-hidden','true');menuButton.textContent='☰'}
+menuButton.addEventListener('click',()=>{const open=!mobilePanel.classList.contains('open');mobilePanel.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);menuButton.setAttribute('aria-expanded',String(open));mobilePanel.setAttribute('aria-hidden',String(!open));menuButton.textContent=open?'×':'☰'});
+mobilePanel.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+// Animated Shopify orders — preserved
+const orderData=[
+  {name:'Cityman Perfume',price:1299,icon:'🧴'},
+  {name:"Men's Shorts Combo",price:649,icon:'▣'},
+  {name:'Ayurvedic Wellness',price:799,icon:'◉'},
+  {name:'Premium Watch',price:2499,icon:'◷'}
+];
+const popups=[...document.querySelectorAll('[data-order-popup]')],salesEl=document.getElementById('totalSales'),ordersEl=document.getElementById('totalOrders');
+let orderIndex=0,popupIndex=0,totalSales=2984144,totalOrders=1354,soundEnabled=false,audioContext=null;
+const formatINR=n=>'₹'+n.toLocaleString('en-IN');
+function metricPulse(el){el.animate([{transform:'scale(1)'},{transform:'scale(1.06)',color:'#4c7900'},{transform:'scale(1)'}],{duration:480,easing:'ease-out'})}
+function orderSound(){if(!soundEnabled)return;audioContext ||= new (window.AudioContext||window.webkitAudioContext)();const osc=audioContext.createOscillator(),gain=audioContext.createGain();osc.type='sine';osc.frequency.setValueAtTime(820,audioContext.currentTime);osc.frequency.exponentialRampToValueAtTime(1260,audioContext.currentTime+.13);gain.gain.setValueAtTime(.0001,audioContext.currentTime);gain.gain.exponentialRampToValueAtTime(.05,audioContext.currentTime+.02);gain.gain.exponentialRampToValueAtTime(.0001,audioContext.currentTime+.22);osc.connect(gain);gain.connect(audioContext.destination);osc.start();osc.stop(audioContext.currentTime+.23)}
+function popupTransforms(side){return side==='left'?{
+  start:'perspective(900px) translate3d(-24px,28px,-30px) scale(.82) rotateY(16deg) rotateZ(-4deg)',
+  peak:'perspective(900px) translate3d(0,-6px,70px) scale(1.045) rotateY(5deg) rotateZ(-1deg)',
+  rest:'perspective(900px) translate3d(0,0,55px) scale(1) rotateY(7deg) rotateZ(-1deg)',
+  exit:'perspective(900px) translate3d(-14px,-18px,-10px) scale(.94) rotateY(13deg) rotateZ(-2deg)'
+}:{
+  start:'perspective(900px) translate3d(24px,28px,-30px) scale(.82) rotateY(-16deg) rotateZ(4deg)',
+  peak:'perspective(900px) translate3d(0,-6px,70px) scale(1.045) rotateY(-5deg) rotateZ(1deg)',
+  rest:'perspective(900px) translate3d(0,0,55px) scale(1) rotateY(-7deg) rotateZ(1deg)',
+  exit:'perspective(900px) translate3d(14px,-18px,-10px) scale(.94) rotateY(-13deg) rotateZ(2deg)'
+}}
+function showOrder(){
+  const order=orderData[orderIndex%orderData.length],popup=popups[popupIndex%popups.length],side=popup.dataset.orderPopup,t=popupTransforms(side);
+  popup.querySelector('.order-name').textContent=order.name;popup.querySelector('.order-price').textContent=formatINR(order.price);popup.querySelector('.order-thumb').textContent=order.icon;popup.querySelector('.order-time').textContent='Just now';
+  popup.getAnimations().forEach(a=>a.cancel());
+  popup.animate([{opacity:0,transform:t.start,filter:'blur(8px)'},{opacity:1,transform:t.peak,filter:'blur(0)',offset:.72},{opacity:1,transform:t.rest,filter:'blur(0)'}],{duration:720,easing:'cubic-bezier(.16,.88,.24,1.18)',fill:'forwards'});
+  totalSales+=order.price;totalOrders++;salesEl.textContent=formatINR(totalSales);ordersEl.textContent=totalOrders.toLocaleString('en-IN');metricPulse(salesEl);metricPulse(ordersEl);orderSound();
+  setTimeout(()=>popup.querySelector('.order-time').textContent='3s ago',1400);
+  setTimeout(()=>popup.animate([{opacity:1,transform:t.rest,filter:'blur(0)'},{opacity:0,transform:t.exit,filter:'blur(5px)'}],{duration:470,easing:'ease-in',fill:'forwards'}),2850);
+  orderIndex++;popupIndex++;
+}
+setTimeout(showOrder,800);setInterval(showOrder,1900);
+const soundToggle=document.getElementById('soundToggle');soundToggle.addEventListener('click',async()=>{soundEnabled=!soundEnabled;if(soundEnabled){audioContext ||= new (window.AudioContext||window.webkitAudioContext)();await audioContext.resume();soundToggle.textContent='🔊 Sound on';orderSound()}else soundToggle.textContent='🔇 Sound off'});
+
+// FAQ
+ document.querySelectorAll('.faq-item').forEach(item=>{const btn=item.querySelector('.faq-question'),answer=item.querySelector('.faq-answer');btn.addEventListener('click',()=>{const opening=!item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(openItem=>{openItem.classList.remove('open');openItem.querySelector('.faq-answer').style.maxHeight=null});item.classList.toggle('open',opening);answer.style.maxHeight=opening?answer.scrollHeight+'px':null})});
+
+// Demo contact form
+const contactForm=document.getElementById('contactForm'),formStatus=document.getElementById('formStatus');
+contactForm.addEventListener('submit',e=>{e.preventDefault();if(!contactForm.reportValidity())return;formStatus.textContent='Thank you — connect this form to your email or CRM before publishing.';contactForm.reset()});
+</script>
 </body>
-
 </html>
