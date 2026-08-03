@@ -786,9 +786,11 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
 .work-track{width:max-content;display:flex;gap:16px;animation:marquee 36s linear infinite;will-change:transform;padding:0 5px}
 .work-viewport:hover .work-track{animation-play-state:paused}
 @keyframes marquee{to{transform:translateX(calc(-50% - 8px))}}
-.work-card{width:410px;aspect-ratio:4/3;flex:0 0 auto;margin:0;border-radius:22px;overflow:hidden;background:#262d28;border:1px solid rgba(255,255,255,.08)}
+.work-card{width:410px;aspect-ratio:4/3;flex:0 0 auto;margin:0;border-radius:22px;overflow:hidden;background:#262d28;border:1px solid rgba(255,255,255,.08);position:relative}
 .work-card img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
 .work-card:hover img{transform:scale(1.025)}
+.work-label{position:absolute;left:16px;bottom:16px;z-index:2;margin:0;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.94);color:#111713;font-size:11px;font-weight:600;line-height:1;box-shadow:0 8px 24px rgba(0,0,0,.12);backdrop-filter:blur(10px);white-space:nowrap;pointer-events:none}
+@media(max-width:560px){.work-label{left:12px;bottom:12px;padding:7px 11px;font-size:10px}}
 
 /* Services */
 .services-shell{display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:start}
@@ -1243,18 +1245,18 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
   <div class="container work-head"><div class="section-heading"><div class="kicker">Selected work</div><h2>Recent commerce work, shown without distractions.</h2><p class="lead">Image-only project previews. Replace the files in the assets folder with your own project images.</p></div><div class="carousel-note">Auto scrolling · Hover to pause</div></div>
   <div class="work-viewport" aria-label="Selected project image carousel">
     <div class="work-track">
-      <figure class="work-card"><img src="assets/work-01.svg" alt="Fashion ecommerce project preview" loading="lazy"/></figure>
-      <figure class="work-card"><img src="assets/work-02.svg" alt="Home and electronics ecommerce project preview" loading="lazy"/></figure>
-      <figure class="work-card"><img src="assets/work-03.svg" alt="Premium accessories ecommerce project preview" loading="lazy"/></figure>
-      <figure class="work-card"><img src="assets/work-04.svg" alt="Mobile storefront project preview" loading="lazy"/></figure>
-      <figure class="work-card"><img src="assets/work-05.svg" alt="Wellness ecommerce project preview" loading="lazy"/></figure>
-      <figure class="work-card"><img src="assets/work-06.svg" alt="Perfume ecommerce project preview" loading="lazy"/></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-01.svg" alt="" loading="lazy"/></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-02.svg" alt="" loading="lazy"/></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-03.svg" alt="" loading="lazy"/></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-04.svg" alt="" loading="lazy"/></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-05.svg" alt="" loading="lazy"/></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-06.svg" alt="" loading="lazy"/></figure>
+      <figure class="work-card"><img src="assets/work-01.svg" alt="Popees Baby Care ecommerce project" loading="lazy"/><figcaption class="work-label">Popees Baby Care</figcaption></figure>
+      <figure class="work-card"><img src="assets/work-02.svg" alt="Kalyan Silks ecommerce project" loading="lazy"/><figcaption class="work-label">Kalyan Silks</figcaption></figure>
+      <figure class="work-card"><img src="assets/work-03.svg" alt="Dotch Leather UK ecommerce project" loading="lazy"/><figcaption class="work-label">Dotch Leather UK</figcaption></figure>
+      <figure class="work-card"><img src="assets/work-04.svg" alt="iBELL Home Solutions ecommerce project" loading="lazy"/><figcaption class="work-label">iBELL Home Solutions</figcaption></figure>
+      <figure class="work-card"><img src="assets/work-05.svg" alt="Nayura Wellness ecommerce project" loading="lazy"/><figcaption class="work-label">Nayura Wellness</figcaption></figure>
+      <figure class="work-card"><img src="assets/work-06.svg" alt="B Perfumes ecommerce project" loading="lazy"/><figcaption class="work-label">B Perfumes</figcaption></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-01.svg" alt="" loading="lazy"/><figcaption class="work-label">Popees Baby Care</figcaption></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-02.svg" alt="" loading="lazy"/><figcaption class="work-label">Kalyan Silks</figcaption></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-03.svg" alt="" loading="lazy"/><figcaption class="work-label">Dotch Leather UK</figcaption></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-04.svg" alt="" loading="lazy"/><figcaption class="work-label">iBELL Home Solutions</figcaption></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-05.svg" alt="" loading="lazy"/><figcaption class="work-label">Nayura Wellness</figcaption></figure>
+      <figure class="work-card" aria-hidden="true"><img src="assets/work-06.svg" alt="" loading="lazy"/><figcaption class="work-label">B Perfumes</figcaption></figure>
     </div>
   </div>
 </section>
