@@ -786,9 +786,10 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
 .work-track{width:max-content;display:flex;gap:16px;animation:marquee 36s linear infinite;will-change:transform;padding:0 5px}
 .work-viewport:hover .work-track{animation-play-state:paused}
 @keyframes marquee{to{transform:translateX(calc(-50% - 8px))}}
-.work-card{width:410px;aspect-ratio:4/3;flex:0 0 auto;margin:0;border-radius:22px;overflow:hidden;background:#262d28;border:1px solid rgba(255,255,255,.08);position:relative}
-.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.work-card{width:450px;aspect-ratio:16/9;flex:0 0 auto;margin:0;border-radius:22px;overflow:hidden;background:#262d28;border:1px solid rgba(255,255,255,.08);position:relative;display:block;cursor:pointer;box-shadow:0 18px 42px rgba(0,0,0,.18)}
+.work-card img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .45s ease}
 .work-card:hover img{transform:scale(1.025)}
+.work-card:focus-visible{outline:3px solid var(--green);outline-offset:5px}
 .work-label{position:absolute;left:16px;bottom:16px;z-index:2;margin:0;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.94);color:#111713;font-size:11px;font-weight:600;line-height:1;box-shadow:0 8px 24px rgba(0,0,0,.12);backdrop-filter:blur(10px);white-space:nowrap;pointer-events:none}
 @media(max-width:560px){.work-label{left:12px;bottom:12px;padding:7px 11px;font-size:10px}}
 
@@ -1245,18 +1246,22 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
   <div class="container work-head"><div class="section-heading"><div class="kicker">Selected work</div><h2>Recent commerce work, shown without distractions.</h2><p class="lead">Image-only project previews. Replace the files in the assets folder with your own project images.</p></div><div class="carousel-note">Auto scrolling · Hover to pause</div></div>
   <div class="work-viewport" aria-label="Selected project image carousel">
     <div class="work-track">
-      <figure class="work-card"><img src="assets/work-07.svg" alt="Popees Baby Care ecommerce project" loading="lazy"/><figcaption class="work-label">Popees Baby Care</figcaption></figure>
-      <figure class="work-card"><img src="assets/work-02.svg" alt="Kalyan Silks ecommerce project" loading="lazy"/><figcaption class="work-label">Kalyan Silks</figcaption></figure>
-      <figure class="work-card"><img src="assets/work-03.svg" alt="Dotch Leather UK ecommerce project" loading="lazy"/><figcaption class="work-label">Dotch Leather UK</figcaption></figure>
-      <figure class="work-card"><img src="assets/work-04.svg" alt="iBELL Home Solutions ecommerce project" loading="lazy"/><figcaption class="work-label">iBELL Home Solutions</figcaption></figure>
-      <figure class="work-card"><img src="assets/work-05.svg" alt="Nayura Wellness ecommerce project" loading="lazy"/><figcaption class="work-label">Nayura Wellness</figcaption></figure>
-      <figure class="work-card"><img src="assets/work-06.svg" alt="B Perfumes ecommerce project" loading="lazy"/><figcaption class="work-label">B Perfumes</figcaption></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-07.svg" alt="" loading="lazy"/><figcaption class="work-label">Popees Baby Care</figcaption></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-02.svg" alt="" loading="lazy"/><figcaption class="work-label">Kalyan Silks</figcaption></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-03.svg" alt="" loading="lazy"/><figcaption class="work-label">Dotch Leather UK</figcaption></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-04.svg" alt="" loading="lazy"/><figcaption class="work-label">iBELL Home Solutions</figcaption></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-05.svg" alt="" loading="lazy"/><figcaption class="work-label">Nayura Wellness</figcaption></figure>
-      <figure class="work-card" aria-hidden="true"><img src="assets/work-06.svg" alt="" loading="lazy"/><figcaption class="work-label">B Perfumes</figcaption></figure>
+      <a class="work-card" href="https://vibesqa.shop" target="_blank" rel="noopener" aria-label="Visit VibesQA website"><img src="assets/work-01.webp" alt="VibesQA Qatar fashion Shopify store" loading="lazy"/><span class="work-label">VibesQA</span></a>
+      <a class="work-card" href="https://slimytea.com" target="_blank" rel="noopener" aria-label="Visit Slim-y Herbal Life website"><img src="assets/work-02.webp" alt="Slim-y Herbal Life custom Shopify theme" loading="lazy"/><span class="work-label">Slim-y Herbal Life</span></a>
+      <a class="work-card" href="https://acaciasports.com" target="_blank" rel="noopener" aria-label="Visit Acacia Sports US website"><img src="assets/work-03.webp" alt="Acacia Sports US ecommerce CRO project" loading="lazy"/><span class="work-label">Acacia Sports US</span></a>
+      <a class="work-card" href="https://nayura.in" target="_blank" rel="noopener" aria-label="Visit Nayura website"><img src="assets/work-04.webp" alt="Nayura Ayurvedic ecommerce store" loading="lazy"/><span class="work-label">Nayura</span></a>
+      <a class="work-card" href="https://aaronskitchen.in" target="_blank" rel="noopener" aria-label="Visit Aaron's Kitchen website"><img src="assets/work-05.webp" alt="Aaron's Kitchen custom Shopify theme" loading="lazy"/><span class="work-label">Aaron's Kitchen</span></a>
+      <a class="work-card" href="https://cultales.com" target="_blank" rel="noopener" aria-label="Visit Cultales website"><img src="assets/work-06.webp" alt="Cultales custom Shopify theme" loading="lazy"/><span class="work-label">Cultales</span></a>
+      <a class="work-card" href="https://acaciasports.ca" target="_blank" rel="noopener" aria-label="Visit Acacia Sports Canada website"><img src="assets/work-07.webp" alt="Acacia Sports Canada ecommerce CRO project" loading="lazy"/><span class="work-label">Acacia Sports Canada</span></a>
+      <a class="work-card" href="https://kapdaclub.com" target="_blank" rel="noopener" aria-label="Visit Kapda Club website"><img src="assets/work-08.webp" alt="Kapda Club fashion ecommerce store" loading="lazy"/><span class="work-label">Kapda Club</span></a>
+      <a class="work-card" href="https://vibesqa.shop" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-01.webp" alt="" loading="lazy"/><span class="work-label">VibesQA</span></a>
+      <a class="work-card" href="https://slimytea.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-02.webp" alt="" loading="lazy"/><span class="work-label">Slim-y Herbal Life</span></a>
+      <a class="work-card" href="https://acaciasports.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-03.webp" alt="" loading="lazy"/><span class="work-label">Acacia Sports US</span></a>
+      <a class="work-card" href="https://nayura.in" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-04.webp" alt="" loading="lazy"/><span class="work-label">Nayura</span></a>
+      <a class="work-card" href="https://aaronskitchen.in" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-05.webp" alt="" loading="lazy"/><span class="work-label">Aaron's Kitchen</span></a>
+      <a class="work-card" href="https://cultales.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-06.webp" alt="" loading="lazy"/><span class="work-label">Cultales</span></a>
+      <a class="work-card" href="https://acaciasports.ca" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-07.webp" alt="" loading="lazy"/><span class="work-label">Acacia Sports Canada</span></a>
+      <a class="work-card" href="https://kapdaclub.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="assets/work-08.webp" alt="" loading="lazy"/><span class="work-label">Kapda Club</span></a>
     </div>
   </div>
 </section>
