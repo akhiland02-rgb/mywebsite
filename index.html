@@ -407,6 +407,9 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
     }
 
     .source-phone-shopify {
+      font-size:0;
+      line-height:0;
+      overflow:hidden;
       width: 29px;
       height: 29px;
       display: grid;
@@ -870,7 +873,7 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
 
 /* Pricing */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.price-card{padding:27px;border:1px solid var(--line);border-radius:22px;background:#fff;display:flex;flex-direction:column;min-height:438px}
+.price-card{padding:27px;border:1px solid var(--line);border-radius:22px;background:#fff;display:flex;flex-direction:column;min-height:575px}
 .price-card.featured{background:var(--dark);color:#fff;border-color:var(--dark)}
 .price-badge{align-self:flex-start;padding:6px 10px;border-radius:99px;background:var(--soft);font-size:10px;font-weight:700;margin-bottom:28px}
 .featured .price-badge{background:#273028;color:#d9e3da}
@@ -878,7 +881,7 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
 .price{font-size:43px;letter-spacing:-.06em;font-weight:500;margin:18px 0 4px}.price small{font-size:12px;letter-spacing:0;font-weight:500;color:var(--muted)}.featured .price small{color:#aeb7b0}
 .features{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:11px}.features li{display:flex;gap:9px;font-size:12px;line-height:1.5}.features li::before{content:"✓";color:var(--green-dark);font-weight:700}.featured .features li::before{color:#b8f36a}
 .price-card .btn{margin-top:auto;width:100%}.featured .btn{background:var(--green);color:#152100}
-.pricing-note{text-align:center;margin:18px 0 0;color:var(--muted);font-size:12px}
+.pricing-note{text-align:center;margin:20px auto 0;color:var(--muted);font-size:13px;line-height:1.65;max-width:760px}.pricing-rules{margin-top:28px;padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--soft-2)}.pricing-rules h3{font-size:20px;font-weight:500;letter-spacing:-.035em;margin-bottom:18px}.pricing-rules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px}.pricing-rule{display:flex;gap:10px;color:#465048;font-size:12px;line-height:1.6}.pricing-rule::before{content:"•";color:var(--green-dark);font-weight:800}
 
 /* FAQ */
 .faq-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.faq-list{border-top:1px solid var(--line)}
@@ -922,7 +925,7 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
   .order-popup.order-left{left:4px;top:154px}
   .order-popup.order-right{right:4px;top:282px}
   .work-card{width:min(78vw,350px)}.work-track{animation-duration:32s}
-  .pricing-grid{grid-template-columns:1fr}.price-card{min-height:auto}.footer-links{grid-template-columns:repeat(2,1fr)}
+  .pricing-grid{grid-template-columns:1fr}.price-card{min-height:auto}.pricing-rules-grid{grid-template-columns:1fr}.footer-links{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
   :root{--gutter-mobile:22px}
@@ -958,26 +961,19 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
   <div class="container">
     <nav class="navbar" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Enteecom home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Enteecom</a>
-<div class="nav-links">
-  <a href="#services">Services</a>
-  <a href="#work">Work</a>
-  <a href="#results">Results</a>
-  <a href="#pricing">Pricing</a>
-  <a href="shopify.html">Course</a>
-  <a href="#contact">Contact</a>
-</div>
+      <div class="nav-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="shopify.html">Course</a><a href="#contact">Contact</a></div>
       <div class="nav-actions"><a class="btn btn-dark" href="#contact">Book a free call ↗</a><button class="menu-button" id="menuButton" aria-expanded="false" aria-label="Open menu">☰</button></div>
     </nav>
   </div>
 </header>
-<div class="mobile-panel" id="mobilePanel" aria-hidden="true"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#contact">Book a free call</a></div>
+<div class="mobile-panel" id="mobilePanel" aria-hidden="true"><a href="#services">Services</a><a href="#work">Work</a><a href="#results">Results</a><a href="#pricing">Pricing</a><a href="shopify.html">Course</a><a href="#contact">Contact</a><a class="btn btn-primary" href="#contact">Book a free call</a></div>
 
 <main id="top">
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
       <div class="kicker">Shopify &amp; eCommerce studio</div>
-      <h1 class="hero-title"><span class="line">We build Shopify stores</span><span class="line">that look better</span><span class="line">and <span class="underlined">sell more.</span></span></h1>
+      <h1 class="hero-title"><span class="line">We build stores</span><span class="line">that look better</span><span class="line">and <span class="underlined">sell more.</span></span></h1>
       <p class="lead">Enteecom designs high-converting Shopify stores, custom themes and eCommerce systems for ambitious brands in India, Qatar, UAE, UK and beyond.</p>
       <div class="hero-actions"><a class="btn btn-primary" href="#contact">Get a free store audit <span class="btn-arrow">↗</span></a><a class="btn btn-outline" href="#work">View selected work</a></div>
       <div class="trust-row"><div class="trust-item"><span>✓</span>Shopify Partner</div><div class="trust-item"><span>✓</span>Custom theme development</div><div class="trust-item"><span>✓</span>CRO-focused design</div></div>
@@ -1154,7 +1150,7 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
               <div class="source-phone-header">
 
                 <div class="source-phone-shopify">
-                  <img src="assets/shopify-bag.png" alt="Shopify" width="29" height="29"/>
+                  <img src="assets/shopify-bag.png" alt="" aria-hidden="true" width="29" height="29"/>
                 </div>
 
                 <div>
@@ -1355,9 +1351,81 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
 </section>
 
 <section class="section section-white" id="pricing">
-  <div class="container"><div class="section-heading center"><div class="kicker">Straightforward pricing</div><h2>Choose the level of build your store needs.</h2><p class="lead">Clear starting prices. Final scope is confirmed after a short store and requirement review.</p></div>
-    <div class="pricing-grid"><article class="price-card"><div class="price-badge">Store launch</div><h3>Shopify Setup</h3><p class="price-copy">A professional starter store using a reliable theme and a clean conversion-ready structure.</p><div class="price">₹6,999 <small>starting</small></div><ul class="features"><li>Theme setup and branding</li><li>Core pages and navigation</li><li>Payments and shipping</li><li>Mobile optimisation</li><li>Basic analytics setup</li></ul><a class="btn btn-outline" href="#contact">Discuss setup</a></article><article class="price-card featured"><div class="price-badge">Most requested</div><h3>Store Redesign</h3><p class="price-copy">A stronger visual direction and improved buying flow for an existing Shopify store.</p><div class="price">₹12,999 <small>starting</small></div><ul class="features"><li>UX and CRO review</li><li>Homepage and product page redesign</li><li>Mobile-first improvements</li><li>Trust and offer structure</li><li>Performance clean-up</li></ul><a class="btn" href="#contact">Request redesign</a></article><article class="price-card"><div class="price-badge">Custom build</div><h3>Custom Theme</h3><p class="price-copy">A distinct Shopify experience developed for your products, brand system and workflows.</p><div class="price">₹18,999 <small>starting</small></div><ul class="features"><li>Custom responsive design</li><li>Reusable Shopify sections</li><li>Advanced product experience</li><li>Integrations and tracking</li><li>Launch support</li></ul><a class="btn btn-outline" href="#contact">Plan custom build</a></article></div>
-    <p class="pricing-note">Bug fixes, custom sections and integrations are also available as standalone projects.</p>
+  <div class="container">
+    <div class="section-heading center">
+      <div class="kicker">Premium Shopify pricing</div>
+      <h2>Choose the level of build your store needs.</h2>
+      <p class="lead">Every project is tailored to your brand, catalogue and business requirements. Final investment is confirmed after a short discovery call.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card">
+        <div class="price-badge">Store launch</div>
+        <h3>Store Launch</h3>
+        <p class="price-copy">A polished Shopify store built on a premium theme and prepared for a confident launch.</p>
+        <div class="price">₹55,000</div>
+        <ul class="features">
+          <li>Premium theme-based development</li>
+          <li>Up to 5 essential pages</li>
+          <li>Up to 25 products</li>
+          <li>Payment and shipping setup</li>
+          <li>Mobile optimisation</li>
+          <li>Basic tracking setup</li>
+          <li>2 revision rounds</li>
+          <li>14 days support</li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Discuss your launch</a>
+      </article>
+
+      <article class="price-card featured">
+        <div class="price-badge">Most requested</div>
+        <h3>Conversion Redesign</h3>
+        <p class="price-copy">A strategic redesign focused on stronger UX, better conversion flow and improved store performance.</p>
+        <div class="price">₹1,10,000</div>
+        <ul class="features">
+          <li>UX and CRO audit</li>
+          <li>Homepage, product, collection and cart redesign</li>
+          <li>Mobile buying-flow optimisation</li>
+          <li>Custom Shopify sections</li>
+          <li>Speed and performance improvements</li>
+          <li>Tracking and integrations</li>
+          <li>3 revision rounds</li>
+          <li>30 days support</li>
+        </ul>
+        <a class="btn" href="#contact">Request a redesign</a>
+      </article>
+
+      <article class="price-card">
+        <div class="price-badge">Bespoke build</div>
+        <h3>Bespoke Shopify Build</h3>
+        <p class="price-copy">A fully custom Shopify experience designed around your brand, catalogue and operational needs.</p>
+        <div class="price">₹2,25,000</div>
+        <ul class="features">
+          <li>Custom UI/UX design</li>
+          <li>Custom Shopify theme development</li>
+          <li>Reusable merchant-editable sections</li>
+          <li>Advanced product and cart experience</li>
+          <li>Custom integrations</li>
+          <li>Arabic/English capability where required</li>
+          <li>Testing, documentation and training</li>
+          <li>45 days priority support</li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Plan a bespoke build</a>
+      </article>
+    </div>
+
+    <div class="pricing-rules">
+      <h3>Pricing rules</h3>
+      <div class="pricing-rules-grid">
+        <div class="pricing-rule">50% advance</div>
+        <div class="pricing-rule">30% after design approval</div>
+        <div class="pricing-rule">20% before launch</div>
+        <div class="pricing-rule">Premium themes, Shopify plans and paid apps are separate</div>
+        <div class="pricing-rule">Extra products, pages and integrations are quoted separately</div>
+        <div class="pricing-rule">Additional revisions are chargeable</div>
+        <div class="pricing-rule">Project files are transferred after full payment</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1369,7 +1437,7 @@ h2{margin:16px 0 14px;font-size:clamp(38px,4.4vw,62px);line-height:1.02;letter-s
 <footer class="site-footer" id="contact">
   <div class="container footer-top">
     <div class="footer-form"><div class="kicker">Got a project in mind?</div><h2>Let’s build it together.</h2><p class="lead">Share the basics. We’ll reply with the best next step for your store.</p><form id="contactForm"><div class="form-grid"><input class="field" name="name" placeholder="Full name" required/><input class="field" name="email" placeholder="Email address" required type="email"/><input class="field full" name="phone" placeholder="Phone / WhatsApp number"/><select class="field full" name="service"><option value="">Select a service</option><option>Shopify store setup</option><option>Store redesign</option><option>Custom theme development</option><option>CRO optimisation</option><option>Bug fixing / integration</option></select><textarea class="field full textarea" name="message" placeholder="Share your project idea..." required></textarea></div><p class="form-status" id="formStatus" aria-live="polite"></p><button class="btn btn-primary" type="submit">Send enquiry <span class="btn-arrow">↗</span></button></form></div>
-    <div class="footer-right"><div class="footer-links"><div class="footer-col"><h3>Company</h3><a href="#top">Home</a><a href="#services">Services</a><a href="#results">Results</a><a href="#contact">Contact</a></div><div class="footer-col"><h3>Explore</h3><a href="#work">Selected work</a><a href="#pricing">Pricing</a><a href="#">Case studies</a><a href="#">Insights</a></div><div class="footer-col"><h3>Platform builds</h3><a href="#services">Shopify stores</a><a href="#services">Custom themes</a><a href="#services">Store redesigns</a><a href="#services">Migrations</a></div><div class="footer-col"><h3>Growth</h3><a href="#services">CRO reviews</a><a href="#services">Product pages</a><a href="#services">Analytics</a><a href="#services">Integrations</a></div></div><div class="footer-contact"><div><div class="contact-title">Talk to us</div><div class="person"><div class="avatar">AA</div><div><div class="person-name">Akhil Anand</div><div class="person-role">Founder · Shopify Developer</div></div></div><div class="support-list"><div class="support-item"><div class="support-icon">✉</div><div>Email<strong>hello@enteecom.in</strong></div></div><div class="support-item"><div class="support-icon">◉</div><div>Availability<strong>Qatar · Kerala · Remote</strong></div></div></div><div class="socials"><a aria-label="LinkedIn" href="#">in</a><a aria-label="Instagram" href="#">ig</a><a aria-label="Facebook" href="#">f</a></div><div class="shopify-partner-badge" aria-label="Shopify Partner"><img src="assets/shopify-bag.png" alt="Shopify" width="27" height="27"/><span><strong>Shopify Partner</strong><small>Design · Development · CRO</small></span></div></div><div><div class="contact-title">Project enquiries</div><div class="support-list"><div class="support-item"><div class="support-icon">↗</div><div>Free audit<strong>Available for selected stores</strong></div></div><div class="support-item"><div class="support-icon">⌁</div><div>Response target<strong>Within 2 working hours</strong></div></div><div class="support-item"><div class="support-icon">✓</div><div>Working style<strong>Clear scope and milestones</strong></div></div></div></div></div></div>
+    <div class="footer-right"><div class="footer-links"><div class="footer-col"><h3>Company</h3><a href="#top">Home</a><a href="#services">Services</a><a href="#results">Results</a><a href="#contact">Contact</a></div><div class="footer-col"><h3>Explore</h3><a href="#work">Selected work</a><a href="#pricing">Pricing</a><a href="#">Case studies</a><a href="#">Insights</a></div><div class="footer-col"><h3>Platform builds</h3><a href="#services">Shopify stores</a><a href="#services">Custom themes</a><a href="#services">Store redesigns</a><a href="#services">Migrations</a></div><div class="footer-col"><h3>Growth</h3><a href="#services">CRO reviews</a><a href="#services">Product pages</a><a href="#services">Analytics</a><a href="#services">Integrations</a></div></div><div class="footer-contact"><div><div class="contact-title">Talk to us</div><div class="person"><div class="avatar">AA</div><div><div class="person-name">Akhil Anand</div><div class="person-role">Founder · Shopify Developer</div></div></div><div class="support-list"><div class="support-item"><div class="support-icon">✉</div><div>Email<strong>hello@enteecom.in</strong></div></div><div class="support-item"><div class="support-icon">◉</div><div>Availability<strong>Qatar · Kerala · Remote</strong></div></div></div><div class="socials"><a aria-label="LinkedIn" href="#">in</a><a aria-label="Instagram" href="#">ig</a><a aria-label="Facebook" href="#">f</a></div><div class="shopify-partner-badge" aria-label="Shopify Partner"><img src="assets/shopify-bag.png" alt="" aria-hidden="true" width="27" height="27"/><span><strong>Shopify Partner</strong><small>Design · Development · CRO</small></span></div></div><div><div class="contact-title">Project enquiries</div><div class="support-list"><div class="support-item"><div class="support-icon">↗</div><div>Free audit<strong>Available for selected stores</strong></div></div><div class="support-item"><div class="support-icon">⌁</div><div>Response target<strong>Within 2 working hours</strong></div></div><div class="support-item"><div class="support-icon">✓</div><div>Working style<strong>Clear scope and milestones</strong></div></div></div></div></div></div>
   </div>
   <div class="container footer-bottom"><span>© 2026 Enteecom. All rights reserved.</span><span>Shopify design · Development · CRO</span></div>
 </footer>
